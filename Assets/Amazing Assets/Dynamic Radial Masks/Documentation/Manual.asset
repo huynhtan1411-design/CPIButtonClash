@@ -1,0 +1,39 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b79d677adb29b4945a80f9711c92ffd8, type: 3}
+  m_Name: Manual
+  m_EditorClassIdentifier: 
+  showHeader: 1
+  icon: {fileID: 2800000, guid: 5aab97424d237d04cb633ea6cd35ccdf, type: 3}
+  title: Dynamic Radial Masks
+  sections:
+  - heading: 
+    text: 
+    linkText: 
+    url: 
+    urlType: 0
+  - heading: Documentation
+    text: 
+    linkText: Open online documentation
+    url: https://docs.google.com/document/d/1nbvgZzM7ZF2LN3ndOlq9Ud8TwGpfr9KO_fO0T9rPZLA
+    urlType: 0
+  - heading: Forum
+    text: 
+    linkText: Get answers
+    url: https://forum.unity.com/threads/dynamic-radial-masks.841579/
+    urlType: 0
+  - heading: Support and bug report
+    text: 
+    linkText: Submit a report
+    url: support@amazingassets.world
+    urlType: 1
+  loadedLayout: 0

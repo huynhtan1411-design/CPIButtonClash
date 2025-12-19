@@ -1,0 +1,73 @@
+// Dynamic Radial Masks <https://u3d.as/1w0H>
+// Copyright (c) Amazing Assets <https://amazingassets.world>
+ 
+#ifndef DYNAMIC_RADIAL_MASKS_#SHAPE_BIG#_#ARRAY_LENGTH#_#TYPE_BIG#_#BLEND_MODE_BIG#_ID#ID#_#SCOPE_BIG#
+#define DYNAMIC_RADIAL_MASKS_#SHAPE_BIG#_#ARRAY_LENGTH#_#TYPE_BIG#_#BLEND_MODE_BIG#_ID#ID#_#SCOPE_BIG#
+
+
+#REMOVE_FOR_GLOBAL##ifndef DYNAMIC_RADIAL_MASKS_VARIABLES_DECLARED_IN_CBUFFER
+#UNIFORM#float4 DynamicRadialMasks_#SHAPE_SMALL#_#ARRAY_LENGTH#_#TYPE_SMALL#_#BLEND_MODE_SMALL#_ID#ID#_#SCOPE_SMALL#_DATA1[#ARRAY_LENGTH#];	
+#UNIFORM#float4 DynamicRadialMasks_#SHAPE_SMALL#_#ARRAY_LENGTH#_#TYPE_SMALL#_#BLEND_MODE_SMALL#_ID#ID#_#SCOPE_SMALL#_DATA2[#ARRAY_LENGTH#];	
+#UNIFORM#float4 DynamicRadialMasks_#SHAPE_SMALL#_#ARRAY_LENGTH#_#TYPE_SMALL#_#BLEND_MODE_SMALL#_ID#ID#_#SCOPE_SMALL#_DATA3[#ARRAY_LENGTH#];	
+#REMOVE_FOR_GLOBAL##endif
+
+#include "../../Core/Core.cginc"
+
+
+
+////////////////////////////////////////////////////////////////////////////////
+//                                                                            //
+//                                Main Method                                 //
+//                                                                            //
+////////////////////////////////////////////////////////////////////////////////
+float DynamicRadialMasks_#SHAPE_SMALL#_#ARRAY_LENGTH#_#TYPE_SMALL#_#BLEND_MODE_SMALL#_ID#ID#_#SCOPE_SMALL#(float3 positionWS, float noise
+#REMOVE_FOR_GLOBAL##ifdef DYNAMIC_RADIAL_MASKS_VARIABLES_DECLARED_IN_CBUFFER
+#REMOVE_FOR_GLOBAL#,
+#REMOVE_FOR_GLOBAL#float4 DynamicRadialMasks_#SHAPE_SMALL#_#ARRAY_LENGTH#_#TYPE_SMALL#_#BLEND_MODE_SMALL#_ID#ID#_#SCOPE_SMALL#_DATA1[#ARRAY_LENGTH#],
+#REMOVE_FOR_GLOBAL#float4 DynamicRadialMasks_#SHAPE_SMALL#_#ARRAY_LENGTH#_#TYPE_SMALL#_#BLEND_MODE_SMALL#_ID#ID#_#SCOPE_SMALL#_DATA2[#ARRAY_LENGTH#],	
+#REMOVE_FOR_GLOBAL#float4 DynamicRadialMasks_#SHAPE_SMALL#_#ARRAY_LENGTH#_#TYPE_SMALL#_#BLEND_MODE_SMALL#_ID#ID#_#SCOPE_SMALL#_DATA3[#ARRAY_LENGTH#]
+#REMOVE_FOR_GLOBAL##endif
+)
+{
+    float retValue = 0; 
+
+	int i = 0;
+#FOR_LOOP#	for(i = 0; i < #ARRAY_LENGTH#; i++)
+	{
+		retValue += ShaderExtensions_DynamicRadialMasks_#SHAPE_SMALL#_#TYPE_SMALL#(positionWS, 
+																					DYNAMIC_RADIAL_MASKS_READ_POSITION(DynamicRadialMasks_#SHAPE_SMALL#_#ARRAY_LENGTH#_#TYPE_SMALL#_#BLEND_MODE_SMALL#_ID#ID#_#SCOPE_SMALL#, i), 
+																					DYNAMIC_RADIAL_MASKS_READ_RADIUS(DynamicRadialMasks_#SHAPE_SMALL#_#ARRAY_LENGTH#_#TYPE_SMALL#_#BLEND_MODE_SMALL#_ID#ID#_#SCOPE_SMALL#, i), 
+																					DYNAMIC_RADIAL_MASKS_READ_INTENSITY(DynamicRadialMasks_#SHAPE_SMALL#_#ARRAY_LENGTH#_#TYPE_SMALL#_#BLEND_MODE_SMALL#_ID#ID#_#SCOPE_SMALL#, i), 
+																					DYNAMIC_RADIAL_MASKS_READ_PHASE(DynamicRadialMasks_#SHAPE_SMALL#_#ARRAY_LENGTH#_#TYPE_SMALL#_#BLEND_MODE_SMALL#_ID#ID#_#SCOPE_SMALL#, i), 
+																					DYNAMIC_RADIAL_MASKS_READ_FREQUENCY(DynamicRadialMasks_#SHAPE_SMALL#_#ARRAY_LENGTH#_#TYPE_SMALL#_#BLEND_MODE_SMALL#_ID#ID#_#SCOPE_SMALL#, i), 
+																					DYNAMIC_RADIAL_MASKS_READ_SMOOTH(DynamicRadialMasks_#SHAPE_SMALL#_#ARRAY_LENGTH#_#TYPE_SMALL#_#BLEND_MODE_SMALL#_ID#ID#_#SCOPE_SMALL#, i), 
+																					DYNAMIC_RADIAL_MASKS_READ_NOISE_STRENGTH(DynamicRadialMasks_#SHAPE_SMALL#_#ARRAY_LENGTH#_#TYPE_SMALL#_#BLEND_MODE_SMALL#_ID#ID#_#SCOPE_SMALL#, i) * noise);
+	}		
+
+    return retValue;
+}
+
+////////////////////////////////////////////////////////////////////////////////
+//                                                                            //
+//                               Helper Methods                               //
+//                                                                            //
+////////////////////////////////////////////////////////////////////////////////
+void DynamicRadialMasks_#SHAPE_SMALL#_#ARRAY_LENGTH#_#TYPE_SMALL#_#BLEND_MODE_SMALL#_ID#ID#_#SCOPE_SMALL#_float(float3 positionWS, float noise, out float retValue)
+{
+    #REMOVE_FOR_GLOBAL##ifdef DYNAMIC_RADIAL_MASKS_VARIABLES_DECLARED_IN_CBUFFER
+	#REMOVE_FOR_GLOBAL#	retValue = 0;
+	#REMOVE_FOR_GLOBAL##else
+		retValue = DynamicRadialMasks_#SHAPE_SMALL#_#ARRAY_LENGTH#_#TYPE_SMALL#_#BLEND_MODE_SMALL#_ID#ID#_#SCOPE_SMALL#(positionWS, noise); 	
+	#REMOVE_FOR_GLOBAL##endif
+}
+
+void DynamicRadialMasks_#SHAPE_SMALL#_#ARRAY_LENGTH#_#TYPE_SMALL#_#BLEND_MODE_SMALL#_ID#ID#_#SCOPE_SMALL#_half(half3 positionWS, half noise, out half retValue)
+{
+    #REMOVE_FOR_GLOBAL##ifdef DYNAMIC_RADIAL_MASKS_VARIABLES_DECLARED_IN_CBUFFER
+	#REMOVE_FOR_GLOBAL#	retValue = 0;
+	#REMOVE_FOR_GLOBAL##else
+		retValue = DynamicRadialMasks_#SHAPE_SMALL#_#ARRAY_LENGTH#_#TYPE_SMALL#_#BLEND_MODE_SMALL#_ID#ID#_#SCOPE_SMALL#(positionWS, noise); 	
+	#REMOVE_FOR_GLOBAL##endif
+}
+
+#endif

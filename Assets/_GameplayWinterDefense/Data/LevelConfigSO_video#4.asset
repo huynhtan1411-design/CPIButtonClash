@@ -1,0 +1,64 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f35972830c4264449543e8fb61d08a9, type: 3}
+  m_Name: LevelConfigSO_video#4
+  m_EditorClassIdentifier: 
+  levels:
+  - waves:
+    - waveName: 
+      enemyGroups:
+      - enemyData: {fileID: 11400000, guid: 6b916b0112682f64caad0038fdcdd051, type: 2}
+        count: 100
+        spawnInterval: 0.1
+        delayBeforeSpawn: 0
+        spawnDirection: 6
+      delayBeforeWave: 0
+    - waveName: 
+      enemyGroups:
+      - enemyData: {fileID: 11400000, guid: 8b6f6fdc766982b4fbc99c3a03246d11, type: 2}
+        count: 1000
+        spawnInterval: 0.06
+        delayBeforeSpawn: 0
+        spawnDirection: 1
+      delayBeforeWave: 0
+    - waveName: 
+      enemyGroups:
+      - enemyData: {fileID: 11400000, guid: 8b6f6fdc766982b4fbc99c3a03246d11, type: 2}
+        count: 1000
+        spawnInterval: 0.06
+        delayBeforeSpawn: 0
+        spawnDirection: 1
+      delayBeforeWave: 0
+    startingGold: 0
+  - waves:
+    - waveName: 
+      enemyGroups:
+      - enemyData: {fileID: 11400000, guid: 40d8b4619e9331b459a9820160041269, type: 2}
+        count: 20
+        spawnInterval: 0.15
+        delayBeforeSpawn: 0
+        spawnDirection: 6
+      delayBeforeWave: 0
+    - waveName: 
+      enemyGroups:
+      - enemyData: {fileID: 11400000, guid: 40d8b4619e9331b459a9820160041269, type: 2}
+        count: 1000
+        spawnInterval: 0.06
+        delayBeforeSpawn: 0
+        spawnDirection: 1
+      - enemyData: {fileID: 11400000, guid: 40d8b4619e9331b459a9820160041269, type: 2}
+        count: 1000
+        spawnInterval: 0.06
+        delayBeforeSpawn: 0
+        spawnDirection: 2
+      delayBeforeWave: 0
+    startingGold: 0

@@ -1,0 +1,64 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5cf1bbee83951c24e8f1606be314a2b6, type: 3}
+  m_Name: HouseBuildingConfig
+  m_EditorClassIdentifier: 
+  ID: 5
+  nameBase: House
+  HealthBase: 100
+  AttackDamageBase: 0
+  LevelIndexUnlock: 0
+  Type: 2
+  levelConfigs:
+  - name: House Lv1
+    icon: {fileID: 21300000, guid: fffd84c9075bcba478a512a21cee5310, type: 3}
+    towerModel: {fileID: 4608178552834111862, guid: 5d7a0e12915023843ae44e114ec2d480,
+      type: 3}
+    description: Generate 1 silver every night
+    percentAddHealth: 0
+    percentAddDamage: 0
+    attackRange: 0
+    attackSpeed: 0
+    radiusExplosion: 0
+    damageExplosion: 0
+    maxTargets: 1
+    upgradeCost: 2
+    levelUnlockCondition: 1
+  - name: House Lv2
+    icon: {fileID: 21300000, guid: fffd84c9075bcba478a512a21cee5310, type: 3}
+    towerModel: {fileID: 4608178552834111862, guid: 9d4615b23bd732c4aaff73338397776d,
+      type: 3}
+    description: Generate 2 silver every night
+    percentAddHealth: 0.5
+    percentAddDamage: 0
+    attackRange: 0
+    attackSpeed: 0
+    radiusExplosion: 0
+    damageExplosion: 0
+    maxTargets: 1
+    upgradeCost: 2
+    levelUnlockCondition: 2
+  - name: House Lv3
+    icon: {fileID: 21300000, guid: fffd84c9075bcba478a512a21cee5310, type: 3}
+    towerModel: {fileID: 4608178552834111862, guid: dd6e35f3c03afb24d93a21a4886f2c8f,
+      type: 3}
+    description: Generate 3 silver every night
+    percentAddHealth: 0.5
+    percentAddDamage: 0
+    attackRange: 0
+    attackSpeed: 0
+    radiusExplosion: 0
+    damageExplosion: 0
+    maxTargets: 1
+    upgradeCost: 2
+    levelUnlockCondition: 3
+  Prefab: {fileID: 7616477193882369530, guid: fc32bf4654977fd4c9cd6c7ac7ae2d4f, type: 3}

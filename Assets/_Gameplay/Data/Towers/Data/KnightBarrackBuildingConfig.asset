@@ -1,0 +1,66 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5cf1bbee83951c24e8f1606be314a2b6, type: 3}
+  m_Name: KnightBarrackBuildingConfig
+  m_EditorClassIdentifier: 
+  ID: 4
+  nameBase: Knight Barrack
+  HealthBase: 100
+  AttackDamageBase: 0
+  LevelIndexUnlock: 2
+  Type: 3
+  levelConfigs:
+  - name: Knight Barrack Lv 1
+    icon: {fileID: 21300000, guid: 547345efa3894d043b02a9ec379a45a7, type: 3}
+    towerModel: {fileID: 4608178552834111862, guid: c890b5eeae5c62d498e36837b51f26e5,
+      type: 3}
+    description: Knights are melee combat troops
+    percentAddHealth: 0
+    percentAddDamage: 0
+    attackRange: 0
+    attackSpeed: 0
+    radiusExplosion: 0
+    damageExplosion: 0
+    maxTargets: 1
+    upgradeCost: 4
+    levelUnlockCondition: 1
+  - name: Knight Barrack Lv 2
+    icon: {fileID: 21300000, guid: 3265ae39672fb6f4595489ade9ce1867, type: 3}
+    towerModel: {fileID: 4608178552834111862, guid: 130a7bad07d1d664481755a0ad338bd9,
+      type: 3}
+    description: 'Reduce Spawn time
+
+      More troops'
+    percentAddHealth: 0.5
+    percentAddDamage: 0
+    attackRange: 0
+    attackSpeed: 0
+    radiusExplosion: 0
+    damageExplosion: 0
+    maxTargets: 1
+    upgradeCost: 8
+    levelUnlockCondition: 2
+  - name: Knight Barrack Lv 3
+    icon: {fileID: 21300000, guid: 2d01c7a3b4315a84aad4d3e37efcf8bb, type: 3}
+    towerModel: {fileID: 4608178552834111862, guid: 795027bf0ef43a74ebf0234e129c307a,
+      type: 3}
+    description: Reduce Spawn time Even more troops
+    percentAddHealth: 0.5
+    percentAddDamage: 0
+    attackRange: 0
+    attackSpeed: 0
+    radiusExplosion: 0
+    damageExplosion: 0
+    maxTargets: 1
+    upgradeCost: 16
+    levelUnlockCondition: 3
+  Prefab: {fileID: 7616477193882369530, guid: 91d6ca56820e37748879917512b32a67, type: 3}

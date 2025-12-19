@@ -1,0 +1,96 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 318fcef1950d7c948a777ce8f38cde1b, type: 3}
+  m_Name: Staff_Fire
+  m_EditorClassIdentifier: 
+  upgradeType: 1
+  upgrades:
+  - weaponPrefab: {fileID: 5636405541002295016, guid: 64787e0afa85a8c4184ebff97b6bad1b,
+      type: 3}
+    bulletPrefab: {fileID: 5952004147216941106, guid: baac439279f60604591914c7a0c8519d,
+      type: 3}
+    damage:
+      firstValue: 9
+      secondValue: 8
+    rangeRadius: 4
+    fireRate: 0.3
+    spread: 0
+    bulletsPerShot:
+      firstValue: 1
+      secondValue: 1
+    bulletSpeed:
+      firstValue: 1
+      secondValue: 1
+  - weaponPrefab: {fileID: 5636405541002295016, guid: 64787e0afa85a8c4184ebff97b6bad1b,
+      type: 3}
+    bulletPrefab: {fileID: 5952004147216941106, guid: baac439279f60604591914c7a0c8519d,
+      type: 3}
+    damage:
+      firstValue: 10
+      secondValue: 15
+    rangeRadius: 4
+    fireRate: 0.3
+    spread: 0
+    bulletsPerShot:
+      firstValue: 1
+      secondValue: 1
+    bulletSpeed:
+      firstValue: 1
+      secondValue: 1
+  - weaponPrefab: {fileID: 5636405541002295016, guid: 64787e0afa85a8c4184ebff97b6bad1b,
+      type: 3}
+    bulletPrefab: {fileID: 5952004147216941106, guid: baac439279f60604591914c7a0c8519d,
+      type: 3}
+    damage:
+      firstValue: 10
+      secondValue: 15
+    rangeRadius: 4
+    fireRate: 0.3
+    spread: 0
+    bulletsPerShot:
+      firstValue: 2
+      secondValue: 2
+    bulletSpeed:
+      firstValue: 1
+      secondValue: 1
+  - weaponPrefab: {fileID: 5636405541002295016, guid: 64787e0afa85a8c4184ebff97b6bad1b,
+      type: 3}
+    bulletPrefab: {fileID: 5952004147216941106, guid: baac439279f60604591914c7a0c8519d,
+      type: 3}
+    damage:
+      firstValue: 20
+      secondValue: 30
+    rangeRadius: 4
+    fireRate: 0.3
+    spread: 0
+    bulletsPerShot:
+      firstValue: 2
+      secondValue: 2
+    bulletSpeed:
+      firstValue: 1
+      secondValue: 1
+  - weaponPrefab: {fileID: 5636405541002295016, guid: 64787e0afa85a8c4184ebff97b6bad1b,
+      type: 3}
+    bulletPrefab: {fileID: 5952004147216941106, guid: baac439279f60604591914c7a0c8519d,
+      type: 3}
+    damage:
+      firstValue: 20
+      secondValue: 30
+    rangeRadius: 4
+    fireRate: 0.3
+    spread: 0
+    bulletsPerShot:
+      firstValue: 3
+      secondValue: 3
+    bulletSpeed:
+      firstValue: 1
+      secondValue: 1

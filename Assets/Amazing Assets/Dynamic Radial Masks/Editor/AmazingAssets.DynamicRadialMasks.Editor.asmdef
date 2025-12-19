@@ -1,0 +1,17 @@
+{
+    "name": "AmazingAssets.DynamicRadialMasks.Editor",
+    "references": [
+        "GUID:cf1942671ad1c48488c300de9a5cf458"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

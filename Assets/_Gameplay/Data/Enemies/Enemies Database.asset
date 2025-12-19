@@ -1,0 +1,155 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ada6e646aae1804db4ed4f6b6502ae0, type: 3}
+  m_Name: Enemies Database
+  m_EditorClassIdentifier: 
+  enemies:
+  - enemyType: 0
+    enemyTier: 0
+    elementType: 0
+    prefab: {fileID: 4796623966293115903, guid: 3111499bb00e17746b0f43e919b7d1d6,
+      type: 3}
+    stats:
+      hp: 24
+      moveSpeed: 0.5
+      damage:
+        firstValue: 5
+        secondValue: 5
+      gold: 5
+      attackRange: 0.5
+      attackCooldown: 4
+  - enemyType: 1
+    enemyTier: 0
+    elementType: 0
+    prefab: {fileID: 4796623966293115903, guid: f2b86d98d28783f4b9c1ddbd5cfba3e7,
+      type: 3}
+    stats:
+      hp: 40
+      moveSpeed: 0.5
+      damage:
+        firstValue: 5
+        secondValue: 5
+      gold: 6
+      attackRange: 0.5
+      attackCooldown: 3.5
+  - enemyType: 2
+    enemyTier: 1
+    elementType: 4
+    prefab: {fileID: 4796623966293115903, guid: 3cc21cfa7f414c1488094e89c8d7886c,
+      type: 3}
+    stats:
+      hp: 400
+      moveSpeed: 0.25
+      damage:
+        firstValue: 20
+        secondValue: 20
+      gold: 50
+      attackRange: 0.5
+      attackCooldown: 3
+  - enemyType: 3
+    enemyTier: 0
+    elementType: 0
+    prefab: {fileID: 4796623966293115903, guid: 4434b3e53ef0a7e49bac91e839bb1b91,
+      type: 3}
+    stats:
+      hp: 65
+      moveSpeed: 1.5
+      damage:
+        firstValue: 8
+        secondValue: 8
+      gold: 12
+      attackRange: 0.5
+      attackCooldown: 2
+  - enemyType: 4
+    enemyTier: 0
+    elementType: 1
+    prefab: {fileID: 4796623966293115903, guid: 42e4f7ae9c8c73842a8993baaf3d44ff,
+      type: 3}
+    stats:
+      hp: 30
+      moveSpeed: 1.25
+      damage:
+        firstValue: 30
+        secondValue: 30
+      gold: 4
+      attackRange: 0.5
+      attackCooldown: 2
+  - enemyType: 6
+    enemyTier: 2
+    elementType: 0
+    prefab: {fileID: 4796623966293115903, guid: a8c7f9183243bc24e80b1a598ca117f3,
+      type: 3}
+    stats:
+      hp: 800
+      moveSpeed: 0.25
+      damage:
+        firstValue: 30
+        secondValue: 30
+      gold: 4
+      attackRange: 0.5
+      attackCooldown: 2
+  - enemyType: 7
+    enemyTier: 2
+    elementType: 0
+    prefab: {fileID: 4796623966293115903, guid: 4cea04f65c1d11549895cbc2a69e71b0,
+      type: 3}
+    stats:
+      hp: 1600
+      moveSpeed: 0.25
+      damage:
+        firstValue: 30
+        secondValue: 30
+      gold: 4
+      attackRange: 0.5
+      attackCooldown: 2
+  - enemyType: 8
+    enemyTier: 2
+    elementType: 0
+    prefab: {fileID: 4796623966293115903, guid: 80b5fd3cf5c04184ab84d5e57ad17496,
+      type: 3}
+    stats:
+      hp: 3000
+      moveSpeed: 0.25
+      damage:
+        firstValue: 30
+        secondValue: 30
+      gold: 4
+      attackRange: 0.5
+      attackCooldown: 2
+  - enemyType: 5
+    enemyTier: 0
+    elementType: 1
+    prefab: {fileID: 4796623966293115903, guid: 5f8c9d41ab02de342892d9a604587d68,
+      type: 3}
+    stats:
+      hp: 40
+      moveSpeed: 0.75
+      damage:
+        firstValue: 20
+        secondValue: 20
+      gold: 7
+      attackRange: 4
+      attackCooldown: 1
+  - enemyType: 1
+    enemyTier: 0
+    elementType: 3
+    prefab: {fileID: 4796623966293115903, guid: f2b86d98d28783f4b9c1ddbd5cfba3e7,
+      type: 3}
+    stats:
+      hp: 50
+      moveSpeed: 0.5
+      damage:
+        firstValue: 8
+        secondValue: 8
+      gold: 7
+      attackRange: 4
+      attackCooldown: 1

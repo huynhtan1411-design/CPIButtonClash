@@ -1,0 +1,341 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &902214597220529621
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 902214597220529623}
+  - component: {fileID: 902214597220529622}
+  - component: {fileID: 3888478370000925429}
+  m_Layer: 0
+  m_Name: Sound_Manager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &902214597220529623
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 902214597220529621}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &902214597220529622
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 902214597220529621}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af7e5ced7c8254550b612ccd5d193a13, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  musics:
+  - name: bgm_menu_B
+    Clip: {fileID: 8300000, guid: f2b728510a098224fb47abfd818998f4, type: 3}
+    Source: {fileID: 0}
+    volume: 0.1
+    pitch: 1
+    loop: 1
+    playOnStart: 1
+  - name: bgm_battle_B
+    Clip: {fileID: 8300000, guid: 2955abac788280545b92eca1e3f4909a, type: 3}
+    Source: {fileID: 0}
+    volume: 0.05
+    pitch: 1
+    loop: 1
+    playOnStart: 0
+  - name: bgm_menu_A
+    Clip: {fileID: 8300000, guid: a69331fdbed57624aaff1bc6dc705dcb, type: 3}
+    Source: {fileID: 0}
+    volume: 0.05
+    pitch: 1
+    loop: 1
+    playOnStart: 0
+  - name: bgm_battle_start
+    Clip: {fileID: 8300000, guid: 8c53edddc916f124d95d2b152b736c78, type: 3}
+    Source: {fileID: 0}
+    volume: 0.3
+    pitch: 1
+    loop: 0
+    playOnStart: 0
+  sounds:
+  - name: Play
+    Clip: {fileID: 8300000, guid: 57afcd1b27155644294b7e5481f1ed6d, type: 3}
+    Source: {fileID: 0}
+    volume: 1
+    pitch: 1
+    loop: 0
+    playOnStart: 0
+  - name: Level_Complete
+    Clip: {fileID: 8300000, guid: 5ceeb16c66293504b8c92cce948fa1ce, type: 3}
+    Source: {fileID: 0}
+    volume: 1
+    pitch: 1
+    loop: 0
+    playOnStart: 0
+  - name: Game_Over
+    Clip: {fileID: 8300000, guid: ee0628eefdd6b6246806edb0add25ef2, type: 3}
+    Source: {fileID: 0}
+    volume: 1
+    pitch: 1
+    loop: 0
+    playOnStart: 0
+  - name: Click
+    Clip: {fileID: 8300000, guid: 42f1ad662d89147da9e73e8a8cbdca66, type: 3}
+    Source: {fileID: 0}
+    volume: 1
+    pitch: 1
+    loop: 0
+    playOnStart: 0
+  - name: Collect
+    Clip: {fileID: 8300000, guid: ddd3681d3bb250e43973f5bc79cc008d, type: 3}
+    Source: {fileID: 0}
+    volume: 0.25
+    pitch: 1
+    loop: 0
+    playOnStart: 0
+  - name: Jump
+    Clip: {fileID: 8300000, guid: 3e5ab0d307ce9904ba4c57cdc8fb85ab, type: 3}
+    Source: {fileID: 0}
+    volume: 1
+    pitch: 1
+    loop: 0
+    playOnStart: 0
+  - name: Complete
+    Clip: {fileID: 8300000, guid: 4a48292c6d55d4472bdf4e8dd1de00f2, type: 3}
+    Source: {fileID: 0}
+    volume: 1
+    pitch: 1
+    loop: 0
+    playOnStart: 0
+  - name: Achievement
+    Clip: {fileID: 8300000, guid: 641fca34d4c564402be53eef2b74074e, type: 3}
+    Source: {fileID: 0}
+    volume: 1
+    pitch: 1
+    loop: 0
+    playOnStart: 0
+  - name: Combo1
+    Clip: {fileID: 8300000, guid: a6c9e44b59659164bb66b5f618e9d013, type: 3}
+    Source: {fileID: 0}
+    volume: 1
+    pitch: 0.38
+    loop: 0
+    playOnStart: 0
+  - name: Combo2
+    Clip: {fileID: 8300000, guid: a6c9e44b59659164bb66b5f618e9d013, type: 3}
+    Source: {fileID: 0}
+    volume: 1
+    pitch: 0.57
+    loop: 0
+    playOnStart: 0
+  - name: Fly
+    Clip: {fileID: 8300000, guid: 563c942a98b35974c83508d4c160e6f1, type: 3}
+    Source: {fileID: 0}
+    volume: 0.5
+    pitch: 1
+    loop: 0
+    playOnStart: 0
+  - name: Merge
+    Clip: {fileID: 8300000, guid: 1044524f2e4650d42851c3fdf7f16016, type: 3}
+    Source: {fileID: 0}
+    volume: 0.5
+    pitch: 1
+    loop: 0
+    playOnStart: 0
+  - name: Done
+    Clip: {fileID: 8300000, guid: a6c9e44b59659164bb66b5f618e9d013, type: 3}
+    Source: {fileID: 0}
+    volume: 0.5
+    pitch: 1
+    loop: 0
+    playOnStart: 0
+  - name: Put
+    Clip: {fileID: 8300000, guid: 99296fd86bb30f1449bd5d57173c4707, type: 3}
+    Source: {fileID: 0}
+    volume: 0.5
+    pitch: 1
+    loop: 0
+    playOnStart: 0
+  - name: Popup
+    Clip: {fileID: 8300000, guid: 73ca435a871cb409f91d424bfa6793ec, type: 3}
+    Source: {fileID: 0}
+    volume: 1
+    pitch: 1
+    loop: 0
+    playOnStart: 0
+  - name: sfx_ui_button_resource_B
+    Clip: {fileID: 8300000, guid: f6f1e278f0704384cb4da40ebf582ad9, type: 3}
+    Source: {fileID: 0}
+    volume: 1
+    pitch: 1
+    loop: 0
+    playOnStart: 0
+  - name: sfx_zombie_explode
+    Clip: {fileID: 8300000, guid: 3e06569797fd1214abae7839942b54d6, type: 3}
+    Source: {fileID: 0}
+    volume: 0.25
+    pitch: 1
+    loop: 0
+    playOnStart: 0
+  - name: sfx_eff_lightning_master
+    Clip: {fileID: 8300000, guid: e46c0ff29e484e74a8b8fe2f55667b7e, type: 3}
+    Source: {fileID: 0}
+    volume: 0.25
+    pitch: 1
+    loop: 0
+    playOnStart: 0
+  - name: sfx_eff_flesh_hit
+    Clip: {fileID: 8300000, guid: 91881f6a59946314ea6cc86289ab7bd9, type: 3}
+    Source: {fileID: 0}
+    volume: 0.25
+    pitch: 1
+    loop: 0
+    playOnStart: 0
+  - name: sfx_eff_fireball_shoot
+    Clip: {fileID: 8300000, guid: 7635c47d46abf6541b1067aade2c174a, type: 3}
+    Source: {fileID: 0}
+    volume: 0.25
+    pitch: 1
+    loop: 0
+    playOnStart: 0
+  - name: sfx_eff_fireball_explode
+    Clip: {fileID: 8300000, guid: 50b113dd4e528254897af4f6dfe7624c, type: 3}
+    Source: {fileID: 0}
+    volume: 0.25
+    pitch: 1
+    loop: 0
+    playOnStart: 0
+  - name: sfx_eff_shuriken_shoot
+    Clip: {fileID: 8300000, guid: 5581a18be414d4c4f93437e6cb8302e6, type: 3}
+    Source: {fileID: 0}
+    volume: 0.25
+    pitch: 1
+    loop: 0
+    playOnStart: 0
+  - name: sfx_eff_arrow_shoot
+    Clip: {fileID: 8300000, guid: d7c8758c68cf41108c49124168f8f6d9, type: 3}
+    Source: {fileID: 0}
+    volume: 0.25
+    pitch: 1
+    loop: 0
+    playOnStart: 0
+  - name: sfx_eff_frost_shoot
+    Clip: {fileID: 8300000, guid: 07532e25ab2bf0e4e9520610dfe2e0ce, type: 3}
+    Source: {fileID: 0}
+    volume: 0.25
+    pitch: 1
+    loop: 0
+    playOnStart: 0
+  - name: sfx_eff_frost_explode
+    Clip: {fileID: 8300000, guid: df0ec39bb7429284fb2f1c3413e68098, type: 3}
+    Source: {fileID: 0}
+    volume: 0.25
+    pitch: 1
+    loop: 0
+    playOnStart: 0
+  - name: sfx_eff_ice_wave_shoot
+    Clip: {fileID: 8300000, guid: 7483499914ee4e64837dcc014bbbd2b1, type: 3}
+    Source: {fileID: 0}
+    volume: 0.25
+    pitch: 1
+    loop: 0
+    playOnStart: 0
+  - name: sfx_ui_alert
+    Clip: {fileID: 8300000, guid: d8e16213e89e49d41be0cec517107862, type: 3}
+    Source: {fileID: 0}
+    volume: 0.2
+    pitch: 1
+    loop: 0
+    playOnStart: 0
+  - name: sfx_card_merge
+    Clip: {fileID: 8300000, guid: ddd3681d3bb250e43973f5bc79cc008d, type: 3}
+    Source: {fileID: 0}
+    volume: 0.3
+    pitch: 1
+    loop: 0
+    playOnStart: 0
+  - name: sfx_summon_hero
+    Clip: {fileID: 8300000, guid: 755e06f029840da46b4ddf0843b6fbdf, type: 3}
+    Source: {fileID: 0}
+    volume: 0.3
+    pitch: 1
+    loop: 0
+    playOnStart: 0
+  - name: sfx_ui_building
+    Clip: {fileID: 8300000, guid: 6b2f67a392e08824db2424287f0effa5, type: 3}
+    Source: {fileID: 0}
+    volume: 0.3
+    pitch: 1
+    loop: 0
+    playOnStart: 0
+  - name: sfx_chop_tree
+    Clip: {fileID: 8300000, guid: 3d68d67972d95f64b8e029601fee5d27, type: 3}
+    Source: {fileID: 0}
+    volume: 0.3
+    pitch: 1
+    loop: 0
+    playOnStart: 0
+  - name: Bazoka_SFX
+    Clip: {fileID: 8300000, guid: 4633691bdad645c4aaa09e4a4e434a0e, type: 3}
+    Source: {fileID: 0}
+    volume: 0.3
+    pitch: 1
+    loop: 0
+    playOnStart: 0
+  - name: sfx_ui_switch_tab
+    Clip: {fileID: 8300000, guid: c0a8d470e6d3448fab2b507b3170aee8, type: 3}
+    Source: {fileID: 0}
+    volume: 0.3
+    pitch: 1
+    loop: 0
+    playOnStart: 0
+  - name: sfx_ui_popup
+    Clip: {fileID: 8300000, guid: 70760cf9549cf794f9436e859388276c, type: 3}
+    Source: {fileID: 0}
+    volume: 0.3
+    pitch: 1
+    loop: 0
+    playOnStart: 0
+  - name: sfx_land_expanding
+    Clip: {fileID: 8300000, guid: 8ca5ddcde048b61428bba55ece703a8b, type: 3}
+    Source: {fileID: 0}
+    volume: 0.5
+    pitch: 1
+    loop: 0
+    playOnStart: 0
+  - name: sfx_building_destroy
+    Clip: {fileID: 8300000, guid: d0f1d1245b5ba2246862f7f30ec3f9e4, type: 3}
+    Source: {fileID: 0}
+    volume: 0.3
+    pitch: 1
+    loop: 0
+    playOnStart: 0
+  audioSourceBG: {fileID: 0}
+  soundMute: 0
+  musicMute: 0
+  playStartRandom: 0
+--- !u!81 &3888478370000925429
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 902214597220529621}
+  m_Enabled: 1

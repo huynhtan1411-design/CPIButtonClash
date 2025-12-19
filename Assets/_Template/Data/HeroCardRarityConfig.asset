@@ -1,0 +1,39 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 620a1c1c7cd95c94da116041acb6ddd9, type: 3}
+  m_Name: HeroCardRarityConfig
+  m_EditorClassIdentifier: 
+  defaultCommonChance: 100
+  defaultRareChance: 0
+  defaultEpicChance: 0
+  defaultLegendaryChance: 0
+  defaultGodlikeChance: 0
+  rareCommonChance: 80
+  rareRareChance: 20
+  rareEpicChance: 0
+  rareLegendaryChance: 0
+  rareGodlikeChance: 0
+  epicCommonChance: 70
+  epicRareChance: 25
+  epicEpicChance: 5
+  epicLegendaryChance: 0
+  epicGodlikeChance: 0
+  legendaryCommonChance: 60
+  legendaryRareChance: 25
+  legendaryEpicChance: 10
+  legendaryLegendaryChance: 5
+  legendaryGodlikeChance: 0
+  godlikeCommonChance: 60
+  godlikeRareChance: 25
+  godlikeEpicChance: 10
+  godlikeLegendaryChance: 5
+  godlikeGodlikeChance: 0

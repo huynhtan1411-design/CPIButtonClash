@@ -1,0 +1,57 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39e316b8095cbb34994f26f4044547e7, type: 3}
+  m_Name: HeroCardUpgradeCostConfig
+  m_EditorClassIdentifier: 
+  Data:
+  - Level: 1
+    Card: 1
+    Coin: 0
+  - Level: 2
+    Card: 2
+    Coin: 5
+  - Level: 3
+    Card: 4
+    Coin: 20
+  - Level: 4
+    Card: 10
+    Coin: 50
+  - Level: 5
+    Card: 20
+    Coin: 150
+  - Level: 6
+    Card: 50
+    Coin: 400
+  - Level: 7
+    Card: 100
+    Coin: 1000
+  - Level: 8
+    Card: 200
+    Coin: 2000
+  - Level: 9
+    Card: 400
+    Coin: 4000
+  - Level: 10
+    Card: 800
+    Coin: 8000
+  - Level: 11
+    Card: 1000
+    Coin: 15000
+  - Level: 12
+    Card: 1500
+    Coin: 35000
+  - Level: 13
+    Card: 3000
+    Coin: 75000
+  - Level: 14
+    Card: 5000
+    Coin: 100000

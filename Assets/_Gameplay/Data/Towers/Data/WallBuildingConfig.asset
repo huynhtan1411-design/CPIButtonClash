@@ -1,0 +1,64 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5cf1bbee83951c24e8f1606be314a2b6, type: 3}
+  m_Name: WallBuildingConfig
+  m_EditorClassIdentifier: 
+  ID: 6
+  nameBase: Wall
+  HealthBase: 50
+  AttackDamageBase: 0
+  LevelIndexUnlock: 0
+  Type: 4
+  levelConfigs:
+  - name: Wall Lv 1
+    icon: {fileID: 21300000, guid: 9f0e8147c9b38d3479e9f3c22c15e518, type: 3}
+    towerModel: {fileID: 2921559818817552074, guid: 972661a2f3fd34b44a9b3cf836abc27b,
+      type: 3}
+    description: Durable blocker.
+    percentAddHealth: 0
+    percentAddDamage: 0
+    attackRange: 0
+    attackSpeed: 0
+    radiusExplosion: 0
+    damageExplosion: 0
+    maxTargets: 1
+    upgradeCost: 2
+    levelUnlockCondition: 1
+  - name: Wall Lv 2
+    icon: {fileID: 21300000, guid: e414ba1723f527746854d461dc672614, type: 3}
+    towerModel: {fileID: 2921559818817552074, guid: cb0a9ff72ed881647b0a8e0d2eb1c2df,
+      type: 3}
+    description: Block more damage
+    percentAddHealth: 0.5
+    percentAddDamage: 0
+    attackRange: 0
+    attackSpeed: 0
+    radiusExplosion: 0
+    damageExplosion: 0
+    maxTargets: 1
+    upgradeCost: 6
+    levelUnlockCondition: 2
+  - name: Wall Lv 3
+    icon: {fileID: 21300000, guid: a2f39dce1df3343408de416a9ce0e805, type: 3}
+    towerModel: {fileID: 2921559818817552074, guid: 6002a7204d1ad694a930da05b653ce1f,
+      type: 3}
+    description: Block more damage
+    percentAddHealth: 0.5
+    percentAddDamage: 0
+    attackRange: 0
+    attackSpeed: 0
+    radiusExplosion: 0
+    damageExplosion: 0
+    maxTargets: 1
+    upgradeCost: 20
+    levelUnlockCondition: 3
+  Prefab: {fileID: 7616477193882369530, guid: d3e53dd66c5090d40b11d5e6359a2558, type: 3}

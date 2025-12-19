@@ -1,0 +1,208 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &2561067308691972519
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8120330838115657519}
+  - component: {fileID: 4680011334165646189}
+  - component: {fileID: 1815886755190563207}
+  - component: {fileID: 2177048711950123100}
+  - component: {fileID: 1634548178159475549}
+  m_Layer: 0
+  m_Name: ScriptHolder
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 4294967295
+  m_IsActive: 1
+--- !u!4 &8120330838115657519
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2561067308691972519}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4680011334165646189
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2561067308691972519}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: deda4686bb13cb14ebcee2bb11ee3356, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  poolsList: []
+--- !u!114 &1815886755190563207
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2561067308691972519}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 508076466b8b1d24a8e4c7627dad05c9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  particles:
+  - particleName: Minigun Hit
+    particlePrefab: {fileID: 8880623512782553958, guid: 827cde8c3cd78324ea491ffb0be328fc,
+      type: 3}
+    specialBehaviour: 0
+  - particleName: Shotgun Hit
+    particlePrefab: {fileID: 8880623512782553958, guid: 13bc53be02fc4e84583acbd5485ebb55,
+      type: 3}
+    specialBehaviour: 0
+  - particleName: Tesla Hit
+    particlePrefab: {fileID: 8880623512782553958, guid: 45a4f1cb1b090f649b9e1d456130f3fd,
+      type: 3}
+    specialBehaviour: 0
+  - particleName: Lava Hit
+    particlePrefab: {fileID: 180702, guid: 94a3750d57b508844b81fa2e388b4db4, type: 3}
+    specialBehaviour: 0
+  - particleName: Boss Step
+    particlePrefab: {fileID: 1114582404318426121, guid: 57ada5099dfdd3143b7fd5f490cfa0a9,
+      type: 3}
+    specialBehaviour: 0
+  - particleName: Boss Death Fall
+    particlePrefab: {fileID: 1114582404318426121, guid: 53a9ad50c0fb361458c68b4d63cdec90,
+      type: 3}
+    specialBehaviour: 0
+  - particleName: Boss Enter Fall
+    particlePrefab: {fileID: 1114582404318426121, guid: 483b350249f7d7d469d6633caed67462,
+      type: 3}
+    specialBehaviour: 0
+  - particleName: Boss Bomb Hit
+    particlePrefab: {fileID: 1114582404318426121, guid: 57ada5099dfdd3143b7fd5f490cfa0a9,
+      type: 3}
+    specialBehaviour: 0
+  - particleName: Boss Bomb Explosion
+    particlePrefab: {fileID: 180702, guid: a7c694f0877ea874fa57e033221095c3, type: 3}
+    specialBehaviour: 0
+  - particleName: Boss Kick
+    particlePrefab: {fileID: 8268539955438565909, guid: 8009c216f7f796a4985bdf31470b3faf,
+      type: 3}
+    specialBehaviour: 0
+  - particleName: Boss Bomb Radius
+    particlePrefab: {fileID: 1114582404318426121, guid: de7c50aac650f404aa57e01dc08fe0ff,
+      type: 3}
+    specialBehaviour: 0
+  - particleName: Enemy Melee Hit
+    particlePrefab: {fileID: 8268539955438565909, guid: 8009c216f7f796a4985bdf31470b3faf,
+      type: 3}
+    specialBehaviour: 0
+  - particleName: Minigun Wall Hit
+    particlePrefab: {fileID: 8880623512782553958, guid: 267847794cf8fd6469d8a333a05f0c8a,
+      type: 3}
+    specialBehaviour: 0
+  - particleName: Shotgun Wall Hit
+    particlePrefab: {fileID: 132352, guid: 71b02155078e4bf4e962f302d3675af2, type: 3}
+    specialBehaviour: 0
+  - particleName: Tesla Wall Hit
+    particlePrefab: {fileID: 8880623512782553958, guid: 186b2743ebce66d4c84ae4e7c3b1b0a6,
+      type: 3}
+    specialBehaviour: 0
+  - particleName: Lava Wall Hit
+    particlePrefab: {fileID: 180702, guid: e36986f274dd2244ba607d8b06d00b6f, type: 3}
+    specialBehaviour: 0
+  - particleName: Bomber Explosion
+    particlePrefab: {fileID: 180702, guid: a7c694f0877ea874fa57e033221095c3, type: 3}
+    specialBehaviour: 0
+  - particleName: Bomber Explosion Decal
+    particlePrefab: {fileID: 1027697777517218, guid: 628d050c815a3a3448ce1dcdf0578f21,
+      type: 3}
+    specialBehaviour: 0
+  - particleName: Gun Upgrade
+    particlePrefab: {fileID: 147642, guid: 3c70647789f35ac4390fe9a96b8d3fcb, type: 3}
+    specialBehaviour: 0
+  - particleName: Upgrade
+    particlePrefab: {fileID: 147642, guid: 3c70647789f35ac4390fe9a96b8d3fcb, type: 3}
+    specialBehaviour: 0
+  - particleName: Ice Hit
+    particlePrefab: {fileID: 180702, guid: 4a0fc4d327f54ae4c9fb96185198f4bb, type: 3}
+    specialBehaviour: 0
+  ringEffectController:
+    isActive: 1
+    ringEffectPrefab: {fileID: 1108375227429275213, guid: 7e4443142ab0357448b3a2d75719cf3c,
+      type: 3}
+    defaultGradient:
+      serializedVersion: 2
+      key0: {r: 1, g: 0.68235296, b: 0, a: 1}
+      key1: {r: 1, g: 0.68235296, b: 0, a: 1}
+      key2: {r: 0, g: 0, b: 0, a: 0.25882354}
+      key3: {r: 0, g: 0, b: 0, a: 0}
+      key4: {r: 0, g: 0, b: 0, a: 0}
+      key5: {r: 0, g: 0, b: 0, a: 0}
+      key6: {r: 0, g: 0, b: 0, a: 0}
+      key7: {r: 0, g: 0, b: 0, a: 0}
+      ctime0: 0
+      ctime1: 65535
+      ctime2: 0
+      ctime3: 0
+      ctime4: 0
+      ctime5: 0
+      ctime6: 0
+      ctime7: 0
+      atime0: 0
+      atime1: 36815
+      atime2: 54741
+      atime3: 65535
+      atime4: 65535
+      atime5: 0
+      atime6: 0
+      atime7: 0
+      m_Mode: 0
+      m_ColorSpace: -1
+      m_NumColorKeys: 2
+      m_NumAlphaKeys: 4
+--- !u!114 &2177048711950123100
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2561067308691972519}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 766e4308be960664697eab448c8823e0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  upgradesDatabase: {fileID: 11400000, guid: ea0177be6fcba8548be3c94e78abf333, type: 2}
+--- !u!114 &1634548178159475549
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2561067308691972519}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 29e6ffd253873f347b7e19f479d4fc22, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  floatingTextCases:
+  - name: Hit
+    floatingTextBehaviour: {fileID: 134047797, guid: e35f6126e485b4847ab7c2b0f86303ec,
+      type: 3}
+  - name: HitResist
+    floatingTextBehaviour: {fileID: 134047797, guid: f79357698280b104594ef7b5fe2bd138,
+      type: 3}
+  - name: HitWeakness
+    floatingTextBehaviour: {fileID: 134047797, guid: 2a15d6978f010204ba9c4e21e3ac8995,
+      type: 3}

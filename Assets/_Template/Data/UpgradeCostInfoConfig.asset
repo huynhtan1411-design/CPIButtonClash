@@ -1,0 +1,435 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1cb579202fde784bbf1dfdb10a58bfc, type: 3}
+  m_Name: UpgradeCostInfoConfig
+  m_EditorClassIdentifier: 
+  Data:
+  - Level: 1
+    Coin: 0
+  - Level: 2
+    Coin: 400
+  - Level: 3
+    Coin: 450
+  - Level: 4
+    Coin: 500
+  - Level: 5
+    Coin: 550
+  - Level: 6
+    Coin: 600
+  - Level: 7
+    Coin: 650
+  - Level: 8
+    Coin: 700
+  - Level: 9
+    Coin: 750
+  - Level: 10
+    Coin: 800
+  - Level: 11
+    Coin: 850
+  - Level: 12
+    Coin: 900
+  - Level: 13
+    Coin: 950
+  - Level: 14
+    Coin: 1000
+  - Level: 15
+    Coin: 1100
+  - Level: 16
+    Coin: 1200
+  - Level: 17
+    Coin: 1300
+  - Level: 18
+    Coin: 1400
+  - Level: 19
+    Coin: 1500
+  - Level: 20
+    Coin: 1600
+  - Level: 21
+    Coin: 1700
+  - Level: 22
+    Coin: 1800
+  - Level: 23
+    Coin: 1900
+  - Level: 24
+    Coin: 2000
+  - Level: 25
+    Coin: 2100
+  - Level: 26
+    Coin: 2200
+  - Level: 27
+    Coin: 2300
+  - Level: 28
+    Coin: 2400
+  - Level: 29
+    Coin: 2600
+  - Level: 30
+    Coin: 2800
+  - Level: 31
+    Coin: 3000
+  - Level: 32
+    Coin: 3300
+  - Level: 33
+    Coin: 3600
+  - Level: 34
+    Coin: 3900
+  - Level: 35
+    Coin: 4200
+  - Level: 36
+    Coin: 4500
+  - Level: 37
+    Coin: 4800
+  - Level: 38
+    Coin: 5100
+  - Level: 39
+    Coin: 5400
+  - Level: 40
+    Coin: 5700
+  - Level: 41
+    Coin: 6000
+  - Level: 42
+    Coin: 6300
+  - Level: 43
+    Coin: 6600
+  - Level: 44
+    Coin: 6900
+  - Level: 45
+    Coin: 7200
+  - Level: 46
+    Coin: 7500
+  - Level: 47
+    Coin: 7800
+  - Level: 48
+    Coin: 8100
+  - Level: 49
+    Coin: 8400
+  - Level: 50
+    Coin: 8700
+  - Level: 51
+    Coin: 9000
+  - Level: 52
+    Coin: 9500
+  - Level: 53
+    Coin: 10000
+  - Level: 54
+    Coin: 10500
+  - Level: 55
+    Coin: 11000
+  - Level: 56
+    Coin: 11500
+  - Level: 57
+    Coin: 12000
+  - Level: 58
+    Coin: 12500
+  - Level: 59
+    Coin: 13000
+  - Level: 60
+    Coin: 13500
+  - Level: 61
+    Coin: 14000
+  - Level: 62
+    Coin: 14500
+  - Level: 63
+    Coin: 15000
+  - Level: 64
+    Coin: 15500
+  - Level: 65
+    Coin: 16000
+  - Level: 66
+    Coin: 16500
+  - Level: 67
+    Coin: 17000
+  - Level: 68
+    Coin: 18000
+  - Level: 69
+    Coin: 19000
+  - Level: 70
+    Coin: 20000
+  - Level: 71
+    Coin: 21000
+  - Level: 72
+    Coin: 22000
+  - Level: 73
+    Coin: 23000
+  - Level: 74
+    Coin: 24000
+  - Level: 75
+    Coin: 25000
+  - Level: 76
+    Coin: 26000
+  - Level: 77
+    Coin: 27000
+  - Level: 78
+    Coin: 28000
+  - Level: 79
+    Coin: 29000
+  - Level: 80
+    Coin: 30000
+  - Level: 81
+    Coin: 32000
+  - Level: 82
+    Coin: 34000
+  - Level: 83
+    Coin: 36000
+  - Level: 84
+    Coin: 38000
+  - Level: 85
+    Coin: 40000
+  - Level: 86
+    Coin: 42000
+  - Level: 87
+    Coin: 44000
+  - Level: 88
+    Coin: 46000
+  - Level: 89
+    Coin: 48000
+  - Level: 90
+    Coin: 50000
+  - Level: 91
+    Coin: 52000
+  - Level: 92
+    Coin: 54000
+  - Level: 93
+    Coin: 56000
+  - Level: 94
+    Coin: 58000
+  - Level: 95
+    Coin: 60000
+  - Level: 96
+    Coin: 63000
+  - Level: 97
+    Coin: 66000
+  - Level: 98
+    Coin: 69000
+  - Level: 99
+    Coin: 72000
+  - Level: 100
+    Coin: 75000
+  - Level: 101
+    Coin: 78000
+  - Level: 102
+    Coin: 81000
+  - Level: 103
+    Coin: 84000
+  - Level: 104
+    Coin: 87000
+  - Level: 105
+    Coin: 90000
+  - Level: 106
+    Coin: 93000
+  - Level: 107
+    Coin: 96000
+  - Level: 108
+    Coin: 99000
+  - Level: 109
+    Coin: 120000
+  - Level: 110
+    Coin: 150000
+  - Level: 111
+    Coin: 160000
+  - Level: 112
+    Coin: 170000
+  - Level: 113
+    Coin: 180000
+  - Level: 114
+    Coin: 190000
+  - Level: 115
+    Coin: 200000
+  - Level: 116
+    Coin: 210000
+  - Level: 117
+    Coin: 220000
+  - Level: 118
+    Coin: 230000
+  - Level: 119
+    Coin: 240000
+  - Level: 120
+    Coin: 250000
+  - Level: 121
+    Coin: 260000
+  - Level: 122
+    Coin: 270000
+  - Level: 123
+    Coin: 280000
+  - Level: 124
+    Coin: 290000
+  - Level: 125
+    Coin: 300000
+  - Level: 126
+    Coin: 320000
+  - Level: 127
+    Coin: 340000
+  - Level: 128
+    Coin: 360000
+  - Level: 129
+    Coin: 380000
+  - Level: 130
+    Coin: 400000
+  - Level: 131
+    Coin: 420000
+  - Level: 132
+    Coin: 440000
+  - Level: 133
+    Coin: 460000
+  - Level: 134
+    Coin: 480000
+  - Level: 135
+    Coin: 500000
+  - Level: 136
+    Coin: 520000
+  - Level: 137
+    Coin: 540000
+  - Level: 138
+    Coin: 560000
+  - Level: 139
+    Coin: 580000
+  - Level: 140
+    Coin: 600000
+  - Level: 141
+    Coin: 630000
+  - Level: 142
+    Coin: 660000
+  - Level: 143
+    Coin: 690000
+  - Level: 144
+    Coin: 720000
+  - Level: 145
+    Coin: 750000
+  - Level: 146
+    Coin: 780000
+  - Level: 147
+    Coin: 810000
+  - Level: 148
+    Coin: 840000
+  - Level: 149
+    Coin: 870000
+  - Level: 150
+    Coin: 900000
+  - Level: 151
+    Coin: 950000
+  - Level: 152
+    Coin: 1000000
+  - Level: 153
+    Coin: 1050000
+  - Level: 154
+    Coin: 1100000
+  - Level: 155
+    Coin: 1150000
+  - Level: 156
+    Coin: 1200000
+  - Level: 157
+    Coin: 1250000
+  - Level: 158
+    Coin: 1300000
+  - Level: 159
+    Coin: 1350000
+  - Level: 160
+    Coin: 1400000
+  - Level: 161
+    Coin: 1450000
+  - Level: 162
+    Coin: 1500000
+  - Level: 163
+    Coin: 1550000
+  - Level: 164
+    Coin: 1600000
+  - Level: 165
+    Coin: 1700000
+  - Level: 166
+    Coin: 1800000
+  - Level: 167
+    Coin: 1900000
+  - Level: 168
+    Coin: 2000000
+  - Level: 169
+    Coin: 2100000
+  - Level: 170
+    Coin: 2200000
+  - Level: 171
+    Coin: 2300000
+  - Level: 172
+    Coin: 2400000
+  - Level: 173
+    Coin: 2500000
+  - Level: 174
+    Coin: 2600000
+  - Level: 175
+    Coin: 2700000
+  - Level: 176
+    Coin: 2800000
+  - Level: 177
+    Coin: 2900000
+  - Level: 178
+    Coin: 3000000
+  - Level: 179
+    Coin: 3200000
+  - Level: 180
+    Coin: 3400000
+  - Level: 181
+    Coin: 3600000
+  - Level: 182
+    Coin: 3800000
+  - Level: 183
+    Coin: 4000000
+  - Level: 184
+    Coin: 4200000
+  - Level: 185
+    Coin: 4400000
+  - Level: 186
+    Coin: 4600000
+  - Level: 187
+    Coin: 4800000
+  - Level: 188
+    Coin: 5000000
+  - Level: 189
+    Coin: 5200000
+  - Level: 190
+    Coin: 5400000
+  - Level: 191
+    Coin: 5600000
+  - Level: 192
+    Coin: 5800000
+  - Level: 193
+    Coin: 6000000
+  - Level: 194
+    Coin: 6300000
+  - Level: 195
+    Coin: 6600000
+  - Level: 196
+    Coin: 6900000
+  - Level: 197
+    Coin: 7200000
+  - Level: 198
+    Coin: 7500000
+  - Level: 199
+    Coin: 7800000
+  - Level: 200
+    Coin: 8100000
+  - Level: 201
+    Coin: 8400000
+  - Level: 202
+    Coin: 8700000
+  - Level: 203
+    Coin: 9000000
+  - Level: 204
+    Coin: 9500000
+  - Level: 205
+    Coin: 10000000
+  - Level: 206
+    Coin: 10500000
+  - Level: 207
+    Coin: 11000000
+  - Level: 208
+    Coin: 11500000
+  - Level: 209
+    Coin: 12000000
+  - Level: 210
+    Coin: 12500000

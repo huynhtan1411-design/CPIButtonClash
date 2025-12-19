@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c10bafd7fd0623468210f3cd0ea2f7a, type: 3}
+  m_Name: ConfigElemental
+  m_EditorClassIdentifier: 
+  elementData:
+  - elementType: 1
+    elementSprite: {fileID: 21300000, guid: 5d96ff3b8ed8e644f8fb074f2d605ba1, type: 3}
+    elementColor: {r: 1, g: 0, b: 0, a: 1}
+    description: 
+  - elementType: 2
+    elementSprite: {fileID: 21300000, guid: 47bee138f4a0433469c1b37be8478633, type: 3}
+    elementColor: {r: 0, g: 0.53380704, b: 1, a: 1}
+    description: 
+  - elementType: 3
+    elementSprite: {fileID: 21300000, guid: 01babb9f0577f674b9edd4aebe866045, type: 3}
+    elementColor: {r: 1, g: 0.88914996, b: 0, a: 1}
+    description: 
+  - elementType: 4
+    elementSprite: {fileID: 21300000, guid: 4f2da261d52c1804ab681dc432024c23, type: 3}
+    elementColor: {r: 0.25866985, g: 1, b: 0, a: 1}
+    description: 

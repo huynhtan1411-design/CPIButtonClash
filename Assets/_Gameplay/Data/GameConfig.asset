@@ -1,0 +1,48 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b914a4e0ad10404fb9c039a5a9f56ff, type: 3}
+  m_Name: GameConfig
+  m_EditorClassIdentifier: 
+  baseExperience: 10
+  CountCheckSpawnHero: 3
+  factorGrowthExperience: 1.3
+  baseExperiencePerClick: 60
+  silverStart: 10
+  weaknessFactor: 0.5
+  resistanceFactor: 0.5
+  guide:
+  - Zombies take <color=#FF2424>50% less damage</color> from the element which they
+    can <color=#FFA500>resist</color>
+  - And receive <color=#33FF00>50% more damage</color> from element they're weak
+    against
+  comboDecayTime: 1
+  comboTiers:
+  - clicksRequired: 0
+    multiplier: 1
+    Color: {r: 0.6320754, g: 0.6320754, b: 0.6320754, a: 1}
+  - clicksRequired: 5
+    multiplier: 2
+    Color: {r: 0, g: 0.9083636, b: 1, a: 1}
+  - clicksRequired: 50
+    multiplier: 3
+    Color: {r: 0.3867924, g: 1, b: 0.08018869, a: 1}
+  - clicksRequired: 100
+    multiplier: 4
+    Color: {r: 0.9818833, g: 1, b: 0, a: 1}
+  - clicksRequired: 200
+    multiplier: 5
+    Color: {r: 1, g: 0.5416667, b: 0, a: 1}
+  - clicksRequired: 400
+    multiplier: 6
+    Color: {r: 1, g: 0.052325584, b: 0, a: 1}
+  SpawnPointEnemy: {x: 2, y: 0, z: 8}
+  FactorPos: 2

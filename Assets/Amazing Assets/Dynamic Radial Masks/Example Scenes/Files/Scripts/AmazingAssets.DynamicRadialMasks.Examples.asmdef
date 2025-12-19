@@ -1,0 +1,15 @@
+{
+    "name": "AmazingAssets.DynamicRadialMasks.Examples",
+    "references": [
+        "GUID:cf1942671ad1c48488c300de9a5cf458"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

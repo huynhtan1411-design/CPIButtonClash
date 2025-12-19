@@ -1,0 +1,64 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5cf1bbee83951c24e8f1606be314a2b6, type: 3}
+  m_Name: ArcherBarrackBuildingConfig
+  m_EditorClassIdentifier: 
+  ID: 7
+  nameBase: Archer Barrack
+  HealthBase: 100
+  AttackDamageBase: 0
+  LevelIndexUnlock: 3
+  Type: 3
+  levelConfigs:
+  - name: Archer Barrack Lv 1
+    icon: {fileID: 21300000, guid: f4574ee02aa09c64b9da33dd4f54f5b1, type: 3}
+    towerModel: {fileID: 4608178552834111862, guid: f49776196bc122440b73d6d0268c6831,
+      type: 3}
+    description: Archers are good at attacking from afar
+    percentAddHealth: 0.5
+    percentAddDamage: 0
+    attackRange: 0
+    attackSpeed: 0
+    radiusExplosion: 0
+    damageExplosion: 0
+    maxTargets: 1
+    upgradeCost: 4
+    levelUnlockCondition: 1
+  - name: Archer Barrack Lv 2
+    icon: {fileID: 21300000, guid: 9f070ee0fd0cdbe4191256f1b46817fe, type: 3}
+    towerModel: {fileID: 4608178552834111862, guid: cd0cd899ece33f246a7b2152083f9672,
+      type: 3}
+    description: Reduce Spawn time More archers
+    percentAddHealth: 0.5
+    percentAddDamage: 0
+    attackRange: 0
+    attackSpeed: 0
+    radiusExplosion: 0
+    damageExplosion: 0
+    maxTargets: 1
+    upgradeCost: 8
+    levelUnlockCondition: 2
+  - name: Archer Barrack Lv 3
+    icon: {fileID: 21300000, guid: 221852e1fa5f8014d8bfd34b56528f11, type: 3}
+    towerModel: {fileID: 4608178552834111862, guid: c2a5ecfa898cea14f9b24be8f85f6491,
+      type: 3}
+    description: Reduce Spawn time Even more archers
+    percentAddHealth: 0.5
+    percentAddDamage: 0
+    attackRange: 0
+    attackSpeed: 0
+    radiusExplosion: 0
+    damageExplosion: 0
+    maxTargets: 1
+    upgradeCost: 16
+    levelUnlockCondition: 3
+  Prefab: {fileID: 7616477193882369530, guid: 024b918f6c879e7498fd19144f1cd9ca, type: 3}

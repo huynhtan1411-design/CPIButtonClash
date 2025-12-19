@@ -1,0 +1,64 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5cf1bbee83951c24e8f1606be314a2b6, type: 3}
+  m_Name: MagicTowerConfig
+  m_EditorClassIdentifier: 
+  ID: 3
+  nameBase: Mage Tower
+  HealthBase: 180
+  AttackDamageBase: 25
+  LevelIndexUnlock: 4
+  Type: 1
+  levelConfigs:
+  - name: Mage Tower Lv 1
+    icon: {fileID: 21300000, guid: a2726047a65bd234b976b107a152ee2a, type: 3}
+    towerModel: {fileID: 6229588430100623587, guid: e672d9b481244e744b8f6b10e822e2bf,
+      type: 3}
+    description: Deals magic damage to enemies
+    percentAddHealth: 0
+    percentAddDamage: 0
+    attackRange: 3.5
+    attackSpeed: 1.8
+    radiusExplosion: 0.1
+    damageExplosion: 25
+    maxTargets: 1
+    upgradeCost: 4
+    levelUnlockCondition: 1
+  - name: Mage Tower Lv 2
+    icon: {fileID: 21300000, guid: 144b73624d93eb64a9c5502f6f232b7e, type: 3}
+    towerModel: {fileID: 6229588430100623587, guid: f7301d0f1a1a7474eb416c13b2ad755a,
+      type: 3}
+    description: More damage
+    percentAddHealth: 0.3
+    percentAddDamage: 0.4
+    attackRange: 3.5
+    attackSpeed: 1.8
+    radiusExplosion: 0.1
+    damageExplosion: 35
+    maxTargets: 1
+    upgradeCost: 5
+    levelUnlockCondition: 2
+  - name: Mage Tower Lv 3
+    icon: {fileID: 21300000, guid: 991bc825f8fcb6c4aa87f6cd9c51f3d5, type: 3}
+    towerModel: {fileID: 6229588430100623587, guid: 10b2e014cc07b484b96eb21ed6b4b0e7,
+      type: 3}
+    description: Even more damage
+    percentAddHealth: 0.3
+    percentAddDamage: 0.4
+    attackRange: 4
+    attackSpeed: 1.8
+    radiusExplosion: 0.1
+    damageExplosion: 45
+    maxTargets: 1
+    upgradeCost: 12
+    levelUnlockCondition: 3
+  Prefab: {fileID: 7616477193882369530, guid: 17c6fe67ee3ef7140b03b7f6b80e4623, type: 3}

@@ -1,0 +1,37 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c3b7818d85445554381d8c42d1ef32ae, type: 3}
+  m_Name: RarityTypeColors
+  m_EditorClassIdentifier: 
+  colorMapping:
+  - type: 0
+    color: {r: 0.7176471, g: 0.7176471, b: 0.7176471, a: 1}
+  - type: 1
+    color: {r: 0.07075471, g: 0.42363274, b: 1, a: 1}
+  - type: 2
+    color: {r: 0.6671698, g: 0.3066038, b: 1, a: 1}
+  - type: 3
+    color: {r: 0.6666667, g: 0.30588236, b: 1, a: 1}
+  - type: 4
+    color: {r: 0.6666667, g: 0.30588236, b: 1, a: 1}
+  - type: 5
+    color: {r: 1, g: 0.6, b: 0, a: 1}
+  - type: 6
+    color: {r: 1, g: 0.6, b: 0, a: 1}
+  - type: 7
+    color: {r: 1, g: 0.6, b: 0, a: 1}
+  - type: 8
+    color: {r: 0.8941177, g: 0.22352943, b: 0.20784315, a: 1}
+  - type: 9
+    color: {r: 0.89411765, g: 0.22352941, b: 0.20784314, a: 1}
+  - type: 10
+    color: {r: 0.89411765, g: 0.22352941, b: 0.20784314, a: 1}

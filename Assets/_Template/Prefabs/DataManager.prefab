@@ -1,0 +1,69 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &579720701419941454
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3098500044197222400}
+  - component: {fileID: 8255156261774378467}
+  m_Layer: 0
+  m_Name: DataManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3098500044197222400
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 579720701419941454}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8255156261774378467
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 579720701419941454}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d093a77af35e2c4994f99d1ec207c63, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  herosInfoData: {fileID: 11400000, guid: 89a5269afd08d1748a368473e11747eb, type: 2}
+  equipmentInfoData: {fileID: 11400000, guid: 325d342fff6fbf54fbb397b211e77f24, type: 2}
+  rarityTypeColorsData: {fileID: 11400000, guid: 445fc558ae7be05498dd9a4aacbb9aab,
+    type: 2}
+  rarityTypeColorsHeroData: {fileID: 11400000, guid: bb447191cc3f80d4080cadcc56ba20c3,
+    type: 2}
+  upgradeCostInfoConfigData: {fileID: 11400000, guid: 1080ce83ca9cda0469280d65a38c1eaa,
+    type: 2}
+  rankUpBonusInfoConfigData: {fileID: 11400000, guid: 90f5f3560a408404194f9d8340f8388f,
+    type: 2}
+  talentsInfoData: {fileID: 11400000, guid: 277b5974e43ce7e49b37ada7f8c7d6ca, type: 2}
+  rarityHeroCardConfig: {fileID: 11400000, guid: 04b1859e19bf3fb4899cf3eec34be70b,
+    type: 2}
+  heroCardUpgradeCostConfig: {fileID: 11400000, guid: 0b27a483226c12341816a5be6f2cc559,
+    type: 2}
+  skillPassiveDatabaseConfig: {fileID: 11400000, guid: 4b7a5eb6e1d83e048bacc2e390ca3b47,
+    type: 2}
+  skillSpecialDatabaseConfig: {fileID: 11400000, guid: 7e94def60a9ceb64784e36be05bcdac0,
+    type: 2}
+  skillHeroDatabaseConfig: {fileID: 11400000, guid: 78a9975787712564b918ee1551ef36cc,
+    type: 2}
+  waveDataConfig: {fileID: 11400000, guid: cf8d3fd1cced613469378618951dd439, type: 2}
+  buildingConfig: {fileID: 11400000, guid: 6da83689855cc4e49beb63f74989c24e, type: 2}

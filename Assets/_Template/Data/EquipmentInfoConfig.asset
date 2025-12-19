@@ -1,0 +1,3777 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7171836b411fe274e8e9deaea5ef4f09, type: 3}
+  m_Name: EquipmentInfoConfig
+  m_EditorClassIdentifier: 
+  Data:
+  - ID: 100001
+    Name: Merciless Bow
+    Type: 0
+    Rarity: 0
+    BasePrice: 200
+    Damage: 10
+    HP: 5
+    Description: 
+    BonusDamage: 0
+    BonusAtkRate: 0
+    BonusAtkRange: 0
+    BonusCritChance: 0
+    BonusCritDamage: 0
+    BonusResourceGenerate: 0
+    BonusBulletSpd: 0
+    BonusReduceDmgFromMob: 0
+    BonusReduceCooldown: 0
+    BonusGoldFromBattle: 0
+    BonusMaxHP: 0
+  - ID: 100101
+    Name: Merciless Bow
+    Type: 0
+    Rarity: 1
+    BasePrice: 200
+    Damage: 19
+    HP: 10
+    Description: 
+    BonusDamage: 5
+    BonusAtkRate: 0
+    BonusAtkRange: 0
+    BonusCritChance: 0
+    BonusCritDamage: 0
+    BonusResourceGenerate: 0
+    BonusBulletSpd: 0
+    BonusReduceDmgFromMob: 0
+    BonusReduceCooldown: 0
+    BonusGoldFromBattle: 0
+    BonusMaxHP: 0
+  - ID: 100201
+    Name: Merciless Bow
+    Type: 0
+    Rarity: 2
+    BasePrice: 200
+    Damage: 23
+    HP: 12
+    Description: 
+    BonusDamage: 0
+    BonusAtkRate: 10
+    BonusAtkRange: 0
+    BonusCritChance: 0
+    BonusCritDamage: 0
+    BonusResourceGenerate: 0
+    BonusBulletSpd: 0
+    BonusReduceDmgFromMob: 0
+    BonusReduceCooldown: 0
+    BonusGoldFromBattle: 0
+    BonusMaxHP: 0
+  - ID: 100301
+    Name: Merciless Bow
+    Type: 0
+    Rarity: 3
+    BasePrice: 200
+    Damage: 27
+    HP: 14
+    Description: 
+    BonusDamage: 0
+    BonusAtkRate: 0
+    BonusAtkRange: 0
+    BonusCritChance: 0
+    BonusCritDamage: 0
+    BonusResourceGenerate: 0
+    BonusBulletSpd: 0
+    BonusReduceDmgFromMob: 0
+    BonusReduceCooldown: 0
+    BonusGoldFromBattle: 0
+    BonusMaxHP: 0
+  - ID: 100401
+    Name: Merciless Bow
+    Type: 0
+    Rarity: 4
+    BasePrice: 200
+    Damage: 31
+    HP: 16
+    Description: 
+    BonusDamage: 0
+    BonusAtkRate: 0
+    BonusAtkRange: 0
+    BonusCritChance: 0
+    BonusCritDamage: 0
+    BonusResourceGenerate: 0
+    BonusBulletSpd: 0
+    BonusReduceDmgFromMob: 0
+    BonusReduceCooldown: 0
+    BonusGoldFromBattle: 0
+    BonusMaxHP: 0
+  - ID: 100501
+    Name: Merciless Bow
+    Type: 0
+    Rarity: 5
+    BasePrice: 200
+    Damage: 40
+    HP: 20
+    Description: 
+    BonusDamage: 10
+    BonusAtkRate: 0
+    BonusAtkRange: 0
+    BonusCritChance: 0
+    BonusCritDamage: 0
+    BonusResourceGenerate: 0
+    BonusBulletSpd: 0
+    BonusReduceDmgFromMob: 0
+    BonusReduceCooldown: 0
+    BonusGoldFromBattle: 0
+    BonusMaxHP: 0
+  - ID: 100601
+    Name: Merciless Bow
+    Type: 0
+    Rarity: 6
+    BasePrice: 200
+    Damage: 44
+    HP: 22
+    Description: 
+    BonusDamage: 0
+    BonusAtkRate: 0
+    BonusAtkRange: 0
+    BonusCritChance: 0
+    BonusCritDamage: 0
+    BonusResourceGenerate: 0
+    BonusBulletSpd: 0
+    BonusReduceDmgFromMob: 0
+    BonusReduceCooldown: 0
+    BonusGoldFromBattle: 0
+    BonusMaxHP: 0
+  - ID: 100701
+    Name: Merciless Bow
+    Type: 0
+    Rarity: 7
+    BasePrice: 200
+    Damage: 48
+    HP: 24
+    Description: 
+    BonusDamage: 0
+    BonusAtkRate: 0
+    BonusAtkRange: 0
+    BonusCritChance: 0
+    BonusCritDamage: 0
+    BonusResourceGenerate: 0
+    BonusBulletSpd: 0
+    BonusReduceDmgFromMob: 0
+    BonusReduceCooldown: 0
+    BonusGoldFromBattle: 0
+    BonusMaxHP: 0
+  - ID: 100801
+    Name: Merciless Bow
+    Type: 0
+    Rarity: 8
+    BasePrice: 200
+    Damage: 52
+    HP: 26
+    Description: 
+    BonusDamage: 0
+    BonusAtkRate: 0
+    BonusAtkRange: 0
+    BonusCritChance: 0
+    BonusCritDamage: 0
+    BonusResourceGenerate: 0
+    BonusBulletSpd: 0
+    BonusReduceDmgFromMob: 0
+    BonusReduceCooldown: 0
+    BonusGoldFromBattle: 0
+    BonusMaxHP: 0
+  - ID: 100901
+    Name: Merciless Bow
+    Type: 0
+    Rarity: 9
+    BasePrice: 200
+    Damage: 56
+    HP: 28
+    Description: 
+    BonusDamage: 0
+    BonusAtkRate: 0
+    BonusAtkRange: 0
+    BonusCritChance: 0
+    BonusCritDamage: 0
+    BonusResourceGenerate: 0
+    BonusBulletSpd: 0
+    BonusReduceDmgFromMob: 0
+    BonusReduceCooldown: 0
+    BonusGoldFromBattle: 0
+    BonusMaxHP: 0
+  - ID: 101001
+    Name: Merciless Bow
+    Type: 0
+    Rarity: 10
+    BasePrice: 200
+    Damage: 60
+    HP: 30
+    Description: 
+    BonusDamage: 0
+    BonusAtkRate: 0
+    BonusAtkRange: 0
+    BonusCritChance: 0
+    BonusCritDamage: 0
+    BonusResourceGenerate: 0
+    BonusBulletSpd: 0
+    BonusReduceDmgFromMob: 0
+    BonusReduceCooldown: 0
+    BonusGoldFromBattle: 0
+    BonusMaxHP: 0
+  - ID: 100002
+    Name: Long Sword
+    Type: 0
+    Rarity: 0
+    BasePrice: 200
+    Damage: 10
+    HP: 5
+    Description: 
+    BonusDamage: 0
+    BonusAtkRate: 0
+    BonusAtkRange: 0
+    BonusCritChance: 0
+    BonusCritDamage: 0
+    BonusResourceGenerate: 0
+    BonusBulletSpd: 0
+    BonusReduceDmgFromMob: 0
+    BonusReduceCooldown: 0
+    BonusGoldFromBattle: 0
+    BonusMaxHP: 0
+  - ID: 100102
+    Name: Long Sword
+    Type: 0
+    Rarity: 1
+    BasePrice: 200
+    Damage: 19
+    HP: 10
+    Description: 
+    BonusDamage: 5
+    BonusAtkRate: 0
+    BonusAtkRange: 0
+    BonusCritChance: 0
+    BonusCritDamage: 0
+    BonusResourceGenerate: 0
+    BonusBulletSpd: 0
+    BonusReduceDmgFromMob: 0
+    BonusReduceCooldown: 0
+    BonusGoldFromBattle: 0
+    BonusMaxHP: 0
+  - ID: 100202
+    Name: Long Sword
+    Type: 0
+    Rarity: 2
+    BasePrice: 200
+    Damage: 23
+    HP: 12
+    Description: 
+    BonusDamage: 0
+    BonusAtkRate: 0
+    BonusAtkRange: 10
+    BonusCritChance: 0
+    BonusCritDamage: 0
+    BonusResourceGenerate: 0
+    BonusBulletSpd: 0
+    BonusReduceDmgFromMob: 0
+    BonusReduceCooldown: 0
+    BonusGoldFromBattle: 0
+    BonusMaxHP: 0
+  - ID: 100302
+    Name: Long Sword
+    Type: 0
+    Rarity: 3
+    BasePrice: 200
+    Damage: 27
+    HP: 14
+    Description: 
+    BonusDamage: 0
+    BonusAtkRate: 0
+    BonusAtkRange: 0
+    BonusCritChance: 0
+    BonusCritDamage: 0
+    BonusResourceGenerate: 0
+    BonusBulletSpd: 0
+    BonusReduceDmgFromMob: 0
+    BonusReduceCooldown: 0
+    BonusGoldFromBattle: 0
+    BonusMaxHP: 0
+  - ID: 100402
+    Name: Long Sword
+    Type: 0
+    Rarity: 4
+    BasePrice: 200
+    Damage: 31
+    HP: 16
+    Description: 
+    BonusDamage: 0
+    BonusAtkRate: 0
+    BonusAtkRange: 0
+    BonusCritChance: 0
+    BonusCritDamage: 0
+    BonusResourceGenerate: 0
+    BonusBulletSpd: 0
+    BonusReduceDmgFromMob: 0
+    BonusReduceCooldown: 0
+    BonusGoldFromBattle: 0
+    BonusMaxHP: 0
+  - ID: 100502
+    Name: Long Sword
+    Type: 0
+    Rarity: 5
+    BasePrice: 200
+    Damage: 40
+    HP: 20
+    Description: 
+    BonusDamage: 10
+    BonusAtkRate: 0
+    BonusAtkRange: 0
+    BonusCritChance: 0
+    BonusCritDamage: 0
+    BonusResourceGenerate: 0
+    BonusBulletSpd: 0
+    BonusReduceDmgFromMob: 0
+    BonusReduceCooldown: 0
+    BonusGoldFromBattle: 0
+    BonusMaxHP: 0
+  - ID: 100602
+    Name: Long Sword
+    Type: 0
+    Rarity: 6
+    BasePrice: 200
+    Damage: 44
+    HP: 22
+    Description: 
+    BonusDamage: 0
+    BonusAtkRate: 0
+    BonusAtkRange: 0
+    BonusCritChance: 0
+    BonusCritDamage: 0
+    BonusResourceGenerate: 0
+    BonusBulletSpd: 0
+    BonusReduceDmgFromMob: 0
+    BonusReduceCooldown: 0
+    BonusGoldFromBattle: 0
+    BonusMaxHP: 0
+  - ID: 100702
+    Name: Long Sword
+    Type: 0
+    Rarity: 7
+    BasePrice: 200
+    Damage: 48
+    HP: 24
+    Description: 
+    BonusDamage: 0
+    BonusAtkRate: 0
+    BonusAtkRange: 0
+    BonusCritChance: 0
+    BonusCritDamage: 0
+    BonusResourceGenerate: 0
+    BonusBulletSpd: 0
+    BonusReduceDmgFromMob: 0
+    BonusReduceCooldown: 0
+    BonusGoldFromBattle: 0
+    BonusMaxHP: 0
+  - ID: 100802
+    Name: Long Sword
+    Type: 0
+    Rarity: 8
+    BasePrice: 200
+    Damage: 52
+    HP: 26
+    Description: 
+    BonusDamage: 0
+    BonusAtkRate: 0
+    BonusAtkRange: 0
+    BonusCritChance: 0
+    BonusCritDamage: 0
+    BonusResourceGenerate: 0
+    BonusBulletSpd: 0
+    BonusReduceDmgFromMob: 0
+    BonusReduceCooldown: 0
+    BonusGoldFromBattle: 0
+    BonusMaxHP: 0
+  - ID: 100902
+    Name: Long Sword
+    Type: 0
+    Rarity: 9
+    BasePrice: 200
+    Damage: 56
+    HP: 28
+    Description: 
+    BonusDamage: 0
+    BonusAtkRate: 0
+    BonusAtkRange: 0
+    BonusCritChance: 0
+    BonusCritDamage: 0
+    BonusResourceGenerate: 0
+    BonusBulletSpd: 0
+    BonusReduceDmgFromMob: 0
+    BonusReduceCooldown: 0
+    BonusGoldFromBattle: 0
+    BonusMaxHP: 0
+  - ID: 101002
+    Name: Long Sword
+    Type: 0
+    Rarity: 10
+    BasePrice: 200
+    Damage: 60
+    HP: 30
+    Description: 
+    BonusDamage: 0
+    BonusAtkRate: 0
+    BonusAtkRange: 0
+    BonusCritChance: 0
+    BonusCritDamage: 0
+    BonusResourceGenerate: 0
+    BonusBulletSpd: 0
+    BonusReduceDmgFromMob: 0
+    BonusReduceCooldown: 0
+    BonusGoldFromBattle: 0
+    BonusMaxHP: 0
+  - ID: 100003
+    Name: Mage Staff
+    Type: 0
+    Rarity: 0
+    BasePrice: 200
+    Damage: 10
+    HP: 5
+    Description: 
+    BonusDamage: 5
+    BonusAtkRate: 0
+    BonusAtkRange: 0
+    BonusCritChance: 0
+    BonusCritDamage: 0
+    BonusResourceGenerate: 0
+    BonusBulletSpd: 0
+    BonusReduceDmgFromMob: 0
+    BonusReduceCooldown: 0
+    BonusGoldFromBattle: 0
+    BonusMaxHP: 0
+  - ID: 100103
+    Name: Mage Staff
+    Type: 0
+    Rarity: 1
+    BasePrice: 200
+    Damage: 19
+    HP: 10
+    Description: 
+    BonusDamage: 0
+    BonusAtkRate: 0
+    BonusAtkRange: 0
+    BonusCritChance: 0
+    BonusCritDamage: 10
+    BonusResourceGenerate: 0
+    BonusBulletSpd: 0
+    BonusReduceDmgFromMob: 0
+    BonusReduceCooldown: 0
+    BonusGoldFromBattle: 0
+    BonusMaxHP: 0
+  - ID: 100203
+    Name: Mage Staff
+    Type: 0
+    Rarity: 2
+    BasePrice: 200
+    Damage: 23
+    HP: 12
+    Description: 
+    BonusDamage: 0
+    BonusAtkRate: 0
+    BonusAtkRange: 0
+    BonusCritChance: 0
+    BonusCritDamage: 0
+    BonusResourceGenerate: 0
+    BonusBulletSpd: 0
+    BonusReduceDmgFromMob: 0
+    BonusReduceCooldown: 0
+    BonusGoldFromBattle: 0
+    BonusMaxHP: 0
+  - ID: 100303
+    Name: Mage Staff
+    Type: 0
+    Rarity: 3
+    BasePrice: 200
+    Damage: 27
+    HP: 14
+    Description: 
+    BonusDamage: 0
+    BonusAtkRate: 0
+    BonusAtkRange: 0
+    BonusCritChance: 0
+    BonusCritDamage: 0
+    BonusResourceGenerate: 0
+    BonusBulletSpd: 0
+    BonusReduceDmgFromMob: 0
+    BonusReduceCooldown: 0
+    BonusGoldFromBattle: 0
+    BonusMaxHP: 0
+  - ID: 100403
+    Name: Mage Staff
+    Type: 0
+    Rarity: 4
+    BasePrice: 200
+    Damage: 31
+    HP: 16
+    Description: 
+    BonusDamage: 10
+    BonusAtkRate: 0
+    BonusAtkRange: 0
+    BonusCritChance: 0
+    BonusCritDamage: 0
+    BonusResourceGenerate: 0
+    BonusBulletSpd: 0
+    BonusReduceDmgFromMob: 0
+    BonusReduceCooldown: 0
+    BonusGoldFromBattle: 0
+    BonusMaxHP: 0
+  - ID: 100503
+    Name: Mage Staff
+    Type: 0
+    Rarity: 5
+    BasePrice: 200
+    Damage: 40
+    HP: 20
+    Description: 
+    BonusDamage: 0
+    BonusAtkRate: 0
+    BonusAtkRange: 0
+    BonusCritChance: 0
+    BonusCritDamage: 0
+    BonusResourceGenerate: 0
+    BonusBulletSpd: 0
+    BonusReduceDmgFromMob: 0
+    BonusReduceCooldown: 0
+    BonusGoldFromBattle: 0
+    BonusMaxHP: 0
+  - ID: 100603
+    Name: Mage Staff
+    Type: 0
+    Rarity: 6
+    BasePrice: 200
+    Damage: 44
+    HP: 22
+    Description: 
+    BonusDamage: 0
+    BonusAtkRate: 0
+    BonusAtkRange: 0
+    BonusCritChance: 0
+    BonusCritDamage: 0
+    BonusResourceGenerate: 0
+    BonusBulletSpd: 0
+    BonusReduceDmgFromMob: 0
+    BonusReduceCooldown: 0
+    BonusGoldFromBattle: 0
+    BonusMaxHP: 0
+  - ID: 100703
+    Name: Mage Staff
+    Type: 0
+    Rarity: 7
+    BasePrice: 200
+    Damage: 48
+    HP: 24
+    Description: 
+    BonusDamage: 0
+    BonusAtkRate: 0
+    BonusAtkRange: 0
+    BonusCritChance: 0
+    BonusCritDamage: 0
+    BonusResourceGenerate: 0
+    BonusBulletSpd: 0
+    BonusReduceDmgFromMob: 0
+    BonusReduceCooldown: 0
+    BonusGoldFromBattle: 0
+    BonusMaxHP: 0
+  - ID: 100803
+    Name: Mage Staff
+    Type: 0
+    Rarity: 8
+    BasePrice: 200
+    Damage: 52
+    HP: 26
+    Description: 
+    BonusDamage: 0
+    BonusAtkRate: 0
+    BonusAtkRange: 0
+    BonusCritChance: 0
+    BonusCritDamage: 0
+    BonusResourceGenerate: 0
+    BonusBulletSpd: 0
+    BonusReduceDmgFromMob: 0
+    BonusReduceCooldown: 0
+    BonusGoldFromBattle: 0
+    BonusMaxHP: 0
+  - ID: 100903
+    Name: Mage Staff
+    Type: 0
+    Rarity: 9
+    BasePrice: 200
+    Damage: 56
+    HP: 28
+    Description: 
+    BonusDamage: 0
+    BonusAtkRate: 0
+    BonusAtkRange: 0
+    BonusCritChance: 0
+    BonusCritDamage: 0
+    BonusResourceGenerate: 0
+    BonusBulletSpd: 0
+    BonusReduceDmgFromMob: 0
+    BonusReduceCooldown: 0
+    BonusGoldFromBattle: 0
+    BonusMaxHP: 0
+  - ID: 101003
+    Name: Mage Staff
+    Type: 0
+    Rarity: 10
+    BasePrice: 200
+    Damage: 60
+    HP: 30
+    Description: 
+    BonusDamage: 0
+    BonusAtkRate: 0
+    BonusAtkRange: 0
+    BonusCritChance: 0
+    BonusCritDamage: 0
+    BonusResourceGenerate: 0
+    BonusBulletSpd: 0
+    BonusReduceDmgFromMob: 0
+    BonusReduceCooldown: 0
+    BonusGoldFromBattle: 0
+    BonusMaxHP: 0
+  - ID: 110004
+    Name: Phantom Ring
+    Type: 1
+    Rarity: 0
+    BasePrice: 200
+    Damage: 10
+    HP: 5
+    Description: 
+    BonusDamage: 0
+    BonusAtkRate: 0
+    BonusAtkRange: 0
+    BonusCritChance: 0
+    BonusCritDamage: 0
+    BonusResourceGenerate: 0
+    BonusBulletSpd: 0
+    BonusReduceDmgFromMob: 0
+    BonusReduceCooldown: 0
+    BonusGoldFromBattle: 0
+    BonusMaxHP: 0
+  - ID: 110104
+    Name: Phantom Ring
+    Type: 1
+    Rarity: 1
+    BasePrice: 200
+    Damage: 19
+    HP: 10
+    Description: 
+    BonusDamage: 0
+    BonusAtkRate: 0
+    BonusAtkRange: 0
+    BonusCritChance: 0.5
+    BonusCritDamage: 0
+    BonusResourceGenerate: 0
+    BonusBulletSpd: 0
+    BonusReduceDmgFromMob: 0
+    BonusReduceCooldown: 0
+    BonusGoldFromBattle: 0
+    BonusMaxHP: 0
+  - ID: 110204
+    Name: Phantom Ring
+    Type: 1
+    Rarity: 2
+    BasePrice: 200
+    Damage: 23
+    HP: 12
+    Description: 
+    BonusDamage: 0
+    BonusAtkRate: 0
+    BonusAtkRange: 0
+    BonusCritChance: 0
+    BonusCritDamage: 10
+    BonusResourceGenerate: 0
+    BonusBulletSpd: 0
+    BonusReduceDmgFromMob: 0
+    BonusReduceCooldown: 0
+    BonusGoldFromBattle: 0
+    BonusMaxHP: 0
+  - ID: 110304
+    Name: Phantom Ring
+    Type: 1
+    Rarity: 3
+    BasePrice: 200
+    Damage: 27
+    HP: 14
+    Description: 
+    BonusDamage: 0
+    BonusAtkRate: 0
+    BonusAtkRange: 0
+    BonusCritChance: 0
+    BonusCritDamage: 0
+    BonusResourceGenerate: 0
+    BonusBulletSpd: 0
+    BonusReduceDmgFromMob: 0
+    BonusReduceCooldown: 0
+    BonusGoldFromBattle: 0
+    BonusMaxHP: 0
+  - ID: 110404
+    Name: Phantom Ring
+    Type: 1
+    Rarity: 4
+    BasePrice: 200
+    Damage: 31
+    HP: 16
+    Description: 
+    BonusDamage: 0
+    BonusAtkRate: 0
+    BonusAtkRange: 0
+    BonusCritChance: 0
+    BonusCritDamage: 0
+    BonusResourceGenerate: 0
+    BonusBulletSpd: 0
+    BonusReduceDmgFromMob: 0
+    BonusReduceCooldown: 0
+    BonusGoldFromBattle: 0
+    BonusMaxHP: 0
+  - ID: 110504
+    Name: Phantom Ring
+    Type: 1
+    Rarity: 5
+    BasePrice: 200
+    Damage: 40
+    HP: 20
+    Description: 
+    BonusDamage: 0
+    BonusAtkRate: 0
+    BonusAtkRange: 0
+    BonusCritChance: 2
+    BonusCritDamage: 0
+    BonusResourceGenerate: 0
+    BonusBulletSpd: 0
+    BonusReduceDmgFromMob: 0
+    BonusReduceCooldown: 0
+    BonusGoldFromBattle: 0
+    BonusMaxHP: 0
+  - ID: 110604
+    Name: Phantom Ring
+    Type: 1
+    Rarity: 6
+    BasePrice: 200
+    Damage: 44
+    HP: 22
+    Description: 
+    BonusDamage: 0
+    BonusAtkRate: 0
+    BonusAtkRange: 0
+    BonusCritChance: 0
+    BonusCritDamage: 0
+    BonusResourceGenerate: 0
+    BonusBulletSpd: 0
+    BonusReduceDmgFromMob: 0
+    BonusReduceCooldown: 0
+    BonusGoldFromBattle: 0
+    BonusMaxHP: 0
+  - ID: 110704
+    Name: Phantom Ring
+    Type: 1
+    Rarity: 7
+    BasePrice: 200
+    Damage: 48
+    HP: 24
+    Description: 
+    BonusDamage: 0
+    BonusAtkRate: 0
+    BonusAtkRange: 0
+    BonusCritChance: 0
+    BonusCritDamage: 0
+    BonusResourceGenerate: 0
+    BonusBulletSpd: 0
+    BonusReduceDmgFromMob: 0
+    BonusReduceCooldown: 0
+    BonusGoldFromBattle: 0
+    BonusMaxHP: 0
+  - ID: 110804
+    Name: Phantom Ring
+    Type: 1
+    Rarity: 8
+    BasePrice: 200
+    Damage: 52
+    HP: 26
+    Description: 
+    BonusDamage: 0
+    BonusAtkRate: 0
+    BonusAtkRange: 0
+    BonusCritChance: 0
+    BonusCritDamage: 0
+    BonusResourceGenerate: 0
+    BonusBulletSpd: 0
+    BonusReduceDmgFromMob: 0
+    BonusReduceCooldown: 0
+    BonusGoldFromBattle: 0
+    BonusMaxHP: 0
+  - ID: 110904
+    Name: Phantom Ring
+    Type: 1
+    Rarity: 9
+    BasePrice: 200
+    Damage: 56
+    HP: 28
+    Description: 
+    BonusDamage: 0
+    BonusAtkRate: 0
+    BonusAtkRange: 0
+    BonusCritChance: 0
+    BonusCritDamage: 0
+    BonusResourceGenerate: 0
+    BonusBulletSpd: 0
+    BonusReduceDmgFromMob: 0
+    BonusReduceCooldown: 0
+    BonusGoldFromBattle: 0
+    BonusMaxHP: 0
+  - ID: 111004
+    Name: Phantom Ring
+    Type: 1
+    Rarity: 10
+    BasePrice: 200
+    Damage: 60
+    HP: 30
+    Description: 
+    BonusDamage: 0
+    BonusAtkRate: 0
+    BonusAtkRange: 0
+    BonusCritChance: 0
+    BonusCritDamage: 0
+    BonusResourceGenerate: 0
+    BonusBulletSpd: 0
+    BonusReduceDmgFromMob: 0
+    BonusReduceCooldown: 0
+    BonusGoldFromBattle: 0
+    BonusMaxHP: 0
+  - ID: 110005
+    Name: Angel Ring
+    Type: 1
+    Rarity: 0
+    BasePrice: 200
+    Damage: 10
+    HP: 5
+    Description: 
+    BonusDamage: 0
+    BonusAtkRate: 0
+    BonusAtkRange: 0
+    BonusCritChance: 0
+    BonusCritDamage: 0
+    BonusResourceGenerate: 0
+    BonusBulletSpd: 0
+    BonusReduceDmgFromMob: 0
+    BonusReduceCooldown: 0
+    BonusGoldFromBattle: 0
+    BonusMaxHP: 0
+  - ID: 110105
+    Name: Angel Ring
+    Type: 1
+    Rarity: 1
+    BasePrice: 200
+    Damage: 19
+    HP: 10
+    Description: 
+    BonusDamage: 0
+    BonusAtkRate: 0
+    BonusAtkRange: 0
+    BonusCritChance: 0.5
+    BonusCritDamage: 0
+    BonusResourceGenerate: 0
+    BonusBulletSpd: 0
+    BonusReduceDmgFromMob: 0
+    BonusReduceCooldown: 0
+    BonusGoldFromBattle: 0
+    BonusMaxHP: 0
+  - ID: 110205
+    Name: Angel Ring
+    Type: 1
+    Rarity: 2
+    BasePrice: 200
+    Damage: 23
+    HP: 12
+    Description: 
+    BonusDamage: 10
+    BonusAtkRate: 0
+    BonusAtkRange: 0
+    BonusCritChance: 0
+    BonusCritDamage: 0
+    BonusResourceGenerate: 0
+    BonusBulletSpd: 0
+    BonusReduceDmgFromMob: 0
+    BonusReduceCooldown: 0
+    BonusGoldFromBattle: 0
+    BonusMaxHP: 0
+  - ID: 110305
+    Name: Angel Ring
+    Type: 1
+    Rarity: 3
+    BasePrice: 200
+    Damage: 27
+    HP: 14
+    Description: 
+    BonusDamage: 0
+    BonusAtkRate: 0
+    BonusAtkRange: 0
+    BonusCritChance: 0
+    BonusCritDamage: 0
+    BonusResourceGenerate: 0
+    BonusBulletSpd: 0
+    BonusReduceDmgFromMob: 0
+    BonusReduceCooldown: 0
+    BonusGoldFromBattle: 0
+    BonusMaxHP: 0
+  - ID: 110405
+    Name: Angel Ring
+    Type: 1
+    Rarity: 4
+    BasePrice: 200
+    Damage: 31
+    HP: 16
+    Description: 
+    BonusDamage: 0
+    BonusAtkRate: 0
+    BonusAtkRange: 0
+    BonusCritChance: 0
+    BonusCritDamage: 0
+    BonusResourceGenerate: 0
+    BonusBulletSpd: 0
+    BonusReduceDmgFromMob: 0
+    BonusReduceCooldown: 0
+    BonusGoldFromBattle: 0
+    BonusMaxHP: 0
+  - ID: 110505
+    Name: Angel Ring
+    Type: 1
+    Rarity: 5
+    BasePrice: 200
+    Damage: 40
+    HP: 20
+    Description: 
+    BonusDamage: 0
+    BonusAtkRate: 0
+    BonusAtkRange: 0
+    BonusCritChance: 2
+    BonusCritDamage: 0
+    BonusResourceGenerate: 0
+    BonusBulletSpd: 0
+    BonusReduceDmgFromMob: 0
+    BonusReduceCooldown: 0
+    BonusGoldFromBattle: 0
+    BonusMaxHP: 0
+  - ID: 110605
+    Name: Angel Ring
+    Type: 1
+    Rarity: 6
+    BasePrice: 200
+    Damage: 44
+    HP: 22
+    Description: 
+    BonusDamage: 0
+    BonusAtkRate: 0
+    BonusAtkRange: 0
+    BonusCritChance: 0
+    BonusCritDamage: 0
+    BonusResourceGenerate: 0
+    BonusBulletSpd: 0
+    BonusReduceDmgFromMob: 0
+    BonusReduceCooldown: 0
+    BonusGoldFromBattle: 0
+    BonusMaxHP: 0
+  - ID: 110705
+    Name: Angel Ring
+    Type: 1
+    Rarity: 7
+    BasePrice: 200
+    Damage: 48
+    HP: 24
+    Description: 
+    BonusDamage: 0
+    BonusAtkRate: 0
+    BonusAtkRange: 0
+    BonusCritChance: 0
+    BonusCritDamage: 0
+    BonusResourceGenerate: 0
+    BonusBulletSpd: 0
+    BonusReduceDmgFromMob: 0
+    BonusReduceCooldown: 0
+    BonusGoldFromBattle: 0
+    BonusMaxHP: 0
+  - ID: 110805
+    Name: Angel Ring
+    Type: 1
+    Rarity: 8
+    BasePrice: 200
+    Damage: 52
+    HP: 26
+    Description: 
+    BonusDamage: 0
+    BonusAtkRate: 0
+    BonusAtkRange: 0
+    BonusCritChance: 0
+    BonusCritDamage: 0
+    BonusResourceGenerate: 0
+    BonusBulletSpd: 0
+    BonusReduceDmgFromMob: 0
+    BonusReduceCooldown: 0
+    BonusGoldFromBattle: 0
+    BonusMaxHP: 0
+  - ID: 110905
+    Name: Angel Ring
+    Type: 1
+    Rarity: 9
+    BasePrice: 200
+    Damage: 56
+    HP: 28
+    Description: 
+    BonusDamage: 0
+    BonusAtkRate: 0
+    BonusAtkRange: 0
+    BonusCritChance: 0
+    BonusCritDamage: 0
+    BonusResourceGenerate: 0
+    BonusBulletSpd: 0
+    BonusReduceDmgFromMob: 0
+    BonusReduceCooldown: 0
+    BonusGoldFromBattle: 0
+    BonusMaxHP: 0
+  - ID: 111005
+    Name: Angel Ring
+    Type: 1
+    Rarity: 10
+    BasePrice: 200
+    Damage: 60
+    HP: 30
+    Description: 
+    BonusDamage: 0
+    BonusAtkRate: 0
+    BonusAtkRange: 0
+    BonusCritChance: 0
+    BonusCritDamage: 0
+    BonusResourceGenerate: 0
+    BonusBulletSpd: 0
+    BonusReduceDmgFromMob: 0
+    BonusReduceCooldown: 0
+    BonusGoldFromBattle: 0
+    BonusMaxHP: 0
+  - ID: 110006
+    Name: Magus Ring
+    Type: 1
+    Rarity: 0
+    BasePrice: 200
+    Damage: 10
+    HP: 5
+    Description: 
+    BonusDamage: 0
+    BonusAtkRate: 0
+    BonusAtkRange: 0
+    BonusCritChance: 0
+    BonusCritDamage: 0
+    BonusResourceGenerate: 0
+    BonusBulletSpd: 0
+    BonusReduceDmgFromMob: 0
+    BonusReduceCooldown: 0
+    BonusGoldFromBattle: 0
+    BonusMaxHP: 0
+  - ID: 110106
+    Name: Magus Ring
+    Type: 1
+    Rarity: 1
+    BasePrice: 200
+    Damage: 19
+    HP: 10
+    Description: 
+    BonusDamage: 0
+    BonusAtkRate: 0
+    BonusAtkRange: 0
+    BonusCritChance: 0.5
+    BonusCritDamage: 0
+    BonusResourceGenerate: 0
+    BonusBulletSpd: 0
+    BonusReduceDmgFromMob: 0
+    BonusReduceCooldown: 0
+    BonusGoldFromBattle: 0
+    BonusMaxHP: 0
+  - ID: 110206
+    Name: Magus Ring
+    Type: 1
+    Rarity: 2
+    BasePrice: 200
+    Damage: 23
+    HP: 12
+    Description: 
+    BonusDamage: 10
+    BonusAtkRate: 0
+    BonusAtkRange: 0
+    BonusCritChance: 0
+    BonusCritDamage: 0
+    BonusResourceGenerate: 0
+    BonusBulletSpd: 0
+    BonusReduceDmgFromMob: 0
+    BonusReduceCooldown: 0
+    BonusGoldFromBattle: 0
+    BonusMaxHP: 0
+  - ID: 110306
+    Name: Magus Ring
+    Type: 1
+    Rarity: 3
+    BasePrice: 200
+    Damage: 27
+    HP: 14
+    Description: 
+    BonusDamage: 0
+    BonusAtkRate: 0
+    BonusAtkRange: 0
+    BonusCritChance: 0
+    BonusCritDamage: 0
+    BonusResourceGenerate: 0
+    BonusBulletSpd: 0
+    BonusReduceDmgFromMob: 0
+    BonusReduceCooldown: 0
+    BonusGoldFromBattle: 0
+    BonusMaxHP: 0
+  - ID: 110406
+    Name: Magus Ring
+    Type: 1
+    Rarity: 4
+    BasePrice: 200
+    Damage: 31
+    HP: 16
+    Description: 
+    BonusDamage: 0
+    BonusAtkRate: 0
+    BonusAtkRange: 0
+    BonusCritChance: 0
+    BonusCritDamage: 0
+    BonusResourceGenerate: 0
+    BonusBulletSpd: 0
+    BonusReduceDmgFromMob: 0
+    BonusReduceCooldown: 0
+    BonusGoldFromBattle: 0
+    BonusMaxHP: 0
+  - ID: 110506
+    Name: Magus Ring
+    Type: 1
+    Rarity: 5
+    BasePrice: 200
+    Damage: 40
+    HP: 20
+    Description: 
+    BonusDamage: 0
+    BonusAtkRate: 0
+    BonusAtkRange: 0
+    BonusCritChance: 2
+    BonusCritDamage: 0
+    BonusResourceGenerate: 0
+    BonusBulletSpd: 0
+    BonusReduceDmgFromMob: 0
+    BonusReduceCooldown: 0
+    BonusGoldFromBattle: 0
+    BonusMaxHP: 0
+  - ID: 110606
+    Name: Magus Ring
+    Type: 1
+    Rarity: 6
+    BasePrice: 200
+    Damage: 44
+    HP: 22
+    Description: 
+    BonusDamage: 0
+    BonusAtkRate: 0
+    BonusAtkRange: 0
+    BonusCritChance: 0
+    BonusCritDamage: 0
+    BonusResourceGenerate: 0
+    BonusBulletSpd: 0
+    BonusReduceDmgFromMob: 0
+    BonusReduceCooldown: 0
+    BonusGoldFromBattle: 0
+    BonusMaxHP: 0
+  - ID: 110706
+    Name: Magus Ring
+    Type: 1
+    Rarity: 7
+    BasePrice: 200
+    Damage: 48
+    HP: 24
+    Description: 
+    BonusDamage: 0
+    BonusAtkRate: 0
+    BonusAtkRange: 0
+    BonusCritChance: 0
+    BonusCritDamage: 0
+    BonusResourceGenerate: 0
+    BonusBulletSpd: 0
+    BonusReduceDmgFromMob: 0
+    BonusReduceCooldown: 0
+    BonusGoldFromBattle: 0
+    BonusMaxHP: 0
+  - ID: 110806
+    Name: Magus Ring
+    Type: 1
+    Rarity: 8
+    BasePrice: 200
+    Damage: 52
+    HP: 26
+    Description: 
+    BonusDamage: 0
+    BonusAtkRate: 0
+    BonusAtkRange: 0
+    BonusCritChance: 0
+    BonusCritDamage: 0
+    BonusResourceGenerate: 0
+    BonusBulletSpd: 0
+    BonusReduceDmgFromMob: 0
+    BonusReduceCooldown: 0
+    BonusGoldFromBattle: 0
+    BonusMaxHP: 0
+  - ID: 110906
+    Name: Magus Ring
+    Type: 1
+    Rarity: 9
+    BasePrice: 200
+    Damage: 56
+    HP: 28
+    Description: 
+    BonusDamage: 0
+    BonusAtkRate: 0
+    BonusAtkRange: 0
+    BonusCritChance: 0
+    BonusCritDamage: 0
+    BonusResourceGenerate: 0
+    BonusBulletSpd: 0
+    BonusReduceDmgFromMob: 0
+    BonusReduceCooldown: 0
+    BonusGoldFromBattle: 0
+    BonusMaxHP: 0
+  - ID: 111006
+    Name: Magus Ring
+    Type: 1
+    Rarity: 10
+    BasePrice: 200
+    Damage: 60
+    HP: 30
+    Description: 
+    BonusDamage: 0
+    BonusAtkRate: 0
+    BonusAtkRange: 0
+    BonusCritChance: 0
+    BonusCritDamage: 0
+    BonusResourceGenerate: 0
+    BonusBulletSpd: 0
+    BonusReduceDmgFromMob: 0
+    BonusReduceCooldown: 0
+    BonusGoldFromBattle: 0
+    BonusMaxHP: 0
+  - ID: 120007
+    Name: Unicorn Necklace
+    Type: 2
+    Rarity: 0
+    BasePrice: 200
+    Damage: 10
+    HP: 5
+    Description: 
+    BonusDamage: 0
+    BonusAtkRate: 0
+    BonusAtkRange: 0
+    BonusCritChance: 0
+    BonusCritDamage: 0
+    BonusResourceGenerate: 0
+    BonusBulletSpd: 0
+    BonusReduceDmgFromMob: 0
+    BonusReduceCooldown: 0
+    BonusGoldFromBattle: 0
+    BonusMaxHP: 0
+  - ID: 120107
+    Name: Unicorn Necklace
+    Type: 2
+    Rarity: 1
+    BasePrice: 200
+    Damage: 19
+    HP: 10
+    Description: 
+    BonusDamage: 0
+    BonusAtkRate: 0
+    BonusAtkRange: 0
+    BonusCritChance: 0
+    BonusCritDamage: 10
+    BonusResourceGenerate: 0
+    BonusBulletSpd: 0
+    BonusReduceDmgFromMob: 0
+    BonusReduceCooldown: 0
+    BonusGoldFromBattle: 0
+    BonusMaxHP: 0
+  - ID: 120207
+    Name: Unicorn Necklace
+    Type: 2
+    Rarity: 2
+    BasePrice: 200
+    Damage: 23
+    HP: 12
+    Description: 
+    BonusDamage: 0
+    BonusAtkRate: 0
+    BonusAtkRange: 0
+    BonusCritChance: 0
+    BonusCritDamage: 0
+    BonusResourceGenerate: 5
+    BonusBulletSpd: 0
+    BonusReduceDmgFromMob: 0
+    BonusReduceCooldown: 0
+    BonusGoldFromBattle: 0
+    BonusMaxHP: 0
+  - ID: 120307
+    Name: Unicorn Necklace
+    Type: 2
+    Rarity: 3
+    BasePrice: 200
+    Damage: 27
+    HP: 14
+    Description: 
+    BonusDamage: 0
+    BonusAtkRate: 0
+    BonusAtkRange: 0
+    BonusCritChance: 0
+    BonusCritDamage: 0
+    BonusResourceGenerate: 0
+    BonusBulletSpd: 0
+    BonusReduceDmgFromMob: 0
+    BonusReduceCooldown: 0
+    BonusGoldFromBattle: 0
+    BonusMaxHP: 0
+  - ID: 120407
+    Name: Unicorn Necklace
+    Type: 2
+    Rarity: 4
+    BasePrice: 200
+    Damage: 31
+    HP: 16
+    Description: 
+    BonusDamage: 0
+    BonusAtkRate: 0
+    BonusAtkRange: 0
+    BonusCritChance: 0
+    BonusCritDamage: 0
+    BonusResourceGenerate: 0
+    BonusBulletSpd: 0
+    BonusReduceDmgFromMob: 0
+    BonusReduceCooldown: 0
+    BonusGoldFromBattle: 0
+    BonusMaxHP: 0
+  - ID: 120507
+    Name: Unicorn Necklace
+    Type: 2
+    Rarity: 5
+    BasePrice: 200
+    Damage: 40
+    HP: 20
+    Description: 
+    BonusDamage: 0
+    BonusAtkRate: 0
+    BonusAtkRange: 0
+    BonusCritChance: 0
+    BonusCritDamage: 25
+    BonusResourceGenerate: 0
+    BonusBulletSpd: 0
+    BonusReduceDmgFromMob: 0
+    BonusReduceCooldown: 0
+    BonusGoldFromBattle: 0
+    BonusMaxHP: 0
+  - ID: 120607
+    Name: Unicorn Necklace
+    Type: 2
+    Rarity: 6
+    BasePrice: 200
+    Damage: 44
+    HP: 22
+    Description: 
+    BonusDamage: 0
+    BonusAtkRate: 0
+    BonusAtkRange: 0
+    BonusCritChance: 0
+    BonusCritDamage: 0
+    BonusResourceGenerate: 0
+    BonusBulletSpd: 0
+    BonusReduceDmgFromMob: 0
+    BonusReduceCooldown: 0
+    BonusGoldFromBattle: 0
+    BonusMaxHP: 0
+  - ID: 120707
+    Name: Unicorn Necklace
+    Type: 2
+    Rarity: 7
+    BasePrice: 200
+    Damage: 48
+    HP: 24
+    Description: 
+    BonusDamage: 0
+    BonusAtkRate: 0
+    BonusAtkRange: 0
+    BonusCritChance: 0
+    BonusCritDamage: 0
+    BonusResourceGenerate: 0
+    BonusBulletSpd: 0
+    BonusReduceDmgFromMob: 0
+    BonusReduceCooldown: 0
+    BonusGoldFromBattle: 0
+    BonusMaxHP: 0
+  - ID: 120807
+    Name: Unicorn Necklace
+    Type: 2
+    Rarity: 8
+    BasePrice: 200
+    Damage: 52
+    HP: 26
+    Description: 
+    BonusDamage: 0
+    BonusAtkRate: 0
+    BonusAtkRange: 0
+    BonusCritChance: 0
+    BonusCritDamage: 0
+    BonusResourceGenerate: 0
+    BonusBulletSpd: 0
+    BonusReduceDmgFromMob: 0
+    BonusReduceCooldown: 0
+    BonusGoldFromBattle: 0
+    BonusMaxHP: 0
+  - ID: 120907
+    Name: Unicorn Necklace
+    Type: 2
+    Rarity: 9
+    BasePrice: 200
+    Damage: 56
+    HP: 28
+    Description: 
+    BonusDamage: 0
+    BonusAtkRate: 0
+    BonusAtkRange: 0
+    BonusCritChance: 0
+    BonusCritDamage: 0
+    BonusResourceGenerate: 0
+    BonusBulletSpd: 0
+    BonusReduceDmgFromMob: 0
+    BonusReduceCooldown: 0
+    BonusGoldFromBattle: 0
+    BonusMaxHP: 0
+  - ID: 121007
+    Name: Unicorn Necklace
+    Type: 2
+    Rarity: 10
+    BasePrice: 200
+    Damage: 60
+    HP: 30
+    Description: 
+    BonusDamage: 0
+    BonusAtkRate: 0
+    BonusAtkRange: 0
+    BonusCritChance: 0
+    BonusCritDamage: 0
+    BonusResourceGenerate: 0
+    BonusBulletSpd: 0
+    BonusReduceDmgFromMob: 0
+    BonusReduceCooldown: 0
+    BonusGoldFromBattle: 0
+    BonusMaxHP: 0
+  - ID: 120008
+    Name: Guardian Necklace
+    Type: 2
+    Rarity: 0
+    BasePrice: 200
+    Damage: 10
+    HP: 5
+    Description: 
+    BonusDamage: 0
+    BonusAtkRate: 0
+    BonusAtkRange: 0
+    BonusCritChance: 0
+    BonusCritDamage: 0
+    BonusResourceGenerate: 0
+    BonusBulletSpd: 0
+    BonusReduceDmgFromMob: 0
+    BonusReduceCooldown: 0
+    BonusGoldFromBattle: 0
+    BonusMaxHP: 0
+  - ID: 120108
+    Name: Guardian Necklace
+    Type: 2
+    Rarity: 1
+    BasePrice: 200
+    Damage: 19
+    HP: 10
+    Description: 
+    BonusDamage: 0
+    BonusAtkRate: 0
+    BonusAtkRange: 0
+    BonusCritChance: 0
+    BonusCritDamage: 10
+    BonusResourceGenerate: 0
+    BonusBulletSpd: 0
+    BonusReduceDmgFromMob: 0
+    BonusReduceCooldown: 0
+    BonusGoldFromBattle: 0
+    BonusMaxHP: 0
+  - ID: 120208
+    Name: Guardian Necklace
+    Type: 2
+    Rarity: 2
+    BasePrice: 200
+    Damage: 23
+    HP: 12
+    Description: 
+    BonusDamage: 0
+    BonusAtkRate: 0
+    BonusAtkRange: 0
+    BonusCritChance: 0
+    BonusCritDamage: 0
+    BonusResourceGenerate: 0
+    BonusBulletSpd: 10
+    BonusReduceDmgFromMob: 0
+    BonusReduceCooldown: 0
+    BonusGoldFromBattle: 0
+    BonusMaxHP: 0
+  - ID: 120308
+    Name: Guardian Necklace
+    Type: 2
+    Rarity: 3
+    BasePrice: 200
+    Damage: 27
+    HP: 14
+    Description: 
+    BonusDamage: 0
+    BonusAtkRate: 0
+    BonusAtkRange: 0
+    BonusCritChance: 0
+    BonusCritDamage: 0
+    BonusResourceGenerate: 0
+    BonusBulletSpd: 0
+    BonusReduceDmgFromMob: 0
+    BonusReduceCooldown: 0
+    BonusGoldFromBattle: 0
+    BonusMaxHP: 0
+  - ID: 120408
+    Name: Guardian Necklace
+    Type: 2
+    Rarity: 4
+    BasePrice: 200
+    Damage: 31
+    HP: 16
+    Description: 
+    BonusDamage: 0
+    BonusAtkRate: 0
+    BonusAtkRange: 0
+    BonusCritChance: 0
+    BonusCritDamage: 0
+    BonusResourceGenerate: 0
+    BonusBulletSpd: 0
+    BonusReduceDmgFromMob: 0
+    BonusReduceCooldown: 0
+    BonusGoldFromBattle: 0
+    BonusMaxHP: 0
+  - ID: 120508
+    Name: Guardian Necklace
+    Type: 2
+    Rarity: 5
+    BasePrice: 200
+    Damage: 40
+    HP: 20
+    Description: 
+    BonusDamage: 0
+    BonusAtkRate: 0
+    BonusAtkRange: 0
+    BonusCritChance: 0
+    BonusCritDamage: 25
+    BonusResourceGenerate: 0
+    BonusBulletSpd: 0
+    BonusReduceDmgFromMob: 0
+    BonusReduceCooldown: 0
+    BonusGoldFromBattle: 0
+    BonusMaxHP: 0
+  - ID: 120608
+    Name: Guardian Necklace
+    Type: 2
+    Rarity: 6
+    BasePrice: 200
+    Damage: 44
+    HP: 22
+    Description: 
+    BonusDamage: 0
+    BonusAtkRate: 0
+    BonusAtkRange: 0
+    BonusCritChance: 0
+    BonusCritDamage: 0
+    BonusResourceGenerate: 0
+    BonusBulletSpd: 0
+    BonusReduceDmgFromMob: 0
+    BonusReduceCooldown: 0
+    BonusGoldFromBattle: 0
+    BonusMaxHP: 0
+  - ID: 120708
+    Name: Guardian Necklace
+    Type: 2
+    Rarity: 7
+    BasePrice: 200
+    Damage: 48
+    HP: 24
+    Description: 
+    BonusDamage: 0
+    BonusAtkRate: 0
+    BonusAtkRange: 0
+    BonusCritChance: 0
+    BonusCritDamage: 0
+    BonusResourceGenerate: 0
+    BonusBulletSpd: 0
+    BonusReduceDmgFromMob: 0
+    BonusReduceCooldown: 0
+    BonusGoldFromBattle: 0
+    BonusMaxHP: 0
+  - ID: 120808
+    Name: Guardian Necklace
+    Type: 2
+    Rarity: 8
+    BasePrice: 200
+    Damage: 52
+    HP: 26
+    Description: 
+    BonusDamage: 0
+    BonusAtkRate: 0
+    BonusAtkRange: 0
+    BonusCritChance: 0
+    BonusCritDamage: 0
+    BonusResourceGenerate: 0
+    BonusBulletSpd: 0
+    BonusReduceDmgFromMob: 0
+    BonusReduceCooldown: 0
+    BonusGoldFromBattle: 0
+    BonusMaxHP: 0
+  - ID: 120908
+    Name: Guardian Necklace
+    Type: 2
+    Rarity: 9
+    BasePrice: 200
+    Damage: 56
+    HP: 28
+    Description: 
+    BonusDamage: 0
+    BonusAtkRate: 0
+    BonusAtkRange: 0
+    BonusCritChance: 0
+    BonusCritDamage: 0
+    BonusResourceGenerate: 0
+    BonusBulletSpd: 0
+    BonusReduceDmgFromMob: 0
+    BonusReduceCooldown: 0
+    BonusGoldFromBattle: 0
+    BonusMaxHP: 0
+  - ID: 121008
+    Name: Guardian Necklace
+    Type: 2
+    Rarity: 10
+    BasePrice: 200
+    Damage: 60
+    HP: 30
+    Description: 
+    BonusDamage: 0
+    BonusAtkRate: 0
+    BonusAtkRange: 0
+    BonusCritChance: 0
+    BonusCritDamage: 0
+    BonusResourceGenerate: 0
+    BonusBulletSpd: 0
+    BonusReduceDmgFromMob: 0
+    BonusReduceCooldown: 0
+    BonusGoldFromBattle: 0
+    BonusMaxHP: 0
+  - ID: 120009
+    Name: Star Necklace
+    Type: 2
+    Rarity: 0
+    BasePrice: 200
+    Damage: 10
+    HP: 5
+    Description: 
+    BonusDamage: 0
+    BonusAtkRate: 0
+    BonusAtkRange: 0
+    BonusCritChance: 0
+    BonusCritDamage: 0
+    BonusResourceGenerate: 0
+    BonusBulletSpd: 0
+    BonusReduceDmgFromMob: 0
+    BonusReduceCooldown: 0
+    BonusGoldFromBattle: 0
+    BonusMaxHP: 0
+  - ID: 120109
+    Name: Star Necklace
+    Type: 2
+    Rarity: 1
+    BasePrice: 200
+    Damage: 19
+    HP: 10
+    Description: 
+    BonusDamage: 0
+    BonusAtkRate: 0
+    BonusAtkRange: 0
+    BonusCritChance: 0
+    BonusCritDamage: 10
+    BonusResourceGenerate: 0
+    BonusBulletSpd: 0
+    BonusReduceDmgFromMob: 0
+    BonusReduceCooldown: 0
+    BonusGoldFromBattle: 0
+    BonusMaxHP: 0
+  - ID: 120209
+    Name: Star Necklace
+    Type: 2
+    Rarity: 2
+    BasePrice: 200
+    Damage: 23
+    HP: 12
+    Description: 
+    BonusDamage: 0
+    BonusAtkRate: 0
+    BonusAtkRange: 10
+    BonusCritChance: 0
+    BonusCritDamage: 0
+    BonusResourceGenerate: 0
+    BonusBulletSpd: 0
+    BonusReduceDmgFromMob: 0
+    BonusReduceCooldown: 0
+    BonusGoldFromBattle: 0
+    BonusMaxHP: 0
+  - ID: 120309
+    Name: Star Necklace
+    Type: 2
+    Rarity: 3
+    BasePrice: 200
+    Damage: 27
+    HP: 14
+    Description: 
+    BonusDamage: 0
+    BonusAtkRate: 0
+    BonusAtkRange: 0
+    BonusCritChance: 0
+    BonusCritDamage: 0
+    BonusResourceGenerate: 0
+    BonusBulletSpd: 0
+    BonusReduceDmgFromMob: 0
+    BonusReduceCooldown: 0
+    BonusGoldFromBattle: 0
+    BonusMaxHP: 0
+  - ID: 120409
+    Name: Star Necklace
+    Type: 2
+    Rarity: 4
+    BasePrice: 200
+    Damage: 31
+    HP: 16
+    Description: 
+    BonusDamage: 0
+    BonusAtkRate: 0
+    BonusAtkRange: 0
+    BonusCritChance: 0
+    BonusCritDamage: 0
+    BonusResourceGenerate: 0
+    BonusBulletSpd: 0
+    BonusReduceDmgFromMob: 0
+    BonusReduceCooldown: 0
+    BonusGoldFromBattle: 0
+    BonusMaxHP: 0
+  - ID: 120509
+    Name: Star Necklace
+    Type: 2
+    Rarity: 5
+    BasePrice: 200
+    Damage: 40
+    HP: 20
+    Description: 
+    BonusDamage: 0
+    BonusAtkRate: 0
+    BonusAtkRange: 0
+    BonusCritChance: 0
+    BonusCritDamage: 25
+    BonusResourceGenerate: 0
+    BonusBulletSpd: 0
+    BonusReduceDmgFromMob: 0
+    BonusReduceCooldown: 0
+    BonusGoldFromBattle: 0
+    BonusMaxHP: 0
+  - ID: 120609
+    Name: Star Necklace
+    Type: 2
+    Rarity: 6
+    BasePrice: 200
+    Damage: 44
+    HP: 22
+    Description: 
+    BonusDamage: 0
+    BonusAtkRate: 0
+    BonusAtkRange: 0
+    BonusCritChance: 0
+    BonusCritDamage: 0
+    BonusResourceGenerate: 0
+    BonusBulletSpd: 0
+    BonusReduceDmgFromMob: 0
+    BonusReduceCooldown: 0
+    BonusGoldFromBattle: 0
+    BonusMaxHP: 0
+  - ID: 120709
+    Name: Star Necklace
+    Type: 2
+    Rarity: 7
+    BasePrice: 200
+    Damage: 48
+    HP: 24
+    Description: 
+    BonusDamage: 0
+    BonusAtkRate: 0
+    BonusAtkRange: 0
+    BonusCritChance: 0
+    BonusCritDamage: 0
+    BonusResourceGenerate: 0
+    BonusBulletSpd: 0
+    BonusReduceDmgFromMob: 0
+    BonusReduceCooldown: 0
+    BonusGoldFromBattle: 0
+    BonusMaxHP: 0
+  - ID: 120809
+    Name: Star Necklace
+    Type: 2
+    Rarity: 8
+    BasePrice: 200
+    Damage: 52
+    HP: 26
+    Description: 
+    BonusDamage: 0
+    BonusAtkRate: 0
+    BonusAtkRange: 0
+    BonusCritChance: 0
+    BonusCritDamage: 0
+    BonusResourceGenerate: 0
+    BonusBulletSpd: 0
+    BonusReduceDmgFromMob: 0
+    BonusReduceCooldown: 0
+    BonusGoldFromBattle: 0
+    BonusMaxHP: 0
+  - ID: 120909
+    Name: Star Necklace
+    Type: 2
+    Rarity: 9
+    BasePrice: 200
+    Damage: 56
+    HP: 28
+    Description: 
+    BonusDamage: 0
+    BonusAtkRate: 0
+    BonusAtkRange: 0
+    BonusCritChance: 0
+    BonusCritDamage: 0
+    BonusResourceGenerate: 0
+    BonusBulletSpd: 0
+    BonusReduceDmgFromMob: 0
+    BonusReduceCooldown: 0
+    BonusGoldFromBattle: 0
+    BonusMaxHP: 0
+  - ID: 121009
+    Name: Star Necklace
+    Type: 2
+    Rarity: 10
+    BasePrice: 200
+    Damage: 60
+    HP: 30
+    Description: 
+    BonusDamage: 0
+    BonusAtkRate: 0
+    BonusAtkRange: 0
+    BonusCritChance: 0
+    BonusCritDamage: 0
+    BonusResourceGenerate: 0
+    BonusBulletSpd: 0
+    BonusReduceDmgFromMob: 0
+    BonusReduceCooldown: 0
+    BonusGoldFromBattle: 0
+    BonusMaxHP: 0
+  - ID: 130010
+    Name: Vanguard's Plate
+    Type: 4
+    Rarity: 0
+    BasePrice: 200
+    Damage: 5
+    HP: 10
+    Description: 
+    BonusDamage: 0
+    BonusAtkRate: 0
+    BonusAtkRange: 0
+    BonusCritChance: 0
+    BonusCritDamage: 0
+    BonusResourceGenerate: 0
+    BonusBulletSpd: 0
+    BonusReduceDmgFromMob: 0
+    BonusReduceCooldown: 0
+    BonusGoldFromBattle: 0
+    BonusMaxHP: 0
+  - ID: 130110
+    Name: Vanguard's Plate
+    Type: 4
+    Rarity: 1
+    BasePrice: 200
+    Damage: 10
+    HP: 13
+    Description: 
+    BonusDamage: 0
+    BonusAtkRate: 0
+    BonusAtkRange: 0
+    BonusCritChance: 0
+    BonusCritDamage: 0
+    BonusResourceGenerate: 0
+    BonusBulletSpd: 0
+    BonusReduceDmgFromMob: 0
+    BonusReduceCooldown: 0
+    BonusGoldFromBattle: 0
+    BonusMaxHP: 5
+  - ID: 130210
+    Name: Vanguard's Plate
+    Type: 4
+    Rarity: 2
+    BasePrice: 200
+    Damage: 12
+    HP: 14
+    Description: 
+    BonusDamage: 0
+    BonusAtkRate: 0
+    BonusAtkRange: 0
+    BonusCritChance: 0
+    BonusCritDamage: 0
+    BonusResourceGenerate: 0
+    BonusBulletSpd: 0
+    BonusReduceDmgFromMob: 10
+    BonusReduceCooldown: 0
+    BonusGoldFromBattle: 0
+    BonusMaxHP: 0
+  - ID: 130310
+    Name: Vanguard's Plate
+    Type: 4
+    Rarity: 3
+    BasePrice: 200
+    Damage: 14
+    HP: 15
+    Description: 
+    BonusDamage: 0
+    BonusAtkRate: 0
+    BonusAtkRange: 0
+    BonusCritChance: 0
+    BonusCritDamage: 0
+    BonusResourceGenerate: 0
+    BonusBulletSpd: 0
+    BonusReduceDmgFromMob: 0
+    BonusReduceCooldown: 0
+    BonusGoldFromBattle: 0
+    BonusMaxHP: 0
+  - ID: 130410
+    Name: Vanguard's Plate
+    Type: 4
+    Rarity: 4
+    BasePrice: 200
+    Damage: 16
+    HP: 16
+    Description: 
+    BonusDamage: 0
+    BonusAtkRate: 0
+    BonusAtkRange: 0
+    BonusCritChance: 0
+    BonusCritDamage: 0
+    BonusResourceGenerate: 0
+    BonusBulletSpd: 0
+    BonusReduceDmgFromMob: 0
+    BonusReduceCooldown: 0
+    BonusGoldFromBattle: 0
+    BonusMaxHP: 0
+  - ID: 130510
+    Name: Vanguard's Plate
+    Type: 4
+    Rarity: 5
+    BasePrice: 200
+    Damage: 20
+    HP: 18
+    Description: 
+    BonusDamage: 0
+    BonusAtkRate: 0
+    BonusAtkRange: 0
+    BonusCritChance: 0
+    BonusCritDamage: 0
+    BonusResourceGenerate: 0
+    BonusBulletSpd: 0
+    BonusReduceDmgFromMob: 0
+    BonusReduceCooldown: 0
+    BonusGoldFromBattle: 0
+    BonusMaxHP: 15
+  - ID: 130610
+    Name: Vanguard's Plate
+    Type: 4
+    Rarity: 6
+    BasePrice: 200
+    Damage: 22
+    HP: 19
+    Description: 
+    BonusDamage: 0
+    BonusAtkRate: 0
+    BonusAtkRange: 0
+    BonusCritChance: 0
+    BonusCritDamage: 0
+    BonusResourceGenerate: 0
+    BonusBulletSpd: 0
+    BonusReduceDmgFromMob: 0
+    BonusReduceCooldown: 0
+    BonusGoldFromBattle: 0
+    BonusMaxHP: 0
+  - ID: 130710
+    Name: Vanguard's Plate
+    Type: 4
+    Rarity: 7
+    BasePrice: 200
+    Damage: 24
+    HP: 20
+    Description: 
+    BonusDamage: 0
+    BonusAtkRate: 0
+    BonusAtkRange: 0
+    BonusCritChance: 0
+    BonusCritDamage: 0
+    BonusResourceGenerate: 0
+    BonusBulletSpd: 0
+    BonusReduceDmgFromMob: 0
+    BonusReduceCooldown: 0
+    BonusGoldFromBattle: 0
+    BonusMaxHP: 0
+  - ID: 130810
+    Name: Vanguard's Plate
+    Type: 4
+    Rarity: 8
+    BasePrice: 200
+    Damage: 26
+    HP: 21
+    Description: 
+    BonusDamage: 0
+    BonusAtkRate: 0
+    BonusAtkRange: 0
+    BonusCritChance: 0
+    BonusCritDamage: 0
+    BonusResourceGenerate: 0
+    BonusBulletSpd: 0
+    BonusReduceDmgFromMob: 0
+    BonusReduceCooldown: 0
+    BonusGoldFromBattle: 0
+    BonusMaxHP: 0
+  - ID: 130910
+    Name: Vanguard's Plate
+    Type: 4
+    Rarity: 9
+    BasePrice: 200
+    Damage: 28
+    HP: 22
+    Description: 
+    BonusDamage: 0
+    BonusAtkRate: 0
+    BonusAtkRange: 0
+    BonusCritChance: 0
+    BonusCritDamage: 0
+    BonusResourceGenerate: 0
+    BonusBulletSpd: 0
+    BonusReduceDmgFromMob: 0
+    BonusReduceCooldown: 0
+    BonusGoldFromBattle: 0
+    BonusMaxHP: 0
+  - ID: 131010
+    Name: Vanguard's Plate
+    Type: 4
+    Rarity: 10
+    BasePrice: 200
+    Damage: 30
+    HP: 23
+    Description: 
+    BonusDamage: 0
+    BonusAtkRate: 0
+    BonusAtkRange: 0
+    BonusCritChance: 0
+    BonusCritDamage: 0
+    BonusResourceGenerate: 0
+    BonusBulletSpd: 0
+    BonusReduceDmgFromMob: 0
+    BonusReduceCooldown: 0
+    BonusGoldFromBattle: 0
+    BonusMaxHP: 0
+  - ID: 130011
+    Name: Guardian's Plate
+    Type: 4
+    Rarity: 0
+    BasePrice: 200
+    Damage: 5
+    HP: 10
+    Description: 
+    BonusDamage: 0
+    BonusAtkRate: 0
+    BonusAtkRange: 0
+    BonusCritChance: 0
+    BonusCritDamage: 0
+    BonusResourceGenerate: 0
+    BonusBulletSpd: 0
+    BonusReduceDmgFromMob: 0
+    BonusReduceCooldown: 0
+    BonusGoldFromBattle: 0
+    BonusMaxHP: 0
+  - ID: 130111
+    Name: Guardian's Plate
+    Type: 4
+    Rarity: 1
+    BasePrice: 200
+    Damage: 10
+    HP: 13
+    Description: 
+    BonusDamage: 0
+    BonusAtkRate: 0
+    BonusAtkRange: 0
+    BonusCritChance: 0
+    BonusCritDamage: 0
+    BonusResourceGenerate: 0
+    BonusBulletSpd: 0
+    BonusReduceDmgFromMob: 0
+    BonusReduceCooldown: 0
+    BonusGoldFromBattle: 0
+    BonusMaxHP: 5
+  - ID: 130211
+    Name: Guardian's Plate
+    Type: 4
+    Rarity: 2
+    BasePrice: 200
+    Damage: 12
+    HP: 14
+    Description: 
+    BonusDamage: 0
+    BonusAtkRate: 0
+    BonusAtkRange: 0
+    BonusCritChance: 0
+    BonusCritDamage: 0
+    BonusResourceGenerate: 5
+    BonusBulletSpd: 0
+    BonusReduceDmgFromMob: 0
+    BonusReduceCooldown: 0
+    BonusGoldFromBattle: 0
+    BonusMaxHP: 0
+  - ID: 130311
+    Name: Guardian's Plate
+    Type: 4
+    Rarity: 3
+    BasePrice: 200
+    Damage: 14
+    HP: 15
+    Description: 
+    BonusDamage: 0
+    BonusAtkRate: 0
+    BonusAtkRange: 0
+    BonusCritChance: 0
+    BonusCritDamage: 0
+    BonusResourceGenerate: 0
+    BonusBulletSpd: 0
+    BonusReduceDmgFromMob: 0
+    BonusReduceCooldown: 0
+    BonusGoldFromBattle: 0
+    BonusMaxHP: 0
+  - ID: 130411
+    Name: Guardian's Plate
+    Type: 4
+    Rarity: 4
+    BasePrice: 200
+    Damage: 16
+    HP: 16
+    Description: 
+    BonusDamage: 0
+    BonusAtkRate: 0
+    BonusAtkRange: 0
+    BonusCritChance: 0
+    BonusCritDamage: 0
+    BonusResourceGenerate: 0
+    BonusBulletSpd: 0
+    BonusReduceDmgFromMob: 0
+    BonusReduceCooldown: 0
+    BonusGoldFromBattle: 0
+    BonusMaxHP: 0
+  - ID: 130511
+    Name: Guardian's Plate
+    Type: 4
+    Rarity: 5
+    BasePrice: 200
+    Damage: 20
+    HP: 18
+    Description: 
+    BonusDamage: 0
+    BonusAtkRate: 0
+    BonusAtkRange: 0
+    BonusCritChance: 0
+    BonusCritDamage: 0
+    BonusResourceGenerate: 0
+    BonusBulletSpd: 0
+    BonusReduceDmgFromMob: 0
+    BonusReduceCooldown: 0
+    BonusGoldFromBattle: 0
+    BonusMaxHP: 15
+  - ID: 130611
+    Name: Guardian's Plate
+    Type: 4
+    Rarity: 6
+    BasePrice: 200
+    Damage: 22
+    HP: 19
+    Description: 
+    BonusDamage: 0
+    BonusAtkRate: 0
+    BonusAtkRange: 0
+    BonusCritChance: 0
+    BonusCritDamage: 0
+    BonusResourceGenerate: 0
+    BonusBulletSpd: 0
+    BonusReduceDmgFromMob: 0
+    BonusReduceCooldown: 0
+    BonusGoldFromBattle: 0
+    BonusMaxHP: 0
+  - ID: 130711
+    Name: Guardian's Plate
+    Type: 4
+    Rarity: 7
+    BasePrice: 200
+    Damage: 24
+    HP: 20
+    Description: 
+    BonusDamage: 0
+    BonusAtkRate: 0
+    BonusAtkRange: 0
+    BonusCritChance: 0
+    BonusCritDamage: 0
+    BonusResourceGenerate: 0
+    BonusBulletSpd: 0
+    BonusReduceDmgFromMob: 0
+    BonusReduceCooldown: 0
+    BonusGoldFromBattle: 0
+    BonusMaxHP: 0
+  - ID: 130811
+    Name: Guardian's Plate
+    Type: 4
+    Rarity: 8
+    BasePrice: 200
+    Damage: 26
+    HP: 21
+    Description: 
+    BonusDamage: 0
+    BonusAtkRate: 0
+    BonusAtkRange: 0
+    BonusCritChance: 0
+    BonusCritDamage: 0
+    BonusResourceGenerate: 0
+    BonusBulletSpd: 0
+    BonusReduceDmgFromMob: 0
+    BonusReduceCooldown: 0
+    BonusGoldFromBattle: 0
+    BonusMaxHP: 0
+  - ID: 130911
+    Name: Guardian's Plate
+    Type: 4
+    Rarity: 9
+    BasePrice: 200
+    Damage: 28
+    HP: 22
+    Description: 
+    BonusDamage: 0
+    BonusAtkRate: 0
+    BonusAtkRange: 0
+    BonusCritChance: 0
+    BonusCritDamage: 0
+    BonusResourceGenerate: 0
+    BonusBulletSpd: 0
+    BonusReduceDmgFromMob: 0
+    BonusReduceCooldown: 0
+    BonusGoldFromBattle: 0
+    BonusMaxHP: 0
+  - ID: 131011
+    Name: Guardian's Plate
+    Type: 4
+    Rarity: 10
+    BasePrice: 200
+    Damage: 30
+    HP: 23
+    Description: 
+    BonusDamage: 0
+    BonusAtkRate: 0
+    BonusAtkRange: 0
+    BonusCritChance: 0
+    BonusCritDamage: 0
+    BonusResourceGenerate: 0
+    BonusBulletSpd: 0
+    BonusReduceDmgFromMob: 0
+    BonusReduceCooldown: 0
+    BonusGoldFromBattle: 0
+    BonusMaxHP: 0
+  - ID: 130012
+    Name: Mage's Robe
+    Type: 4
+    Rarity: 0
+    BasePrice: 200
+    Damage: 5
+    HP: 10
+    Description: 
+    BonusDamage: 0
+    BonusAtkRate: 0
+    BonusAtkRange: 0
+    BonusCritChance: 0
+    BonusCritDamage: 0
+    BonusResourceGenerate: 0
+    BonusBulletSpd: 0
+    BonusReduceDmgFromMob: 0
+    BonusReduceCooldown: 0
+    BonusGoldFromBattle: 0
+    BonusMaxHP: 0
+  - ID: 130112
+    Name: Mage's Robe
+    Type: 4
+    Rarity: 1
+    BasePrice: 200
+    Damage: 10
+    HP: 13
+    Description: 
+    BonusDamage: 0
+    BonusAtkRate: 0
+    BonusAtkRange: 0
+    BonusCritChance: 0
+    BonusCritDamage: 0
+    BonusResourceGenerate: 0
+    BonusBulletSpd: 0
+    BonusReduceDmgFromMob: 0
+    BonusReduceCooldown: 0
+    BonusGoldFromBattle: 0
+    BonusMaxHP: 5
+  - ID: 130212
+    Name: Mage's Robe
+    Type: 4
+    Rarity: 2
+    BasePrice: 200
+    Damage: 12
+    HP: 14
+    Description: 
+    BonusDamage: 0
+    BonusAtkRate: 0
+    BonusAtkRange: 0
+    BonusCritChance: 0
+    BonusCritDamage: 0
+    BonusResourceGenerate: 0
+    BonusBulletSpd: 0
+    BonusReduceDmgFromMob: 10
+    BonusReduceCooldown: 0
+    BonusGoldFromBattle: 0
+    BonusMaxHP: 0
+  - ID: 130312
+    Name: Mage's Robe
+    Type: 4
+    Rarity: 3
+    BasePrice: 200
+    Damage: 14
+    HP: 15
+    Description: 
+    BonusDamage: 0
+    BonusAtkRate: 0
+    BonusAtkRange: 0
+    BonusCritChance: 0
+    BonusCritDamage: 0
+    BonusResourceGenerate: 0
+    BonusBulletSpd: 0
+    BonusReduceDmgFromMob: 0
+    BonusReduceCooldown: 0
+    BonusGoldFromBattle: 0
+    BonusMaxHP: 0
+  - ID: 130412
+    Name: Mage's Robe
+    Type: 4
+    Rarity: 4
+    BasePrice: 200
+    Damage: 16
+    HP: 16
+    Description: 
+    BonusDamage: 0
+    BonusAtkRate: 0
+    BonusAtkRange: 0
+    BonusCritChance: 0
+    BonusCritDamage: 0
+    BonusResourceGenerate: 0
+    BonusBulletSpd: 0
+    BonusReduceDmgFromMob: 0
+    BonusReduceCooldown: 0
+    BonusGoldFromBattle: 0
+    BonusMaxHP: 0
+  - ID: 130512
+    Name: Mage's Robe
+    Type: 4
+    Rarity: 5
+    BasePrice: 200
+    Damage: 20
+    HP: 18
+    Description: 
+    BonusDamage: 0
+    BonusAtkRate: 0
+    BonusAtkRange: 0
+    BonusCritChance: 0
+    BonusCritDamage: 0
+    BonusResourceGenerate: 0
+    BonusBulletSpd: 0
+    BonusReduceDmgFromMob: 0
+    BonusReduceCooldown: 0
+    BonusGoldFromBattle: 0
+    BonusMaxHP: 15
+  - ID: 130612
+    Name: Mage's Robe
+    Type: 4
+    Rarity: 6
+    BasePrice: 200
+    Damage: 22
+    HP: 19
+    Description: 
+    BonusDamage: 0
+    BonusAtkRate: 0
+    BonusAtkRange: 0
+    BonusCritChance: 0
+    BonusCritDamage: 0
+    BonusResourceGenerate: 0
+    BonusBulletSpd: 0
+    BonusReduceDmgFromMob: 0
+    BonusReduceCooldown: 0
+    BonusGoldFromBattle: 0
+    BonusMaxHP: 0
+  - ID: 130712
+    Name: Mage's Robe
+    Type: 4
+    Rarity: 7
+    BasePrice: 200
+    Damage: 24
+    HP: 20
+    Description: 
+    BonusDamage: 0
+    BonusAtkRate: 0
+    BonusAtkRange: 0
+    BonusCritChance: 0
+    BonusCritDamage: 0
+    BonusResourceGenerate: 0
+    BonusBulletSpd: 0
+    BonusReduceDmgFromMob: 0
+    BonusReduceCooldown: 0
+    BonusGoldFromBattle: 0
+    BonusMaxHP: 0
+  - ID: 130812
+    Name: Mage's Robe
+    Type: 4
+    Rarity: 8
+    BasePrice: 200
+    Damage: 26
+    HP: 21
+    Description: 
+    BonusDamage: 0
+    BonusAtkRate: 0
+    BonusAtkRange: 0
+    BonusCritChance: 0
+    BonusCritDamage: 0
+    BonusResourceGenerate: 0
+    BonusBulletSpd: 0
+    BonusReduceDmgFromMob: 0
+    BonusReduceCooldown: 0
+    BonusGoldFromBattle: 0
+    BonusMaxHP: 0
+  - ID: 130912
+    Name: Mage's Robe
+    Type: 4
+    Rarity: 9
+    BasePrice: 200
+    Damage: 28
+    HP: 22
+    Description: 
+    BonusDamage: 0
+    BonusAtkRate: 0
+    BonusAtkRange: 0
+    BonusCritChance: 0
+    BonusCritDamage: 0
+    BonusResourceGenerate: 0
+    BonusBulletSpd: 0
+    BonusReduceDmgFromMob: 0
+    BonusReduceCooldown: 0
+    BonusGoldFromBattle: 0
+    BonusMaxHP: 0
+  - ID: 131012
+    Name: Mage's Robe
+    Type: 4
+    Rarity: 10
+    BasePrice: 200
+    Damage: 30
+    HP: 23
+    Description: 
+    BonusDamage: 0
+    BonusAtkRate: 0
+    BonusAtkRange: 0
+    BonusCritChance: 0
+    BonusCritDamage: 0
+    BonusResourceGenerate: 0
+    BonusBulletSpd: 0
+    BonusReduceDmgFromMob: 0
+    BonusReduceCooldown: 0
+    BonusGoldFromBattle: 0
+    BonusMaxHP: 0
+  - ID: 140013
+    Name: Warrior Helmet
+    Type: 3
+    Rarity: 0
+    BasePrice: 200
+    Damage: 5
+    HP: 10
+    Description: 
+    BonusDamage: 0
+    BonusAtkRate: 0
+    BonusAtkRange: 0
+    BonusCritChance: 0
+    BonusCritDamage: 0
+    BonusResourceGenerate: 0
+    BonusBulletSpd: 0
+    BonusReduceDmgFromMob: 0
+    BonusReduceCooldown: 0
+    BonusGoldFromBattle: 0
+    BonusMaxHP: 0
+  - ID: 140113
+    Name: Warrior Helmet
+    Type: 3
+    Rarity: 1
+    BasePrice: 200
+    Damage: 10
+    HP: 13
+    Description: 
+    BonusDamage: 0
+    BonusAtkRate: 0
+    BonusAtkRange: 0
+    BonusCritChance: 0
+    BonusCritDamage: 0
+    BonusResourceGenerate: 0
+    BonusBulletSpd: 0
+    BonusReduceDmgFromMob: 0
+    BonusReduceCooldown: 0
+    BonusGoldFromBattle: 0
+    BonusMaxHP: 5
+  - ID: 140213
+    Name: Warrior Helmet
+    Type: 3
+    Rarity: 2
+    BasePrice: 200
+    Damage: 12
+    HP: 14
+    Description: 
+    BonusDamage: 0
+    BonusAtkRate: 0
+    BonusAtkRange: 0
+    BonusCritChance: 0
+    BonusCritDamage: 0
+    BonusResourceGenerate: 0
+    BonusBulletSpd: 0
+    BonusReduceDmgFromMob: 0
+    BonusReduceCooldown: 0
+    BonusGoldFromBattle: 0
+    BonusMaxHP: 10
+  - ID: 140313
+    Name: Warrior Helmet
+    Type: 3
+    Rarity: 3
+    BasePrice: 200
+    Damage: 14
+    HP: 15
+    Description: 
+    BonusDamage: 0
+    BonusAtkRate: 0
+    BonusAtkRange: 0
+    BonusCritChance: 0
+    BonusCritDamage: 0
+    BonusResourceGenerate: 0
+    BonusBulletSpd: 0
+    BonusReduceDmgFromMob: 0
+    BonusReduceCooldown: 0
+    BonusGoldFromBattle: 0
+    BonusMaxHP: 0
+  - ID: 140413
+    Name: Warrior Helmet
+    Type: 3
+    Rarity: 4
+    BasePrice: 200
+    Damage: 16
+    HP: 16
+    Description: 
+    BonusDamage: 0
+    BonusAtkRate: 0
+    BonusAtkRange: 0
+    BonusCritChance: 0
+    BonusCritDamage: 0
+    BonusResourceGenerate: 0
+    BonusBulletSpd: 0
+    BonusReduceDmgFromMob: 0
+    BonusReduceCooldown: 0
+    BonusGoldFromBattle: 0
+    BonusMaxHP: 0
+  - ID: 140513
+    Name: Warrior Helmet
+    Type: 3
+    Rarity: 5
+    BasePrice: 200
+    Damage: 20
+    HP: 18
+    Description: 
+    BonusDamage: 0
+    BonusAtkRate: 0
+    BonusAtkRange: 0
+    BonusCritChance: 0
+    BonusCritDamage: 0
+    BonusResourceGenerate: 0
+    BonusBulletSpd: 0
+    BonusReduceDmgFromMob: 0
+    BonusReduceCooldown: 0
+    BonusGoldFromBattle: 0
+    BonusMaxHP: 0
+  - ID: 140613
+    Name: Warrior Helmet
+    Type: 3
+    Rarity: 6
+    BasePrice: 200
+    Damage: 22
+    HP: 19
+    Description: 
+    BonusDamage: 0
+    BonusAtkRate: 0
+    BonusAtkRange: 0
+    BonusCritChance: 0
+    BonusCritDamage: 0
+    BonusResourceGenerate: 0
+    BonusBulletSpd: 0
+    BonusReduceDmgFromMob: 0
+    BonusReduceCooldown: 0
+    BonusGoldFromBattle: 0
+    BonusMaxHP: 15
+  - ID: 140713
+    Name: Warrior Helmet
+    Type: 3
+    Rarity: 7
+    BasePrice: 200
+    Damage: 24
+    HP: 20
+    Description: 
+    BonusDamage: 0
+    BonusAtkRate: 0
+    BonusAtkRange: 0
+    BonusCritChance: 0
+    BonusCritDamage: 0
+    BonusResourceGenerate: 0
+    BonusBulletSpd: 0
+    BonusReduceDmgFromMob: 0
+    BonusReduceCooldown: 0
+    BonusGoldFromBattle: 0
+    BonusMaxHP: 0
+  - ID: 140813
+    Name: Warrior Helmet
+    Type: 3
+    Rarity: 8
+    BasePrice: 200
+    Damage: 26
+    HP: 21
+    Description: 
+    BonusDamage: 0
+    BonusAtkRate: 0
+    BonusAtkRange: 0
+    BonusCritChance: 0
+    BonusCritDamage: 0
+    BonusResourceGenerate: 0
+    BonusBulletSpd: 0
+    BonusReduceDmgFromMob: 0
+    BonusReduceCooldown: 0
+    BonusGoldFromBattle: 0
+    BonusMaxHP: 0
+  - ID: 140913
+    Name: Warrior Helmet
+    Type: 3
+    Rarity: 9
+    BasePrice: 200
+    Damage: 28
+    HP: 22
+    Description: 
+    BonusDamage: 0
+    BonusAtkRate: 0
+    BonusAtkRange: 0
+    BonusCritChance: 0
+    BonusCritDamage: 0
+    BonusResourceGenerate: 0
+    BonusBulletSpd: 0
+    BonusReduceDmgFromMob: 0
+    BonusReduceCooldown: 0
+    BonusGoldFromBattle: 0
+    BonusMaxHP: 0
+  - ID: 141013
+    Name: Warrior Helmet
+    Type: 3
+    Rarity: 10
+    BasePrice: 200
+    Damage: 30
+    HP: 23
+    Description: 
+    BonusDamage: 0
+    BonusAtkRate: 0
+    BonusAtkRange: 0
+    BonusCritChance: 0
+    BonusCritDamage: 0
+    BonusResourceGenerate: 0
+    BonusBulletSpd: 0
+    BonusReduceDmgFromMob: 0
+    BonusReduceCooldown: 0
+    BonusGoldFromBattle: 0
+    BonusMaxHP: 0
+  - ID: 140014
+    Name: Witch Hat
+    Type: 3
+    Rarity: 0
+    BasePrice: 200
+    Damage: 5
+    HP: 10
+    Description: 
+    BonusDamage: 0
+    BonusAtkRate: 0
+    BonusAtkRange: 0
+    BonusCritChance: 0
+    BonusCritDamage: 0
+    BonusResourceGenerate: 0
+    BonusBulletSpd: 0
+    BonusReduceDmgFromMob: 0
+    BonusReduceCooldown: 0
+    BonusGoldFromBattle: 0
+    BonusMaxHP: 0
+  - ID: 140114
+    Name: Witch Hat
+    Type: 3
+    Rarity: 1
+    BasePrice: 200
+    Damage: 10
+    HP: 13
+    Description: 
+    BonusDamage: 0
+    BonusAtkRate: 0
+    BonusAtkRange: 0
+    BonusCritChance: 0
+    BonusCritDamage: 0
+    BonusResourceGenerate: 0
+    BonusBulletSpd: 0
+    BonusReduceDmgFromMob: 0
+    BonusReduceCooldown: 0
+    BonusGoldFromBattle: 0
+    BonusMaxHP: 5
+  - ID: 140214
+    Name: Witch Hat
+    Type: 3
+    Rarity: 2
+    BasePrice: 200
+    Damage: 12
+    HP: 14
+    Description: 
+    BonusDamage: 0
+    BonusAtkRate: 5
+    BonusAtkRange: 0
+    BonusCritChance: 0
+    BonusCritDamage: 0
+    BonusResourceGenerate: 0
+    BonusBulletSpd: 0
+    BonusReduceDmgFromMob: 0
+    BonusReduceCooldown: 0
+    BonusGoldFromBattle: 0
+    BonusMaxHP: 0
+  - ID: 140314
+    Name: Witch Hat
+    Type: 3
+    Rarity: 3
+    BasePrice: 200
+    Damage: 14
+    HP: 15
+    Description: 
+    BonusDamage: 0
+    BonusAtkRate: 0
+    BonusAtkRange: 0
+    BonusCritChance: 0
+    BonusCritDamage: 0
+    BonusResourceGenerate: 0
+    BonusBulletSpd: 0
+    BonusReduceDmgFromMob: 0
+    BonusReduceCooldown: 0
+    BonusGoldFromBattle: 0
+    BonusMaxHP: 0
+  - ID: 140414
+    Name: Witch Hat
+    Type: 3
+    Rarity: 4
+    BasePrice: 200
+    Damage: 16
+    HP: 16
+    Description: 
+    BonusDamage: 0
+    BonusAtkRate: 0
+    BonusAtkRange: 0
+    BonusCritChance: 0
+    BonusCritDamage: 0
+    BonusResourceGenerate: 0
+    BonusBulletSpd: 0
+    BonusReduceDmgFromMob: 0
+    BonusReduceCooldown: 0
+    BonusGoldFromBattle: 0
+    BonusMaxHP: 0
+  - ID: 140514
+    Name: Witch Hat
+    Type: 3
+    Rarity: 5
+    BasePrice: 200
+    Damage: 20
+    HP: 18
+    Description: 
+    BonusDamage: 0
+    BonusAtkRate: 0
+    BonusAtkRange: 0
+    BonusCritChance: 0
+    BonusCritDamage: 0
+    BonusResourceGenerate: 0
+    BonusBulletSpd: 0
+    BonusReduceDmgFromMob: 0
+    BonusReduceCooldown: 0
+    BonusGoldFromBattle: 0
+    BonusMaxHP: 15
+  - ID: 140614
+    Name: Witch Hat
+    Type: 3
+    Rarity: 6
+    BasePrice: 200
+    Damage: 22
+    HP: 19
+    Description: 
+    BonusDamage: 0
+    BonusAtkRate: 0
+    BonusAtkRange: 0
+    BonusCritChance: 0
+    BonusCritDamage: 0
+    BonusResourceGenerate: 0
+    BonusBulletSpd: 0
+    BonusReduceDmgFromMob: 0
+    BonusReduceCooldown: 0
+    BonusGoldFromBattle: 0
+    BonusMaxHP: 0
+  - ID: 140714
+    Name: Witch Hat
+    Type: 3
+    Rarity: 7
+    BasePrice: 200
+    Damage: 24
+    HP: 20
+    Description: 
+    BonusDamage: 0
+    BonusAtkRate: 0
+    BonusAtkRange: 0
+    BonusCritChance: 0
+    BonusCritDamage: 0
+    BonusResourceGenerate: 0
+    BonusBulletSpd: 0
+    BonusReduceDmgFromMob: 0
+    BonusReduceCooldown: 0
+    BonusGoldFromBattle: 0
+    BonusMaxHP: 0
+  - ID: 140814
+    Name: Witch Hat
+    Type: 3
+    Rarity: 8
+    BasePrice: 200
+    Damage: 26
+    HP: 21
+    Description: 
+    BonusDamage: 0
+    BonusAtkRate: 0
+    BonusAtkRange: 0
+    BonusCritChance: 0
+    BonusCritDamage: 0
+    BonusResourceGenerate: 0
+    BonusBulletSpd: 0
+    BonusReduceDmgFromMob: 0
+    BonusReduceCooldown: 0
+    BonusGoldFromBattle: 0
+    BonusMaxHP: 0
+  - ID: 140914
+    Name: Witch Hat
+    Type: 3
+    Rarity: 9
+    BasePrice: 200
+    Damage: 28
+    HP: 22
+    Description: 
+    BonusDamage: 0
+    BonusAtkRate: 0
+    BonusAtkRange: 0
+    BonusCritChance: 0
+    BonusCritDamage: 0
+    BonusResourceGenerate: 0
+    BonusBulletSpd: 0
+    BonusReduceDmgFromMob: 0
+    BonusReduceCooldown: 0
+    BonusGoldFromBattle: 0
+    BonusMaxHP: 0
+  - ID: 141014
+    Name: Witch Hat
+    Type: 3
+    Rarity: 10
+    BasePrice: 200
+    Damage: 30
+    HP: 23
+    Description: 
+    BonusDamage: 0
+    BonusAtkRate: 0
+    BonusAtkRange: 0
+    BonusCritChance: 0
+    BonusCritDamage: 0
+    BonusResourceGenerate: 0
+    BonusBulletSpd: 0
+    BonusReduceDmgFromMob: 0
+    BonusReduceCooldown: 0
+    BonusGoldFromBattle: 0
+    BonusMaxHP: 0
+  - ID: 140015
+    Name: Fashion Hat
+    Type: 3
+    Rarity: 0
+    BasePrice: 200
+    Damage: 5
+    HP: 10
+    Description: 
+    BonusDamage: 0
+    BonusAtkRate: 0
+    BonusAtkRange: 0
+    BonusCritChance: 0
+    BonusCritDamage: 0
+    BonusResourceGenerate: 0
+    BonusBulletSpd: 0
+    BonusReduceDmgFromMob: 0
+    BonusReduceCooldown: 0
+    BonusGoldFromBattle: 0
+    BonusMaxHP: 0
+  - ID: 140115
+    Name: Fashion Hat
+    Type: 3
+    Rarity: 1
+    BasePrice: 200
+    Damage: 10
+    HP: 13
+    Description: 
+    BonusDamage: 0
+    BonusAtkRate: 0
+    BonusAtkRange: 0
+    BonusCritChance: 0
+    BonusCritDamage: 0
+    BonusResourceGenerate: 0
+    BonusBulletSpd: 0
+    BonusReduceDmgFromMob: 0
+    BonusReduceCooldown: 0
+    BonusGoldFromBattle: 0
+    BonusMaxHP: 5
+  - ID: 140215
+    Name: Fashion Hat
+    Type: 3
+    Rarity: 2
+    BasePrice: 200
+    Damage: 12
+    HP: 14
+    Description: 
+    BonusDamage: 0
+    BonusAtkRate: 0
+    BonusAtkRange: 10
+    BonusCritChance: 0
+    BonusCritDamage: 0
+    BonusResourceGenerate: 0
+    BonusBulletSpd: 0
+    BonusReduceDmgFromMob: 0
+    BonusReduceCooldown: 0
+    BonusGoldFromBattle: 0
+    BonusMaxHP: 0
+  - ID: 140315
+    Name: Fashion Hat
+    Type: 3
+    Rarity: 3
+    BasePrice: 200
+    Damage: 14
+    HP: 15
+    Description: 
+    BonusDamage: 0
+    BonusAtkRate: 0
+    BonusAtkRange: 0
+    BonusCritChance: 0
+    BonusCritDamage: 0
+    BonusResourceGenerate: 0
+    BonusBulletSpd: 0
+    BonusReduceDmgFromMob: 0
+    BonusReduceCooldown: 0
+    BonusGoldFromBattle: 0
+    BonusMaxHP: 0
+  - ID: 140415
+    Name: Fashion Hat
+    Type: 3
+    Rarity: 4
+    BasePrice: 200
+    Damage: 16
+    HP: 16
+    Description: 
+    BonusDamage: 0
+    BonusAtkRate: 0
+    BonusAtkRange: 0
+    BonusCritChance: 0
+    BonusCritDamage: 0
+    BonusResourceGenerate: 0
+    BonusBulletSpd: 0
+    BonusReduceDmgFromMob: 0
+    BonusReduceCooldown: 0
+    BonusGoldFromBattle: 0
+    BonusMaxHP: 0
+  - ID: 140515
+    Name: Fashion Hat
+    Type: 3
+    Rarity: 5
+    BasePrice: 200
+    Damage: 20
+    HP: 18
+    Description: 
+    BonusDamage: 0
+    BonusAtkRate: 0
+    BonusAtkRange: 0
+    BonusCritChance: 0
+    BonusCritDamage: 0
+    BonusResourceGenerate: 0
+    BonusBulletSpd: 0
+    BonusReduceDmgFromMob: 0
+    BonusReduceCooldown: 0
+    BonusGoldFromBattle: 0
+    BonusMaxHP: 15
+  - ID: 140615
+    Name: Fashion Hat
+    Type: 3
+    Rarity: 6
+    BasePrice: 200
+    Damage: 22
+    HP: 19
+    Description: 
+    BonusDamage: 0
+    BonusAtkRate: 0
+    BonusAtkRange: 0
+    BonusCritChance: 0
+    BonusCritDamage: 0
+    BonusResourceGenerate: 0
+    BonusBulletSpd: 0
+    BonusReduceDmgFromMob: 0
+    BonusReduceCooldown: 0
+    BonusGoldFromBattle: 0
+    BonusMaxHP: 0
+  - ID: 140715
+    Name: Fashion Hat
+    Type: 3
+    Rarity: 7
+    BasePrice: 200
+    Damage: 24
+    HP: 20
+    Description: 
+    BonusDamage: 0
+    BonusAtkRate: 0
+    BonusAtkRange: 0
+    BonusCritChance: 0
+    BonusCritDamage: 0
+    BonusResourceGenerate: 0
+    BonusBulletSpd: 0
+    BonusReduceDmgFromMob: 0
+    BonusReduceCooldown: 0
+    BonusGoldFromBattle: 0
+    BonusMaxHP: 0
+  - ID: 140815
+    Name: Fashion Hat
+    Type: 3
+    Rarity: 8
+    BasePrice: 200
+    Damage: 26
+    HP: 21
+    Description: 
+    BonusDamage: 0
+    BonusAtkRate: 0
+    BonusAtkRange: 0
+    BonusCritChance: 0
+    BonusCritDamage: 0
+    BonusResourceGenerate: 0
+    BonusBulletSpd: 0
+    BonusReduceDmgFromMob: 0
+    BonusReduceCooldown: 0
+    BonusGoldFromBattle: 0
+    BonusMaxHP: 0
+  - ID: 140915
+    Name: Fashion Hat
+    Type: 3
+    Rarity: 9
+    BasePrice: 200
+    Damage: 28
+    HP: 22
+    Description: 
+    BonusDamage: 0
+    BonusAtkRate: 0
+    BonusAtkRange: 0
+    BonusCritChance: 0
+    BonusCritDamage: 0
+    BonusResourceGenerate: 0
+    BonusBulletSpd: 0
+    BonusReduceDmgFromMob: 0
+    BonusReduceCooldown: 0
+    BonusGoldFromBattle: 0
+    BonusMaxHP: 0
+  - ID: 141015
+    Name: Fashion Hat
+    Type: 3
+    Rarity: 10
+    BasePrice: 200
+    Damage: 30
+    HP: 23
+    Description: 
+    BonusDamage: 0
+    BonusAtkRate: 0
+    BonusAtkRange: 0
+    BonusCritChance: 0
+    BonusCritDamage: 0
+    BonusResourceGenerate: 0
+    BonusBulletSpd: 0
+    BonusReduceDmgFromMob: 0
+    BonusReduceCooldown: 0
+    BonusGoldFromBattle: 0
+    BonusMaxHP: 0
+  - ID: 150016
+    Name: Armor Gloves
+    Type: 5
+    Rarity: 0
+    BasePrice: 200
+    Damage: 5
+    HP: 10
+    Description: 
+    BonusDamage: 0
+    BonusAtkRate: 0
+    BonusAtkRange: 0
+    BonusCritChance: 0
+    BonusCritDamage: 0
+    BonusResourceGenerate: 0
+    BonusBulletSpd: 0
+    BonusReduceDmgFromMob: 0
+    BonusReduceCooldown: 0
+    BonusGoldFromBattle: 0
+    BonusMaxHP: 0
+  - ID: 150116
+    Name: Armor Gloves
+    Type: 5
+    Rarity: 1
+    BasePrice: 200
+    Damage: 10
+    HP: 13
+    Description: 
+    BonusDamage: 0
+    BonusAtkRate: 0
+    BonusAtkRange: 0
+    BonusCritChance: 0
+    BonusCritDamage: 0
+    BonusResourceGenerate: 0
+    BonusBulletSpd: 0
+    BonusReduceDmgFromMob: 0
+    BonusReduceCooldown: 0
+    BonusGoldFromBattle: 0
+    BonusMaxHP: 5
+  - ID: 150216
+    Name: Armor Gloves
+    Type: 5
+    Rarity: 2
+    BasePrice: 200
+    Damage: 12
+    HP: 14
+    Description: 
+    BonusDamage: 0
+    BonusAtkRate: 0
+    BonusAtkRange: 0
+    BonusCritChance: 0
+    BonusCritDamage: 0
+    BonusResourceGenerate: 0
+    BonusBulletSpd: 10
+    BonusReduceDmgFromMob: 0
+    BonusReduceCooldown: 0
+    BonusGoldFromBattle: 0
+    BonusMaxHP: 0
+  - ID: 150316
+    Name: Armor Gloves
+    Type: 5
+    Rarity: 3
+    BasePrice: 200
+    Damage: 14
+    HP: 15
+    Description: 
+    BonusDamage: 0
+    BonusAtkRate: 0
+    BonusAtkRange: 0
+    BonusCritChance: 0
+    BonusCritDamage: 0
+    BonusResourceGenerate: 0
+    BonusBulletSpd: 0
+    BonusReduceDmgFromMob: 0
+    BonusReduceCooldown: 0
+    BonusGoldFromBattle: 0
+    BonusMaxHP: 0
+  - ID: 150416
+    Name: Armor Gloves
+    Type: 5
+    Rarity: 4
+    BasePrice: 200
+    Damage: 16
+    HP: 16
+    Description: 
+    BonusDamage: 0
+    BonusAtkRate: 0
+    BonusAtkRange: 0
+    BonusCritChance: 0
+    BonusCritDamage: 0
+    BonusResourceGenerate: 0
+    BonusBulletSpd: 0
+    BonusReduceDmgFromMob: 0
+    BonusReduceCooldown: 0
+    BonusGoldFromBattle: 0
+    BonusMaxHP: 0
+  - ID: 150516
+    Name: Armor Gloves
+    Type: 5
+    Rarity: 5
+    BasePrice: 200
+    Damage: 20
+    HP: 18
+    Description: 
+    BonusDamage: 0
+    BonusAtkRate: 0
+    BonusAtkRange: 0
+    BonusCritChance: 0
+    BonusCritDamage: 0
+    BonusResourceGenerate: 0
+    BonusBulletSpd: 0
+    BonusReduceDmgFromMob: 0
+    BonusReduceCooldown: 0
+    BonusGoldFromBattle: 0
+    BonusMaxHP: 15
+  - ID: 150616
+    Name: Armor Gloves
+    Type: 5
+    Rarity: 6
+    BasePrice: 200
+    Damage: 22
+    HP: 19
+    Description: 
+    BonusDamage: 0
+    BonusAtkRate: 0
+    BonusAtkRange: 0
+    BonusCritChance: 0
+    BonusCritDamage: 0
+    BonusResourceGenerate: 0
+    BonusBulletSpd: 0
+    BonusReduceDmgFromMob: 0
+    BonusReduceCooldown: 0
+    BonusGoldFromBattle: 0
+    BonusMaxHP: 0
+  - ID: 150716
+    Name: Armor Gloves
+    Type: 5
+    Rarity: 7
+    BasePrice: 200
+    Damage: 24
+    HP: 20
+    Description: 
+    BonusDamage: 0
+    BonusAtkRate: 0
+    BonusAtkRange: 0
+    BonusCritChance: 0
+    BonusCritDamage: 0
+    BonusResourceGenerate: 0
+    BonusBulletSpd: 0
+    BonusReduceDmgFromMob: 0
+    BonusReduceCooldown: 0
+    BonusGoldFromBattle: 0
+    BonusMaxHP: 0
+  - ID: 150816
+    Name: Armor Gloves
+    Type: 5
+    Rarity: 8
+    BasePrice: 200
+    Damage: 26
+    HP: 21
+    Description: 
+    BonusDamage: 0
+    BonusAtkRate: 0
+    BonusAtkRange: 0
+    BonusCritChance: 0
+    BonusCritDamage: 0
+    BonusResourceGenerate: 0
+    BonusBulletSpd: 0
+    BonusReduceDmgFromMob: 0
+    BonusReduceCooldown: 0
+    BonusGoldFromBattle: 0
+    BonusMaxHP: 0
+  - ID: 150916
+    Name: Armor Gloves
+    Type: 5
+    Rarity: 9
+    BasePrice: 200
+    Damage: 28
+    HP: 22
+    Description: 
+    BonusDamage: 0
+    BonusAtkRate: 0
+    BonusAtkRange: 0
+    BonusCritChance: 0
+    BonusCritDamage: 0
+    BonusResourceGenerate: 0
+    BonusBulletSpd: 0
+    BonusReduceDmgFromMob: 0
+    BonusReduceCooldown: 0
+    BonusGoldFromBattle: 0
+    BonusMaxHP: 0
+  - ID: 151016
+    Name: Armor Gloves
+    Type: 5
+    Rarity: 10
+    BasePrice: 200
+    Damage: 30
+    HP: 23
+    Description: 
+    BonusDamage: 0
+    BonusAtkRate: 0
+    BonusAtkRange: 0
+    BonusCritChance: 0
+    BonusCritDamage: 0
+    BonusResourceGenerate: 0
+    BonusBulletSpd: 0
+    BonusReduceDmgFromMob: 0
+    BonusReduceCooldown: 0
+    BonusGoldFromBattle: 0
+    BonusMaxHP: 0
+  - ID: 150017
+    Name: Mage Gloves
+    Type: 5
+    Rarity: 0
+    BasePrice: 200
+    Damage: 5
+    HP: 10
+    Description: 
+    BonusDamage: 0
+    BonusAtkRate: 0
+    BonusAtkRange: 0
+    BonusCritChance: 0
+    BonusCritDamage: 0
+    BonusResourceGenerate: 0
+    BonusBulletSpd: 0
+    BonusReduceDmgFromMob: 0
+    BonusReduceCooldown: 0
+    BonusGoldFromBattle: 0
+    BonusMaxHP: 0
+  - ID: 150117
+    Name: Mage Gloves
+    Type: 5
+    Rarity: 1
+    BasePrice: 200
+    Damage: 10
+    HP: 13
+    Description: 
+    BonusDamage: 0
+    BonusAtkRate: 0
+    BonusAtkRange: 0
+    BonusCritChance: 0
+    BonusCritDamage: 0
+    BonusResourceGenerate: 0
+    BonusBulletSpd: 0
+    BonusReduceDmgFromMob: 0
+    BonusReduceCooldown: 0
+    BonusGoldFromBattle: 0
+    BonusMaxHP: 5
+  - ID: 150217
+    Name: Mage Gloves
+    Type: 5
+    Rarity: 2
+    BasePrice: 200
+    Damage: 12
+    HP: 14
+    Description: 
+    BonusDamage: 0
+    BonusAtkRate: 0
+    BonusAtkRange: 0
+    BonusCritChance: 0
+    BonusCritDamage: 0
+    BonusResourceGenerate: 0
+    BonusBulletSpd: 0
+    BonusReduceDmgFromMob: 0
+    BonusReduceCooldown: 5
+    BonusGoldFromBattle: 0
+    BonusMaxHP: 0
+  - ID: 150317
+    Name: Mage Gloves
+    Type: 5
+    Rarity: 3
+    BasePrice: 200
+    Damage: 14
+    HP: 15
+    Description: 
+    BonusDamage: 0
+    BonusAtkRate: 0
+    BonusAtkRange: 0
+    BonusCritChance: 0
+    BonusCritDamage: 0
+    BonusResourceGenerate: 0
+    BonusBulletSpd: 0
+    BonusReduceDmgFromMob: 0
+    BonusReduceCooldown: 0
+    BonusGoldFromBattle: 0
+    BonusMaxHP: 0
+  - ID: 150417
+    Name: Mage Gloves
+    Type: 5
+    Rarity: 4
+    BasePrice: 200
+    Damage: 16
+    HP: 16
+    Description: 
+    BonusDamage: 0
+    BonusAtkRate: 0
+    BonusAtkRange: 0
+    BonusCritChance: 0
+    BonusCritDamage: 0
+    BonusResourceGenerate: 0
+    BonusBulletSpd: 0
+    BonusReduceDmgFromMob: 0
+    BonusReduceCooldown: 0
+    BonusGoldFromBattle: 0
+    BonusMaxHP: 0
+  - ID: 150517
+    Name: Mage Gloves
+    Type: 5
+    Rarity: 5
+    BasePrice: 200
+    Damage: 20
+    HP: 18
+    Description: 
+    BonusDamage: 0
+    BonusAtkRate: 0
+    BonusAtkRange: 0
+    BonusCritChance: 0
+    BonusCritDamage: 0
+    BonusResourceGenerate: 0
+    BonusBulletSpd: 0
+    BonusReduceDmgFromMob: 0
+    BonusReduceCooldown: 0
+    BonusGoldFromBattle: 0
+    BonusMaxHP: 15
+  - ID: 150617
+    Name: Mage Gloves
+    Type: 5
+    Rarity: 6
+    BasePrice: 200
+    Damage: 22
+    HP: 19
+    Description: 
+    BonusDamage: 0
+    BonusAtkRate: 0
+    BonusAtkRange: 0
+    BonusCritChance: 0
+    BonusCritDamage: 0
+    BonusResourceGenerate: 0
+    BonusBulletSpd: 0
+    BonusReduceDmgFromMob: 0
+    BonusReduceCooldown: 0
+    BonusGoldFromBattle: 0
+    BonusMaxHP: 0
+  - ID: 150717
+    Name: Mage Gloves
+    Type: 5
+    Rarity: 7
+    BasePrice: 200
+    Damage: 24
+    HP: 20
+    Description: 
+    BonusDamage: 0
+    BonusAtkRate: 0
+    BonusAtkRange: 0
+    BonusCritChance: 0
+    BonusCritDamage: 0
+    BonusResourceGenerate: 0
+    BonusBulletSpd: 0
+    BonusReduceDmgFromMob: 0
+    BonusReduceCooldown: 0
+    BonusGoldFromBattle: 0
+    BonusMaxHP: 0
+  - ID: 150817
+    Name: Mage Gloves
+    Type: 5
+    Rarity: 8
+    BasePrice: 200
+    Damage: 26
+    HP: 21
+    Description: 
+    BonusDamage: 0
+    BonusAtkRate: 0
+    BonusAtkRange: 0
+    BonusCritChance: 0
+    BonusCritDamage: 0
+    BonusResourceGenerate: 0
+    BonusBulletSpd: 0
+    BonusReduceDmgFromMob: 0
+    BonusReduceCooldown: 0
+    BonusGoldFromBattle: 0
+    BonusMaxHP: 0
+  - ID: 150917
+    Name: Mage Gloves
+    Type: 5
+    Rarity: 9
+    BasePrice: 200
+    Damage: 28
+    HP: 22
+    Description: 
+    BonusDamage: 0
+    BonusAtkRate: 0
+    BonusAtkRange: 0
+    BonusCritChance: 0
+    BonusCritDamage: 0
+    BonusResourceGenerate: 0
+    BonusBulletSpd: 0
+    BonusReduceDmgFromMob: 0
+    BonusReduceCooldown: 0
+    BonusGoldFromBattle: 0
+    BonusMaxHP: 0
+  - ID: 151017
+    Name: Mage Gloves
+    Type: 5
+    Rarity: 10
+    BasePrice: 200
+    Damage: 30
+    HP: 23
+    Description: 
+    BonusDamage: 0
+    BonusAtkRate: 0
+    BonusAtkRange: 0
+    BonusCritChance: 0
+    BonusCritDamage: 0
+    BonusResourceGenerate: 0
+    BonusBulletSpd: 0
+    BonusReduceDmgFromMob: 0
+    BonusReduceCooldown: 0
+    BonusGoldFromBattle: 0
+    BonusMaxHP: 0
+  - ID: 150018
+    Name: Warrior's Gloves
+    Type: 5
+    Rarity: 0
+    BasePrice: 200
+    Damage: 5
+    HP: 10
+    Description: 
+    BonusDamage: 0
+    BonusAtkRate: 0
+    BonusAtkRange: 0
+    BonusCritChance: 0
+    BonusCritDamage: 0
+    BonusResourceGenerate: 0
+    BonusBulletSpd: 0
+    BonusReduceDmgFromMob: 0
+    BonusReduceCooldown: 0
+    BonusGoldFromBattle: 0
+    BonusMaxHP: 0
+  - ID: 150118
+    Name: Warrior's Gloves
+    Type: 5
+    Rarity: 1
+    BasePrice: 200
+    Damage: 10
+    HP: 13
+    Description: 
+    BonusDamage: 0
+    BonusAtkRate: 0
+    BonusAtkRange: 0
+    BonusCritChance: 0
+    BonusCritDamage: 0
+    BonusResourceGenerate: 0
+    BonusBulletSpd: 0
+    BonusReduceDmgFromMob: 0
+    BonusReduceCooldown: 0
+    BonusGoldFromBattle: 0
+    BonusMaxHP: 5
+  - ID: 150218
+    Name: Warrior's Gloves
+    Type: 5
+    Rarity: 2
+    BasePrice: 200
+    Damage: 12
+    HP: 14
+    Description: 
+    BonusDamage: 0
+    BonusAtkRate: 0
+    BonusAtkRange: 0
+    BonusCritChance: 0
+    BonusCritDamage: 0
+    BonusResourceGenerate: 0
+    BonusBulletSpd: 0
+    BonusReduceDmgFromMob: 0
+    BonusReduceCooldown: 0
+    BonusGoldFromBattle: 5
+    BonusMaxHP: 0
+  - ID: 150318
+    Name: Warrior's Gloves
+    Type: 5
+    Rarity: 3
+    BasePrice: 200
+    Damage: 14
+    HP: 15
+    Description: 
+    BonusDamage: 0
+    BonusAtkRate: 0
+    BonusAtkRange: 0
+    BonusCritChance: 0
+    BonusCritDamage: 0
+    BonusResourceGenerate: 0
+    BonusBulletSpd: 0
+    BonusReduceDmgFromMob: 0
+    BonusReduceCooldown: 0
+    BonusGoldFromBattle: 0
+    BonusMaxHP: 0
+  - ID: 150418
+    Name: Warrior's Gloves
+    Type: 5
+    Rarity: 4
+    BasePrice: 200
+    Damage: 16
+    HP: 16
+    Description: 
+    BonusDamage: 0
+    BonusAtkRate: 0
+    BonusAtkRange: 0
+    BonusCritChance: 0
+    BonusCritDamage: 0
+    BonusResourceGenerate: 0
+    BonusBulletSpd: 0
+    BonusReduceDmgFromMob: 0
+    BonusReduceCooldown: 0
+    BonusGoldFromBattle: 0
+    BonusMaxHP: 0
+  - ID: 150518
+    Name: Warrior's Gloves
+    Type: 5
+    Rarity: 5
+    BasePrice: 200
+    Damage: 20
+    HP: 18
+    Description: 
+    BonusDamage: 0
+    BonusAtkRate: 0
+    BonusAtkRange: 0
+    BonusCritChance: 0
+    BonusCritDamage: 0
+    BonusResourceGenerate: 0
+    BonusBulletSpd: 0
+    BonusReduceDmgFromMob: 0
+    BonusReduceCooldown: 0
+    BonusGoldFromBattle: 0
+    BonusMaxHP: 15
+  - ID: 150618
+    Name: Warrior's Gloves
+    Type: 5
+    Rarity: 6
+    BasePrice: 200
+    Damage: 22
+    HP: 19
+    Description: 
+    BonusDamage: 0
+    BonusAtkRate: 0
+    BonusAtkRange: 0
+    BonusCritChance: 0
+    BonusCritDamage: 0
+    BonusResourceGenerate: 0
+    BonusBulletSpd: 0
+    BonusReduceDmgFromMob: 0
+    BonusReduceCooldown: 0
+    BonusGoldFromBattle: 0
+    BonusMaxHP: 0
+  - ID: 150718
+    Name: Warrior's Gloves
+    Type: 5
+    Rarity: 7
+    BasePrice: 200
+    Damage: 24
+    HP: 20
+    Description: 
+    BonusDamage: 0
+    BonusAtkRate: 0
+    BonusAtkRange: 0
+    BonusCritChance: 0
+    BonusCritDamage: 0
+    BonusResourceGenerate: 0
+    BonusBulletSpd: 0
+    BonusReduceDmgFromMob: 0
+    BonusReduceCooldown: 0
+    BonusGoldFromBattle: 0
+    BonusMaxHP: 0
+  - ID: 150818
+    Name: Warrior's Gloves
+    Type: 5
+    Rarity: 8
+    BasePrice: 200
+    Damage: 26
+    HP: 21
+    Description: 
+    BonusDamage: 0
+    BonusAtkRate: 0
+    BonusAtkRange: 0
+    BonusCritChance: 0
+    BonusCritDamage: 0
+    BonusResourceGenerate: 0
+    BonusBulletSpd: 0
+    BonusReduceDmgFromMob: 0
+    BonusReduceCooldown: 0
+    BonusGoldFromBattle: 0
+    BonusMaxHP: 0
+  - ID: 150918
+    Name: Warrior's Gloves
+    Type: 5
+    Rarity: 9
+    BasePrice: 200
+    Damage: 28
+    HP: 22
+    Description: 
+    BonusDamage: 0
+    BonusAtkRate: 0
+    BonusAtkRange: 0
+    BonusCritChance: 0
+    BonusCritDamage: 0
+    BonusResourceGenerate: 0
+    BonusBulletSpd: 0
+    BonusReduceDmgFromMob: 0
+    BonusReduceCooldown: 0
+    BonusGoldFromBattle: 0
+    BonusMaxHP: 0
+  - ID: 151018
+    Name: Warrior's Gloves
+    Type: 5
+    Rarity: 10
+    BasePrice: 200
+    Damage: 30
+    HP: 23
+    Description: 
+    BonusDamage: 0
+    BonusAtkRate: 0
+    BonusAtkRange: 0
+    BonusCritChance: 0
+    BonusCritDamage: 0
+    BonusResourceGenerate: 0
+    BonusBulletSpd: 0
+    BonusReduceDmgFromMob: 0
+    BonusReduceCooldown: 0
+    BonusGoldFromBattle: 0
+    BonusMaxHP: 0

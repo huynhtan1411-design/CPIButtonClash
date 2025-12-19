@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b2af489f9cd8fe64b9e318e559954edd, type: 3}
+  m_Name: Healing Factor
+  m_EditorClassIdentifier: 
+  Id: 1212
+  IdIcon: 
+  skillName: Healing Factor
+  effects:
+  - {fileID: 11400000, guid: 27b0db34dcb546d49a07d87d42ca535b, type: 2}
+  abilityType: 3
+  skillType: 1
+  chapterIndexRepair: -1

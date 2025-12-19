@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1dd4d50bfe78d374c95650053747f06e, type: 3}
+  m_Name: SkillHeroDatabase
+  m_EditorClassIdentifier: 
+  skilldatabase:
+  - {fileID: 11400000, guid: 64248408692b85b478a08da4af36d272, type: 2}
+  - {fileID: 11400000, guid: df4b11e31612d91489caf96ed3c81ff4, type: 2}
+  - {fileID: 11400000, guid: 5f9e9bfeabe53c945b98271051068527, type: 2}
+  - {fileID: 11400000, guid: 27d4d0f3a8306d94698efcf5fd76e071, type: 2}
+  - {fileID: 11400000, guid: 6ec33e14c83d54548a9cc77a717de27c, type: 2}
+  - {fileID: 11400000, guid: 2dd581f0eea964e4689c67aeaa299c5a, type: 2}
+  - {fileID: 11400000, guid: 2a35389421377f14bbfdbfaec99c9d24, type: 2}
+  - {fileID: 11400000, guid: 2617661aeda5b2d4cbb24247d3c4ec90, type: 2}

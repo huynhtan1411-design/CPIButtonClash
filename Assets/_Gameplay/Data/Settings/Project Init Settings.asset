@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b5a0258cb7d17964493174ceaf8d2867, type: 3}
+  m_Name: Project Init Settings
+  m_EditorClassIdentifier: 
+  coreModules:
+  - {fileID: 11400000, guid: a749291eec0e076469fd5ca4f1514451, type: 2}
+  - {fileID: 11400000, guid: 501faf964f48b5a4c861ce73f52f5107, type: 2}
+  - {fileID: 11400000, guid: 27a1f6ffbb37e774e89e9464b4d61e71, type: 2}
+  initModules: []

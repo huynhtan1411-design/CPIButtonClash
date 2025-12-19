@@ -1,0 +1,60 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 71aa38a6747932d4698948adfb2ab030, type: 3}
+  m_Name: HerosInfoConfig
+  m_EditorClassIdentifier: 
+  Data:
+  - Id: 0
+    Name: King
+    HP: 300
+    Damage: 4
+    LevelUnlock: 0
+  - Id: 3
+    Name: Ninja
+    HP: 150
+    Damage: 8
+    LevelUnlock: 100
+  - Id: 1
+    Name: Lightning Master
+    HP: 120
+    Damage: 10
+    LevelUnlock: 100
+  - Id: 5
+    Name: Ice Witch
+    HP: 100
+    Damage: 4
+    LevelUnlock: 100
+  - Id: 4
+    Name: Archer
+    HP: 180
+    Damage: 20
+    LevelUnlock: 100
+  - Id: 2
+    Name: Fire Mage
+    HP: 100
+    Damage: 5
+    LevelUnlock: 0
+  - Id: 6
+    Name: ' Fire Knight'
+    HP: 200
+    Damage: 10
+    LevelUnlock: 100
+  - Id: 7
+    Name: ' Bolt Hunter'
+    HP: 180
+    Damage: 15
+    LevelUnlock: 100
+  - Id: 8
+    Name: Glacier Archer
+    HP: 160
+    Damage: 20
+    LevelUnlock: 100

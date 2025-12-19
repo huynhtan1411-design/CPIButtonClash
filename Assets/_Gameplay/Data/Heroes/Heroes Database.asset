@@ -1,0 +1,105 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a52be4f26019ca1489981b76e45fad84, type: 3}
+  m_Name: Heroes Database
+  m_EditorClassIdentifier: 
+  characters:
+  - id: 0
+    type: 0
+    prefab: {fileID: 7504978189251959939, guid: 116996a7e8082be4baa9477a2961b66e,
+      type: 3}
+    weaponType: 0
+    elementType: 0
+    Level: 0
+    AttackPower: 0
+    CooldownReduction: 0
+    MoveSpeed: 0
+  - id: 1
+    type: 1
+    prefab: {fileID: 4845020985889000177, guid: f721b0b6c6c9f32409b459311b19f00d,
+      type: 3}
+    weaponType: 6
+    elementType: 3
+    Level: 1
+    AttackPower: 0
+    CooldownReduction: 0
+    MoveSpeed: 0
+  - id: 2
+    type: 2
+    prefab: {fileID: 4845020985889000177, guid: 598cec84d09134f44a28d2e8dea30cb3,
+      type: 3}
+    weaponType: 1
+    elementType: 1
+    Level: 2
+    AttackPower: 0
+    CooldownReduction: 0
+    MoveSpeed: 0
+  - id: 3
+    type: 3
+    prefab: {fileID: 4845020985889000177, guid: 46ed7a58790bfba429a7f6bf4c4ffcab,
+      type: 3}
+    weaponType: 2
+    elementType: 4
+    Level: 0
+    AttackPower: 0
+    CooldownReduction: 0
+    MoveSpeed: 0
+  - id: 4
+    type: 4
+    prefab: {fileID: 6148347664831866679, guid: bc55126d2c417d34995c7b8fe1069384,
+      type: 3}
+    weaponType: 4
+    elementType: 4
+    Level: 1
+    AttackPower: 0
+    CooldownReduction: 0
+    MoveSpeed: 0
+  - id: 5
+    type: 5
+    prefab: {fileID: 4845020985889000177, guid: 5aa5b2634e9e61349a15dc1935eaa873,
+      type: 3}
+    weaponType: 5
+    elementType: 2
+    Level: 0
+    AttackPower: 0
+    CooldownReduction: 0
+    MoveSpeed: 0
+  - id: 6
+    type: 6
+    prefab: {fileID: 4845020985889000177, guid: 710562280e882b14790f20aa31945269,
+      type: 3}
+    weaponType: 7
+    elementType: 1
+    Level: 1
+    AttackPower: 0
+    CooldownReduction: 0
+    MoveSpeed: 0
+  - id: 7
+    type: 7
+    prefab: {fileID: 4845020985889000177, guid: d9a3265a066a17744b8ff4451a97c55a,
+      type: 3}
+    weaponType: 8
+    elementType: 3
+    Level: 1
+    AttackPower: 0
+    CooldownReduction: 0
+    MoveSpeed: 0
+  - id: 8
+    type: 8
+    prefab: {fileID: 4845020985889000177, guid: 28372f07bbf250f479026ba800134f3d,
+      type: 3}
+    weaponType: 9
+    elementType: 2
+    Level: 1
+    AttackPower: 0
+    CooldownReduction: 0
+    MoveSpeed: 0
