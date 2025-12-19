@@ -38,6 +38,10 @@ namespace WD
         [SerializeField] private bool enableEliteSpawnHotkey = false;
         [SerializeField] private KeyCode eliteSpawnKey = KeyCode.E;
 
+        [Header("Drop Spawn Hotkeys")]
+        [SerializeField] private bool enableDropSpawnHotkeys = false;
+        [SerializeField] private DropSpawnHotkey[] dropSpawnHotkeys;
+
         private bool isMovementActive;
 
         private void Awake()
@@ -62,6 +66,7 @@ namespace WD
             HandleWaveInput();
             HandlePathSpawnHotkeys();
             HandleEliteSpawnHotkey();
+            HandleDropSpawnHotkeys();
         }
 
         private void HandleMovementInput()
@@ -193,6 +198,21 @@ namespace WD
             if (Input.GetKeyDown(eliteSpawnKey))
                 pathSpawnController.SpawnEliteOnce();
         }
+
+        private void HandleDropSpawnHotkeys()
+        {
+            if (!enableDropSpawnHotkeys || pathSpawnController == null || dropSpawnHotkeys == null)
+                return;
+
+            for (int i = 0; i < dropSpawnHotkeys.Length; i++)
+            {
+                var mapping = dropSpawnHotkeys[i];
+                if (Input.GetKeyDown(mapping.key))
+                {
+                    pathSpawnController.SpawnDropAtIndex(mapping.pointIndex);
+                }
+            }
+        }
     }
 
     [System.Serializable]
@@ -200,5 +220,12 @@ namespace WD
     {
         public KeyCode key;
         public int pathIndex;
+    }
+
+    [System.Serializable]
+    public struct DropSpawnHotkey
+    {
+        public KeyCode key;
+        public int pointIndex;
     }
 }

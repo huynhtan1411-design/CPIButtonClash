@@ -21,6 +21,14 @@ namespace WD
         [SerializeField] private int eliteLevel = 1;
         [SerializeField] private Transform eliteSpawnPoint;
         [SerializeField] private float eliteRandomOffset = 0.15f;
+        [SerializeField] private GameObject eliteDropPrefab;
+        [SerializeField] private int eliteDropCount = 1;
+        [SerializeField] private float eliteDropSpread = 0.25f;
+
+        [Header("Drop Spawn (Manual)")]
+        [SerializeField] private GameObject dropPrefab;
+        [SerializeField] private Transform[] dropPoints;
+        [SerializeField] private float dropRandomOffset = 0.1f;
 
         private Coroutine[] spawnCoroutines;
         private bool[] isSpawning;
@@ -152,7 +160,29 @@ namespace WD
                 Random.Range(-eliteRandomOffset, eliteRandomOffset)
             );
 
-            SpawnEnemy(prefabToSpawn, eliteEnemyData, eliteLevel, eliteSpawnPoint.position + offset);
+            SpawnEnemy(prefabToSpawn, eliteEnemyData, eliteLevel, eliteSpawnPoint.position + offset, isElite: true);
+        }
+
+        public void SpawnDropAtIndex(int index)
+        {
+            if (dropPrefab == null)
+            {
+                Debug.LogWarning("Drop prefab is not assigned.", this);
+                return;
+            }
+            if (dropPoints == null || index < 0 || index >= dropPoints.Length || dropPoints[index] == null)
+            {
+                Debug.LogWarning($"Invalid drop point index: {index}", this);
+                return;
+            }
+
+            Vector3 offset = new Vector3(
+                Random.Range(-dropRandomOffset, dropRandomOffset),
+                0f,
+                Random.Range(-dropRandomOffset, dropRandomOffset)
+            );
+
+            Instantiate(dropPrefab, dropPoints[index].position + offset, Quaternion.identity);
         }
 
         private void StartSpawn(int index)
@@ -224,7 +254,7 @@ namespace WD
             return null;
         }
 
-        private void SpawnEnemy(GameObject prefabToSpawn, EnemyData data, int level, Vector3 position)
+        private void SpawnEnemy(GameObject prefabToSpawn, EnemyData data, int level, Vector3 position, bool isElite = false)
         {
             GameObject enemyObj = Instantiate(prefabToSpawn, position, Quaternion.identity);
 
@@ -241,8 +271,32 @@ namespace WD
 
             baseEnemy.Initialise();
 
+            if (isElite)
+            {
+                AttachEliteDrop(baseEnemy);
+            }
+
             if (GameManager.Instance != null)
                 GameManager.Instance.RegisterEnemy(enemyObj);
+        }
+
+        private void AttachEliteDrop(BaseEnemyBehavior baseEnemy)
+        {
+            if (eliteDropPrefab == null)
+                return;
+
+            baseEnemy.onDeath += () =>
+            {
+                for (int i = 0; i < Mathf.Max(1, eliteDropCount); i++)
+                {
+                    Vector3 spread = new Vector3(
+                        Random.Range(-eliteDropSpread, eliteDropSpread),
+                        0f,
+                        Random.Range(-eliteDropSpread, eliteDropSpread)
+                    );
+                    Instantiate(eliteDropPrefab, baseEnemy.transform.position + spread, Quaternion.identity);
+                }
+            };
         }
     }
 }

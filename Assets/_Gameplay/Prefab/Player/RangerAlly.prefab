@@ -738,6 +738,7 @@ GameObject:
   - component: {fileID: 8199095678628769236}
   - component: {fileID: 2505109265937319243}
   - component: {fileID: 6882734691590976398}
+  - component: {fileID: -1611898264268112607}
   m_Layer: 0
   m_Name: RangerAlly
   m_TagString: Tower
@@ -909,6 +910,22 @@ MonoBehaviour:
   projectileSpawnPoint: {fileID: 2911846644858325948}
   projectilePrefab: {fileID: 7995167561492624291, guid: a5b361710a963bd44a81b75873d1c0a9,
     type: 3}
+--- !u!114 &-1611898264268112607
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4796623966293115903}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 29071bb92ef95c546b2533f9313634c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 0}
+  followDistance: 1.5
+  moveSpeed: 4
+  rotateSpeed: 8
 --- !u!1 &4930569597998480040
 GameObject:
   m_ObjectHideFlags: 0
