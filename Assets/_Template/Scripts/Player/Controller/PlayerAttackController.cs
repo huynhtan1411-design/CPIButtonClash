@@ -80,7 +80,7 @@ namespace TemplateSystems.Controllers.Player
         }
         private void Update()
         {
-            if (WD.GameManager.IsPaused() || movementController.IsReadyToMove)
+            if (WD.GameManager.IsPaused())
                 return;
 
             UpdateEnemiesInRange();
@@ -184,29 +184,29 @@ namespace TemplateSystems.Controllers.Player
             {
                 animationController.PlayAttackAnimation();
             }
-            yield return new WaitForSeconds(0.4f); // Wait for animation wind-up
+            yield return new WaitForSeconds(0.6f); // Wait for animation wind-up
             // Create and initialize the projectile
             if (projectilePrefab != null)
             {
                 // Transform spawnPoint = animationController.IsOnHorse ? mountedProjectileSpawnPoint : projectileSpawnPoint;
                 Transform spawnPoint = mountedProjectileSpawnPoint;
                 if (spawnPoint == null) spawnPoint = projectileSpawnPoint; // Fallback to default spawn point
-                PlayerBulletBehavior projectile1 = bulletPool
+                Boomerang projectile1 = bulletPool
                 .GetPooledObject(new PooledObjectSettings()
                 .SetPosition(spawnPoint.position))
                 //.SetEulerRotation(Vector3.zero))
-                .GetComponent<PlayerBulletBehavior>();
-                PlayerBulletBehavior projectile2 = bulletPool
+                .GetComponent<Boomerang>();
+                Boomerang projectile2 = bulletPool
                 .GetPooledObject(new PooledObjectSettings()
                 .SetPosition(spawnPoint.position))
                 //.SetEulerRotation(Vector3.zero))
-                .GetComponent<PlayerBulletBehavior>();
+                .GetComponent<Boomerang>();
                 //GameObject projectileObj = Instantiate(projectilePrefab, spawnPoint.position, transform.rotation);
                 //PlayerBulletBehavior projectile = projectileObj.GetComponent<PlayerBulletBehavior>();
                 // GameObject projectile1 = Instantiate(projectilePrefab, spawnPoint.position, transform.rotation, transform);
                 // GameObject projectile2 = Instantiate(projectilePrefab, spawnPoint.position, transform.rotation, transform);
-                projectile1.Initialise(damage, -1, ElementType.None, target, 3); // More damage when mounted
-                projectile2.Initialise(damage, -1, ElementType.None, target, 3); // More damage when mounted
+                projectile1.Initialise(damage, 20, ElementType.None, transform.forward, 1);
+                projectile2.Initialise(damage, 20, ElementType.None, transform.forward, -1); 
             }
         }
 

@@ -101,7 +101,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &2808937612689846983
 Transform:
   m_ObjectHideFlags: 0
@@ -112,7 +112,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0.5, y: 0.5, z: 0.5, w: 0.5}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.3, y: 0.3, z: 0.3}
+  m_LocalScale: {x: 0.7, y: 0.7, z: 0.7}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 482553980287903460}
@@ -562,11 +562,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3470268897448238287}
-  - component: {fileID: 7447480749591070662}
   - component: {fileID: 6925777729979834486}
   - component: {fileID: -7377313053627546694}
+  - component: {fileID: 4196834152868990513}
   m_Layer: 11
-  m_Name: Crowbow Bullet
+  m_Name: Hammer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -592,23 +592,6 @@ Transform:
   - {fileID: 2808937612689846983}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &7447480749591070662
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7995167561492624291}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c6c34f50ebd778d46b48b74edf7d11b1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  damage: 10
-  speed: 7
-  arcHeight: 1
-  sideSign: 1
-  trailRenderer: {fileID: 4173962772436254626}
 --- !u!65 &6925777729979834486
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -628,8 +611,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.25, y: 0.25, z: 0.25}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 0.3666935, y: 0.68359745, z: 1.0268879}
+  m_Center: {x: -0.012890875, y: 0.040101588, z: 0.10457969}
 --- !u!54 &-7377313053627546694
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -657,6 +640,22 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &4196834152868990513
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7995167561492624291}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7590a80808598c544b7c19a7b087878d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 80
+  maxDistance: 4
+  sideOffset: 0.5
+  trailRenderer: {fileID: 4275672981623040213}
 --- !u!1001 &1184493088296193168
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -671,7 +670,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 161162, guid: 2d1b67d2f85c20a4ca9d95a82a0814ef, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 461162, guid: 2d1b67d2f85c20a4ca9d95a82a0814ef, type: 3}
       propertyPath: m_LocalScale.x
