@@ -153,8 +153,9 @@ namespace CLHoma.Combat
         }
 
         private void InitializeVisuals()
-        {
-            shawdowObj.gameObject.SetActive(true);
+        {   
+            if(shawdowObj != null)
+                shawdowObj.gameObject.SetActive(true);
             renderer.material.color = originalColor;
             animatorRef.transform.localPosition = Vector3.zero;
 
@@ -263,7 +264,8 @@ namespace CLHoma.Combat
             if (healthbarBehaviour != null)
                 healthbarBehaviour.DisableBar();
             enemyCollider.enabled = false;
-            shawdowObj.gameObject.SetActive(false);
+            if(shawdowObj != null)
+                shawdowObj.gameObject.SetActive(false);
             renderer.material.color = Color.gray;
             onDeath?.Invoke();
 

@@ -182,7 +182,6 @@ namespace TemplateSystems.Controllers.Player
             // Trigger attack animation
             if (animationController != null)
             {
-                Debug.Log("Execute Attack");
                 animationController.PlayAttackAnimation();
             }
             yield return new WaitForSeconds(0.4f); // Wait for animation wind-up
@@ -192,14 +191,22 @@ namespace TemplateSystems.Controllers.Player
                 // Transform spawnPoint = animationController.IsOnHorse ? mountedProjectileSpawnPoint : projectileSpawnPoint;
                 Transform spawnPoint = mountedProjectileSpawnPoint;
                 if (spawnPoint == null) spawnPoint = projectileSpawnPoint; // Fallback to default spawn point
-                PlayerBulletBehavior projectile = bulletPool
+                PlayerBulletBehavior projectile1 = bulletPool
+                .GetPooledObject(new PooledObjectSettings()
+                .SetPosition(spawnPoint.position))
+                //.SetEulerRotation(Vector3.zero))
+                .GetComponent<PlayerBulletBehavior>();
+                PlayerBulletBehavior projectile2 = bulletPool
                 .GetPooledObject(new PooledObjectSettings()
                 .SetPosition(spawnPoint.position))
                 //.SetEulerRotation(Vector3.zero))
                 .GetComponent<PlayerBulletBehavior>();
                 //GameObject projectileObj = Instantiate(projectilePrefab, spawnPoint.position, transform.rotation);
                 //PlayerBulletBehavior projectile = projectileObj.GetComponent<PlayerBulletBehavior>();
-                projectile.Initialise(damage, -1, ElementType.None, target, 3); // More damage when mounted
+                // GameObject projectile1 = Instantiate(projectilePrefab, spawnPoint.position, transform.rotation, transform);
+                // GameObject projectile2 = Instantiate(projectilePrefab, spawnPoint.position, transform.rotation, transform);
+                projectile1.Initialise(damage, -1, ElementType.None, target, 3); // More damage when mounted
+                projectile2.Initialise(damage, -1, ElementType.None, target, 3); // More damage when mounted
             }
         }
 
