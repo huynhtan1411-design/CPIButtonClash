@@ -76,9 +76,8 @@ namespace TemplateSystems.Controllers.Player
         private void HandlePauseState(bool isPaused)
         {
             //Debug.LogError("Pause");
-           // enabled = !isPaused;
+            // enabled = !isPaused;
         }
-
         private void Update()
         {
             if (WD.GameManager.IsPaused() || movementController.IsReadyToMove)
@@ -95,7 +94,8 @@ namespace TemplateSystems.Controllers.Player
         private void UpdateEnemiesInRange()
         {
             enemiesInRange.Clear();
-            float currentRange = animationController.IsOnHorse ? mountedAttackRange : attackRange;
+            // float currentRange = animationController.IsOnHorse ? mountedAttackRange : attackRange;
+            float currentRange = mountedAttackRange;
             Collider[] hitColliders = Physics.OverlapSphere(transform.position, currentRange, enemyLayer);
 
             foreach (var hitCollider in hitColliders)
@@ -145,7 +145,8 @@ namespace TemplateSystems.Controllers.Player
         {
             if (playerCtr.PlayerHeroEntity.IsDead)
                 return;
-            float currentCooldown = animationController.IsOnHorse ? mountedAttackCooldown : attackCooldown;
+            // float currentCooldown = animationController.IsOnHorse ? mountedAttackCooldown : attackCooldown;
+            float currentCooldown = mountedAttackCooldown;
             // Check if we have a valid target and attack is off cooldown
             if (currentTarget == null || Time.time < lastAttackTime + currentCooldown)
             {
@@ -154,7 +155,7 @@ namespace TemplateSystems.Controllers.Player
             // If we're facing the target, execute the attack
             if (IsPlayerFacingTarget())
             {
-                ExecuteAttack(currentTarget);
+                StartCoroutine(ExecuteAttack(currentTarget));
             }
         }
 
@@ -171,23 +172,25 @@ namespace TemplateSystems.Controllers.Player
         /// <summary>
         /// Performs the attack action on the target
         /// </summary>
-        private void ExecuteAttack(BaseEnemyBehavior target)
+        private IEnumerator ExecuteAttack(BaseEnemyBehavior target)
         {
             if (WD.GameManager.IsPaused())
-                return;
+                yield break;
 
             lastAttackTime = Time.time;
 
             // Trigger attack animation
             if (animationController != null)
             {
+                Debug.Log("Execute Attack");
                 animationController.PlayAttackAnimation();
             }
-
+            yield return new WaitForSeconds(0.4f); // Wait for animation wind-up
             // Create and initialize the projectile
             if (projectilePrefab != null)
             {
-                Transform spawnPoint = animationController.IsOnHorse ? mountedProjectileSpawnPoint : projectileSpawnPoint;
+                // Transform spawnPoint = animationController.IsOnHorse ? mountedProjectileSpawnPoint : projectileSpawnPoint;
+                Transform spawnPoint = mountedProjectileSpawnPoint;
                 if (spawnPoint == null) spawnPoint = projectileSpawnPoint; // Fallback to default spawn point
                 PlayerBulletBehavior projectile = bulletPool
                 .GetPooledObject(new PooledObjectSettings()
@@ -196,7 +199,7 @@ namespace TemplateSystems.Controllers.Player
                 .GetComponent<PlayerBulletBehavior>();
                 //GameObject projectileObj = Instantiate(projectilePrefab, spawnPoint.position, transform.rotation);
                 //PlayerBulletBehavior projectile = projectileObj.GetComponent<PlayerBulletBehavior>();
-                projectile.Initialise(damage, -1, ElementType.None, target, animationController.IsOnHorse ? 3 : 2); // More damage when mounted
+                projectile.Initialise(damage, -1, ElementType.None, target, 3); // More damage when mounted
             }
         }
 
@@ -241,7 +244,8 @@ namespace TemplateSystems.Controllers.Player
             Vector3 directionToTarget = (currentTarget.transform.position - transform.position).normalized;
             directionToTarget.y = 0;
             
-            float currentMinAngle = animationController.IsOnHorse ? mountedMinAngleToShoot : minAngleToShoot;
+            // float currentMinAngle = animationController.IsOnHorse ? mountedMinAngleToShoot : minAngleToShoot;
+            float currentMinAngle = mountedMinAngleToShoot;
             float angle = Vector3.Angle(transform.forward, directionToTarget);
             return angle < currentMinAngle;
         }
