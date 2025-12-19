@@ -14,9 +14,9 @@ namespace CLHoma.Combat
         private bool autoDisableOnHit;
 
         private TweenCase disableTweenCase;
-        private Vector3 startPosition;
-        private float journeyLength;
-        private float startTime;
+        private Vector3 arcStartPosition;
+        private float arcJourneyLength;
+        private float arcStartTime;
 
         protected BaseEnemyBehavior currentTarget;
         protected ElementType elementType;
@@ -37,11 +37,11 @@ namespace CLHoma.Combat
             this.elementType = element;
             
             // Initialize arc trajectory
-            startPosition = transform.position;
-            startTime = Time.time;
+            arcStartPosition = transform.position;
+            arcStartTime = Time.time;
             if (currentTarget != null)
             {
-                journeyLength = Vector3.Distance(startPosition, currentTarget.transform.position);
+                arcJourneyLength = Vector3.Distance(arcStartPosition, currentTarget.transform.position);
             }
 
             if (autoDisableTime > 0)
@@ -66,14 +66,14 @@ namespace CLHoma.Combat
 
             // Calculate the current position on the arc
             Vector3 targetPos = currentTarget.transform.position;
-            float distanceCovered = (Time.time - startTime) * speed;
-            float journeyFraction = distanceCovered / journeyLength;
+            float distanceCovered = (Time.time - arcStartTime) * speed;
+            float journeyFraction = distanceCovered / arcJourneyLength;
 
             // Clamp the fraction to prevent overshooting
             journeyFraction = Mathf.Clamp01(journeyFraction);
 
             // Calculate the current position
-            Vector3 currentPos = Vector3.Lerp(startPosition, targetPos, journeyFraction);
+            Vector3 currentPos = Vector3.Lerp(arcStartPosition, targetPos, journeyFraction);
 
             // Modify the arc height calculation for a more pronounced arc
             float heightMultiplier = Mathf.Sin(journeyFraction * Mathf.PI); // Creates a smoother arc
@@ -87,7 +87,7 @@ namespace CLHoma.Combat
             {
                 // Calculate next position for smooth rotation
                 float nextFraction = Mathf.Clamp01(journeyFraction + 0.1f);
-                Vector3 nextPos = Vector3.Lerp(startPosition, targetPos, nextFraction);
+                Vector3 nextPos = Vector3.Lerp(arcStartPosition, targetPos, nextFraction);
                 float nextHeightMultiplier = Mathf.Sin(nextFraction * Mathf.PI);
                 nextPos.y += nextHeightMultiplier * arcHeight;
                 

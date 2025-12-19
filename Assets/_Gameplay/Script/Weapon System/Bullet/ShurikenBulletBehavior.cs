@@ -9,7 +9,7 @@ namespace CLHoma.Combat
         [SerializeField] TrailRenderer trailRenderer;
         [SerializeField] Transform modelProjectile;
 
-        private Vector3 startPosition;
+        private Vector3 returnStartPosition;
         private bool isReturning;
 
         private Vector3 targetPos;
@@ -22,7 +22,7 @@ namespace CLHoma.Combat
             base.Initialise(damage, speed, element, target, autoDisableTime, autoDisableOnHit);
             trailRenderer.Clear();
 
-            startPosition = transform.position;
+            returnStartPosition = transform.position;
             transform.localScale = Vector3.one * 2f;
 
             targetPos = Utils.GetRandomPositionAround(target.transform.position, 0.5f);
@@ -38,7 +38,7 @@ namespace CLHoma.Combat
             if (isReturning)
             {
                 float step = speed * Time.fixedDeltaTime;
-                Vector3 returnPosition = startPosition;
+                Vector3 returnPosition = returnStartPosition;
                 transform.position = Vector3.MoveTowards(transform.position, returnPosition, step);
 
                 if (Vector3.Distance(transform.position, returnPosition) < 0.1f)

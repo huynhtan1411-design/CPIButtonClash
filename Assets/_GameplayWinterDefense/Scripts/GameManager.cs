@@ -272,10 +272,6 @@ namespace WD
             {
                 StartCombatPhase();
             }
-            if (Input.GetKeyDown(KeyCode.F))
-            {
-                waveSpawner.StartNextWave();
-            }
         }
 
         private void UpdateGameLogic()
