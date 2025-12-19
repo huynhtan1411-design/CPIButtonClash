@@ -34,6 +34,10 @@ namespace WD
         [Tooltip("Bật: giữ phím để spawn, nhả phím dừng. Tắt: bấm 1 lần để bật/tắt spawn.")]
         [SerializeField] private bool holdToSpawn = false;
 
+        [Header("Elite Spawn Hotkey")]
+        [SerializeField] private bool enableEliteSpawnHotkey = false;
+        [SerializeField] private KeyCode eliteSpawnKey = KeyCode.E;
+
         private bool isMovementActive;
 
         private void Awake()
@@ -57,6 +61,7 @@ namespace WD
             HandleMovementInput();
             HandleWaveInput();
             HandlePathSpawnHotkeys();
+            HandleEliteSpawnHotkey();
         }
 
         private void HandleMovementInput()
@@ -178,6 +183,15 @@ namespace WD
                         pathSpawnController.StopSpawnAtIndex(mapping.pathIndex);
                 }
             }
+        }
+
+        private void HandleEliteSpawnHotkey()
+        {
+            if (!enableEliteSpawnHotkey || pathSpawnController == null)
+                return;
+
+            if (Input.GetKeyDown(eliteSpawnKey))
+                pathSpawnController.SpawnEliteOnce();
         }
     }
 

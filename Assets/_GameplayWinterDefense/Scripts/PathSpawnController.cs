@@ -15,6 +15,13 @@ namespace WD
         [SerializeField] private float spawnInterval = 1f;
         [SerializeField] private int spawnCountPerTick = 1;
 
+        [Header("Elite Spawn")]
+        [SerializeField] private EnemyData eliteEnemyData;
+        [SerializeField] private GameObject elitePrefabOverride;
+        [SerializeField] private int eliteLevel = 1;
+        [SerializeField] private Transform eliteSpawnPoint;
+        [SerializeField] private float eliteRandomOffset = 0.15f;
+
         private Coroutine[] spawnCoroutines;
         private bool[] isSpawning;
 
@@ -101,7 +108,7 @@ namespace WD
 
         public void SpawnAtPath(PathMovementWD path)
         {
-            GameObject prefabToSpawn = enemyPrefabOverride != null ? enemyPrefabOverride : enemyData?.Prefab;
+            GameObject prefabToSpawn = ResolvePrefab(enemyPrefabOverride, enemyData);
 
             if (prefabToSpawn == null)
             {
@@ -121,23 +128,31 @@ namespace WD
                 Random.Range(-randomOffset, randomOffset)
             );
 
-            GameObject enemyObj = Instantiate(prefabToSpawn, path.StartPoint.position + offset, Quaternion.identity);
+            SpawnEnemy(prefabToSpawn, enemyData, enemyLevel, path.StartPoint.position + offset);
+        }
 
-            BaseEnemyBehavior baseEnemy = enemyObj.GetComponent<BaseEnemyBehavior>();
-            if (baseEnemy == null)
+        public void SpawnEliteOnce()
+        {
+            GameObject prefabToSpawn = ResolvePrefab(elitePrefabOverride, eliteEnemyData);
+            if (prefabToSpawn == null)
             {
-                Debug.LogWarning("Spawned enemy is missing BaseEnemyBehavior.", enemyObj);
-                Destroy(enemyObj);
+                Debug.LogWarning("Elite prefab is not assigned (set EliteEnemyData or ElitePrefabOverride).", this);
                 return;
             }
 
-            if (enemyData != null)
-                baseEnemy.SetEnemyData(enemyData, enemyLevel);
+            if (eliteSpawnPoint == null)
+            {
+                Debug.LogWarning("Elite spawn point is not assigned.", this);
+                return;
+            }
 
-            baseEnemy.Initialise();
+            Vector3 offset = new Vector3(
+                Random.Range(-eliteRandomOffset, eliteRandomOffset),
+                0f,
+                Random.Range(-eliteRandomOffset, eliteRandomOffset)
+            );
 
-            if (GameManager.Instance != null)
-                GameManager.Instance.RegisterEnemy(enemyObj);
+            SpawnEnemy(prefabToSpawn, eliteEnemyData, eliteLevel, eliteSpawnPoint.position + offset);
         }
 
         private void StartSpawn(int index)
@@ -198,6 +213,36 @@ namespace WD
             {
                 InitialiseState();
             }
+        }
+
+        private GameObject ResolvePrefab(GameObject prefabOverride, EnemyData data)
+        {
+            if (prefabOverride != null)
+                return prefabOverride;
+            if (data != null)
+                return data.Prefab;
+            return null;
+        }
+
+        private void SpawnEnemy(GameObject prefabToSpawn, EnemyData data, int level, Vector3 position)
+        {
+            GameObject enemyObj = Instantiate(prefabToSpawn, position, Quaternion.identity);
+
+            BaseEnemyBehavior baseEnemy = enemyObj.GetComponent<BaseEnemyBehavior>();
+            if (baseEnemy == null)
+            {
+                Debug.LogWarning("Spawned enemy is missing BaseEnemyBehavior.", enemyObj);
+                Destroy(enemyObj);
+                return;
+            }
+
+            if (data != null)
+                baseEnemy.SetEnemyData(data, level);
+
+            baseEnemy.Initialise();
+
+            if (GameManager.Instance != null)
+                GameManager.Instance.RegisterEnemy(enemyObj);
         }
     }
 }
