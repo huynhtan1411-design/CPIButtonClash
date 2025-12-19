@@ -58,6 +58,7 @@ namespace TemplateSystems.Controllers.Player
 
         private void OnJoystickDragged(IdleInputParams arg0)
         {
+            
             if (IsOnHorse)
             {
                 ChangeAnimationState(PlayerAnimationStates.HorseRide);
@@ -70,6 +71,8 @@ namespace TemplateSystems.Controllers.Player
 
         public void OnPointerDown()
         {
+            animator.SetBool("IsMoving", true);
+            animator.SetTrigger("StartMove");
             if (IsOnHorse)
             {
                 ChangeAnimationState(PlayerAnimationStates.HorseRide);
@@ -77,6 +80,7 @@ namespace TemplateSystems.Controllers.Player
                 {
                     horseAnimator.SetBool(HORSE_MOVE_PARAM, true);
                 }
+                
             }
             else
             {
@@ -86,6 +90,7 @@ namespace TemplateSystems.Controllers.Player
 
         public void OnInputReleased()
         {
+            animator.SetBool("IsMoving", false);
             if (IsOnHorse)
             {
                 ChangeAnimationState(PlayerAnimationStates.HorseIdle);
@@ -106,11 +111,45 @@ namespace TemplateSystems.Controllers.Player
 
             if (animationStates == PlayerAnimationStates.Attack || animationStates == PlayerAnimationStates.HorseAttack)
             {
-                animator.SetTrigger(ATTACK_TRIGGER);
+                // animator.SetTrigger(ATTACK_TRIGGER);
+                // animator.SetTrigger("StartAttack");
+                Debug.Log("Play Attack Animation");
+                PlayAttack(100, false);
                 return;
             }
 
             animator.Play(animationStates.ToString());
+        }
+        private int idxAtk = 1;
+        public void PlayAttack(float atkSpeed, bool isCrit = false)
+        {
+            if (animator == null)
+                return ;
+            animator.SetBool("IsWalk", false);
+            animator.SetBool("IsRun", false);
+            animator.SetBool("IsIdle", false);
+            animator.SetFloat("Speed", 0);
+            // animator.ResetTrigger("StartIdle");
+
+
+            if (isCrit)
+            {
+                animator.SetFloat("AttackIndex", 0);
+            }
+            else
+            {
+                animator.SetFloat("AttackIndex", idxAtk);
+                idxAtk++; // Toggle between 0 and 1
+            }
+
+            animator.SetTrigger("StartAttack");
+            if(idxAtk == 3)
+            {
+                idxAtk = 1;
+            }
+            var stateInfo = animator.GetCurrentAnimatorStateInfo(0);
+            animator.Play(stateInfo.fullPathHash, 0, 0f);
+            
         }
 
         public void MountHorse(Animator horseAnim)

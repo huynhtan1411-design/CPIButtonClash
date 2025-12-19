@@ -114,9 +114,9 @@ namespace CLHoma.Combat
             {
                 playerHeroEntity.gameObject.SetActive(true);
                 playerHeroEntity.ResetHealth();
-                playerObject.SetActive(true);
-                horseObject.SetActive(true);
-                ghostObject.SetActive(false);
+                // playerObject.SetActive(true);
+                // horseObject.SetActive(true);
+                // ghostObject.SetActive(false);
             }
             gameObject.SetActive(true);
         }
