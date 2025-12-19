@@ -114,14 +114,13 @@ namespace TemplateSystems.Controllers.Player
             {
                 // animator.SetTrigger(ATTACK_TRIGGER);
                 // animator.SetTrigger("StartAttack");
-                Debug.Log("Play Attack Animation");
                 PlayAttack(100, false);
                 return;
             }
 
             animator.Play(animationStates.ToString());
         }
-        private int idxAtk = 1;
+        // private int idxAtk = 1;
         public void PlayAttack(float atkSpeed, bool isCrit = false)
         {
             if (animator == null)
@@ -137,17 +136,18 @@ namespace TemplateSystems.Controllers.Player
             {
                 animator.SetFloat("AttackIndex", 0);
             }
-            else
-            {
-                animator.SetFloat("AttackIndex", idxAtk);
-                idxAtk++; // Toggle between 0 and 1
-            }
+            // else
+            // {
+            //     animator.SetFloat("AttackIndex", idxAtk);
+            //     idxAtk++; // Toggle between 0 and 1
+            // }
+            animator.SetFloat("AttackIndex", 0);
 
             animator.SetTrigger("StartAttack");
-            if(idxAtk == 3)
-            {
-                idxAtk = 1;
-            }
+            // if(idxAtk == 3)
+            // {
+            //     idxAtk = 1;
+            // }
             var stateInfo = animator.GetCurrentAnimatorStateInfo(0);
             animator.Play(stateInfo.fullPathHash, 0, 0f);
             
