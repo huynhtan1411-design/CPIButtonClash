@@ -73,6 +73,7 @@ namespace TemplateSystems.Controllers.Player
         {
             animator.SetBool("IsMoving", true);
             animator.SetTrigger("StartMove");
+            animator.SetFloat("MoveSpeed", 2);
             if (IsOnHorse)
             {
                 ChangeAnimationState(PlayerAnimationStates.HorseRide);

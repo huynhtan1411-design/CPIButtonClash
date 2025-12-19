@@ -1,5 +1,89 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &4439026286459059729
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4956296720034206684}
+  - component: {fileID: 2222031996589647982}
+  m_Layer: 9
+  m_Name: Shadow
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4956296720034206684
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4439026286459059729}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: 0.7071068}
+  m_LocalPosition: {x: 0.021452, y: 0.020000001, z: 0.047}
+  m_LocalScale: {x: 0.40000004, y: 0.39999998, z: 0.39999998}
+  m_ConstrainProportionsScale: 1
+  m_Children: []
+  m_Father: {fileID: 6084768703658842500}
+  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
+--- !u!212 &2222031996589647982
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4439026286459059729}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 302
+  m_Sprite: {fileID: 21300000, guid: 30af861f4c8c141159c3c1ff5b424c3c, type: 3}
+  m_Color: {r: 0, g: 0, b: 0, a: 0.5019608}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 1, y: 1}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
 --- !u!1 &4796623966293115903
 GameObject:
   m_ObjectHideFlags: 0
@@ -16,7 +100,7 @@ GameObject:
   - component: {fileID: 8425767046491952598}
   - component: {fileID: 3967057150565478662}
   m_Layer: 9
-  m_Name: Normal
+  m_Name: Jaques
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -54,7 +138,7 @@ MonoBehaviour:
   tier: 0
   animatorRef: {fileID: 5133542230949846186}
   healthbarBehaviour: {fileID: 0}
-  shawdowObj: {fileID: 0}
+  shawdowObj: {fileID: 4439026286459059729}
   renderer: {fileID: 6710910425853434011}
   _elementUi: {fileID: 0}
   attackAnimationDelay: 0.5
@@ -263,11 +347,6 @@ PrefabInstance:
       objectReference: {fileID: 1672511104345793610}
     - target: {fileID: 913941209755913852, guid: 4b86f9b2e30d9724ba36aa666015c53d,
         type: 3}
-      propertyPath: m_CastShadows
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 913941209755913852, guid: 4b86f9b2e30d9724ba36aa666015c53d,
-        type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: ff607e3d031f4334da3561ffc8cd2300, type: 2}
@@ -281,16 +360,6 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 2361591329911813050, guid: 4b86f9b2e30d9724ba36aa666015c53d,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6126708833659741310, guid: 4b86f9b2e30d9724ba36aa666015c53d,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 1496469542853442385, guid: 4b86f9b2e30d9724ba36aa666015c53d, type: 3}
     - {fileID: 2898434403781147144, guid: 4b86f9b2e30d9724ba36aa666015c53d, type: 3}
@@ -299,7 +368,11 @@ PrefabInstance:
     m_RemovedGameObjects:
     - {fileID: 1704225644898591354, guid: 4b86f9b2e30d9724ba36aa666015c53d, type: 3}
     - {fileID: 4959636312197204046, guid: 4b86f9b2e30d9724ba36aa666015c53d, type: 3}
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 431915844505554787, guid: 4b86f9b2e30d9724ba36aa666015c53d,
+        type: 3}
+      insertIndex: 0
+      addedObject: {fileID: 4956296720034206684}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4b86f9b2e30d9724ba36aa666015c53d, type: 3}
 --- !u!4 &1672511104345793610 stripped
