@@ -14115,6 +14115,22 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1014698167272372296, guid: 1158f128473ca1041951a4102aa76181,
+        type: 3}
+      propertyPath: attackRange
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1014698167272372296, guid: 1158f128473ca1041951a4102aa76181,
+        type: 3}
+      propertyPath: projectilePrefab
+      value: 
+      objectReference: {fileID: 7995167561492624291, guid: 7e348d1ba937c3242a8cae5e560292ca,
+        type: 3}
+    - target: {fileID: 1014698167272372296, guid: 1158f128473ca1041951a4102aa76181,
+        type: 3}
+      propertyPath: mountedAttackRange
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 1154031757469388743, guid: 1158f128473ca1041951a4102aa76181,
         type: 3}
       propertyPath: m_AnchorMax.x

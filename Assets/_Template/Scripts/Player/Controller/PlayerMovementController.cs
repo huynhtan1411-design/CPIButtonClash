@@ -126,11 +126,15 @@ namespace TemplateSystems.Controllers.Player
             }
 
             // Handle rotation
-            if (_movementDirection != Vector3.zero)
+            if (_movementDirection != Vector3.zero && Target == null)
             {
                 // When moving, rotate towards movement direction
                 var toRotation = Quaternion.LookRotation(_movementDirection);
                 transform.rotation = Quaternion.Lerp(transform.rotation, toRotation, Time.deltaTime * movementRotationSpeed);
+            }
+            if(Target != null)
+            {
+                HandleCombatRotation(); 
             }
         }
 
