@@ -12,16 +12,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e5713a4aeb934643bf82496834ee86d, type: 3}
   m_Name: EliteData
   m_EditorClassIdentifier: 
-  enemyType: 0
-  enemyTier: 0
-  elementType: 0
-  prefab: {fileID: 0}
+  enemyType: 3
+  enemyTier: 1
+  elementType: 2
+  prefab: {fileID: 4796623966293115903, guid: 4434b3e53ef0a7e49bac91e839bb1b91, type: 3}
   stats:
-    hp: 0
-    moveSpeed: 0
+    hp: 2000
+    moveSpeed: 10
     damage:
-      firstValue: 0
-      secondValue: 0
-    gold: 0
-    attackRange: 0
-    attackCooldown: 0
+      firstValue: 20
+      secondValue: 10
+    gold: 1
+    attackRange: 5
+    attackCooldown: 1
