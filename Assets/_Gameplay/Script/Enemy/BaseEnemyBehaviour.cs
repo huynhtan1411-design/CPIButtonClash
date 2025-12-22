@@ -368,9 +368,11 @@ namespace CLHoma.Combat
             if (animatorRef != null && !isDead)
             {
                 Debug.Log("Setting attack trigger on animator");
-                animatorRef.SetTrigger("StartAttack");
+                animatorRef.SetTrigger("StartCastSkill");
                 animatorRef.SetBool("IsAttacking", true);
                 animatorRef.SetInteger("AttackIndex", 0);
+                animatorRef.SetBool("IsMoving", false);
+
                 // animatorRef.SetTrigger(ANIMATOR_TRIGGER_ATTACK);
             }
             else

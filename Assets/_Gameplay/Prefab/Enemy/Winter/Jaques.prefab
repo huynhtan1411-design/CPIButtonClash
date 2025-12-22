@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 8225182008989774660}
   - component: {fileID: 4796623966293115897}
   - component: {fileID: 4796623966293115896}
-  - component: {fileID: 6421106788705347779}
   - component: {fileID: 8425767046491952598}
   - component: {fileID: 3967057150565478662}
   m_Layer: 9
@@ -115,29 +114,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &6421106788705347779
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4796623966293115903}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fc64495d1180407449eb4085b7fe846c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  enemyType: 0
-  flyingMoveSpeed: 5
-  targetPriority: 010000000400000000000000
-  useStrictPriorityOrder: 0
-  attackRange: 1
-  targetCheckInterval: 0.5
-  pathCheckDistance: 30
-  wallLayer:
-    serializedVersion: 2
-    m_Bits: 262144
-  raycastHeight: 1
 --- !u!195 &8425767046491952598
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -177,6 +153,8 @@ MonoBehaviour:
   waypointReachDistance: 0.3
   randomOffset: 0.5
   lookAtNextWaypoint: 1
+  detectRadius: 2
+  targetTrackingFrequency: 1
 --- !u!1001 &4725365759774197988
 PrefabInstance:
   m_ObjectHideFlags: 0
