@@ -47,6 +47,7 @@ public class SlotBuildingBehaviour : MonoBehaviour
     private int pendingCost;
     private int coinsArrived;
     private int targetCost;
+    private bool waitForCoins;
     public BuildingType SlotType => slotBuildingType;
     public BaseBuildingBehaviour BuildingBehaviour => buildingBehaviour;
     public int LevelUnlockCondition => levelUnlockCondition;
@@ -109,6 +110,7 @@ public class SlotBuildingBehaviour : MonoBehaviour
 
     public void BuildTower()
     {
+        Debug.Log($"[SlotBuilding] BuildTower called. isBuilding={isBuilding} isEmpty={isEmpty} slotType={slotBuildingType} currentGold={(WD.GameManager.Instance != null ? WD.GameManager.Instance.PlayerGold : -1)}", this);
         if (isBuilding) return;
         if (!IsUnlockedForBuild())
         {
@@ -118,12 +120,15 @@ public class SlotBuildingBehaviour : MonoBehaviour
         if (IsEmpty())
         {
             int cost = data.GetCostUpgrade(1);
+            Debug.Log($"[SlotBuilding] Building new {data.name} cost={cost}", this);
             if (!HasEnoughGold(cost))
                 return;
-            bool drainByCoins = useGoldFlyDrain && useCostAsFlyCount;
+            bool drainByCoins = useGoldFlyDrain && useCostAsFlyCount && resourceFlyEffect != null && WDPlayerController.Instance != null;
+            Debug.Log($"[SlotBuilding] drainByCoins={drainByCoins} useGoldFlyDrain={useGoldFlyDrain} useCostAsFlyCount={useCostAsFlyCount} resourceFlyEffectNull={resourceFlyEffect==null}", this);
             pendingCost = drainByCoins ? cost : 0;
             coinsArrived = 0;
             targetCost = drainByCoins ? cost : 0;
+            waitForCoins = drainByCoins;
 
             isEmpty = false;
 
@@ -135,8 +140,16 @@ public class SlotBuildingBehaviour : MonoBehaviour
                 int flyCount = useCostAsFlyCount ? cost : resourceFlyEffect.ResourceCount;
                 resourceFlyEffect.PlayResourceFlyEffect(resourceSpawnPoint, targetPos, flyCount, drainByCoins ? OnGoldFlyArrived : null);
             }
-            if (!drainByCoins && WD.GameManager.Instance != null)
+            else
             {
+                Debug.Log($"[SlotBuilding] No resourceFlyEffect. Deduct gold immediately {cost}", this);
+                waitForCoins = false;
+                if (WD.GameManager.Instance != null)
+                    WD.GameManager.Instance.AddGold(-cost);
+            }
+            if (!drainByCoins && WD.GameManager.Instance != null && resourceFlyEffect != null)
+            {
+                Debug.Log($"[SlotBuilding] Not draining per coin, deduct gold immediately {cost}", this);
                 WD.GameManager.Instance.AddGold(-cost);
             }
             
@@ -172,12 +185,15 @@ public class SlotBuildingBehaviour : MonoBehaviour
         else if (buildingBehaviour != null && buildingBehaviour.CanUpgrade())
         {
             int cost = data.GetCostUpgrade(buildingBehaviour.CurrentLevel + 1);
+            Debug.Log($"[SlotBuilding] Upgrade {data.name} from lv {buildingBehaviour.CurrentLevel} cost={cost}", this);
             if (!HasEnoughGold(cost))
                 return;
-            bool drainByCoins = useGoldFlyDrain && useCostAsFlyCount;
+            bool drainByCoins = useGoldFlyDrain && useCostAsFlyCount && resourceFlyEffect != null && WDPlayerController.Instance != null;
+            Debug.Log($"[SlotBuilding] drainByCoins={drainByCoins} useGoldFlyDrain={useGoldFlyDrain} useCostAsFlyCount={useCostAsFlyCount} resourceFlyEffectNull={resourceFlyEffect==null}", this);
             pendingCost = drainByCoins ? cost : 0;
             coinsArrived = 0;
             targetCost = drainByCoins ? cost : 0;
+            waitForCoins = drainByCoins;
 
             Transform resourceSpawnPoint = WDPlayerController.Instance.transform;
             // Play resource fly effect before building animation
@@ -187,8 +203,16 @@ public class SlotBuildingBehaviour : MonoBehaviour
                 int flyCount = useCostAsFlyCount ? cost : resourceFlyEffect.ResourceCount;
                 resourceFlyEffect.PlayResourceFlyEffect(resourceSpawnPoint, targetPos, flyCount, drainByCoins ? OnGoldFlyArrived : null);
             }
-            if (!drainByCoins && WD.GameManager.Instance != null)
+            else
             {
+                Debug.Log($"[SlotBuilding] No resourceFlyEffect. Deduct gold immediately {cost}", this);
+                waitForCoins = false;
+                if (WD.GameManager.Instance != null)
+                    WD.GameManager.Instance.AddGold(-cost);
+            }
+            if (!drainByCoins && WD.GameManager.Instance != null && resourceFlyEffect != null)
+            {
+                Debug.Log($"[SlotBuilding] Not draining per coin, deduct gold immediately {cost}", this);
                 WD.GameManager.Instance.AddGold(-cost);
             }
             PlayBuildingAnimation(() => {
@@ -223,6 +247,7 @@ public class SlotBuildingBehaviour : MonoBehaviour
 
     private IEnumerator BuildingAnimationRoutine(System.Action onComplete)
     {
+        Debug.Log($"[SlotBuilding] Start build routine waitForCoins={waitForCoins} targetCost={targetCost} timeAnimation={timeAnimation}", this);
         isBuilding = true;
         buildingProgressSlider.gameObject.SetActive(true);
         if (buildingProgressSlider != null)
@@ -234,7 +259,7 @@ public class SlotBuildingBehaviour : MonoBehaviour
         buildingEffect.Play();
         Audio_Manager.instance.play("sfx_ui_building");
 
-        if (useGoldFlyDrain && useCostAsFlyCount && targetCost > 0)
+        if (waitForCoins && targetCost > 0)
         {
             while (coinsArrived < targetCost)
             {
@@ -278,6 +303,7 @@ public class SlotBuildingBehaviour : MonoBehaviour
 
         if (pendingCost > 0)
         {
+            Debug.Log($"[SlotBuilding] OnGoldFlyArrived amount={amount} pendingCost(before)={pendingCost}", this);
             WD.GameManager.Instance.AddGold(-amount);
             pendingCost -= amount;
             coinsArrived += amount;
@@ -292,6 +318,10 @@ public class SlotBuildingBehaviour : MonoBehaviour
             return true;
         int currentZone = SafeZoneController.Instance != null ? SafeZoneController.Instance.CurrentZoneLevel : 0;
         int requiredZone = Mathf.Max(levelUnlockCondition, data != null ? data.LevelIndexUnlock : 0);
+        var lvlData = data != null ? data.GetLevelData(levelInit) : null;
+        if (lvlData != null)
+            requiredZone = Mathf.Max(requiredZone, lvlData.levelUnlockCondition);
+        Debug.Log($"[SlotBuilding] IsUnlockedForBuild currentZone={currentZone} requiredZone={requiredZone} slotType={slotBuildingType}", this);
         return currentZone >= requiredZone;
     }
 

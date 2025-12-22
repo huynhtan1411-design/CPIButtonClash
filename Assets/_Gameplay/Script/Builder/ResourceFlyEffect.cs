@@ -29,6 +29,7 @@ public class ResourceFlyEffect : MonoBehaviour
 
     public void PlayResourceFlyEffect(Transform startTrans, Vector3 endPos, int resourceAmount = -1, System.Action<int> onArrive = null)
     {
+        Debug.Log($"[ResourceFlyEffect] PlayResourceFlyEffect from {startTrans?.name} to {endPos} amount={(resourceAmount > 0 ? resourceAmount : resourceCount)}");
         StartCoroutine(SpawnResources(startTrans, endPos, resourceAmount, onArrive));
     }
 

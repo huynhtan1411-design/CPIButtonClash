@@ -69,6 +69,10 @@ public class UIGameCtr : MonoBehaviour
     public void Init()
     {
         playerStats = PlayerController.StatsManager;
+        if (WD.GameManager.Instance != null)
+        {
+            UpdatePlayerGoldUI(WD.GameManager.Instance.PlayerGold);
+        }
     }
 
     private IEnumerator DelayedInit()
@@ -95,6 +99,7 @@ public class UIGameCtr : MonoBehaviour
 
     private void OnEnable()
     {
+        Debug.Log("[UIGameCtr] OnEnable subscribe events");
         BuildingManager.OnResourceUpdated += UpdateResourdUI;
         if (WD.GameManager.Instance != null)
         {
@@ -105,6 +110,7 @@ public class UIGameCtr : MonoBehaviour
 
     private void OnDisable()
     {
+        Debug.Log("[UIGameCtr] OnDisable unsubscribe events");
         BuildingManager.OnResourceUpdated -= UpdateResourdUI;
         if (WD.GameManager.Instance != null)
             WD.GameManager.Instance.OnPlayerGoldChanged -= UpdatePlayerGoldUI;
@@ -204,7 +210,10 @@ public class UIGameCtr : MonoBehaviour
         _textGoldReward.text = gold.ToString();
         _textEnemyKill.text = enemyKill.ToString();
         if (_textPlayerGold != null)
+        {
             _textPlayerGold.text = gold.ToString();
+            Debug.Log($"[UIGameCtr] UpdateResourdUI -> sync player gold text to {gold}");
+        }
     }
 
     public void UpdateResourcePerSecUI(float resPerSecond)
@@ -221,7 +230,14 @@ public class UIGameCtr : MonoBehaviour
     public void UpdatePlayerGoldUI(int gold)
     {
         if (_textPlayerGold != null)
+        {
             _textPlayerGold.text = gold.ToString();
+            Debug.Log($"[UIGameCtr] UpdatePlayerGoldUI -> {gold}");
+        }
+        else
+        {
+            Debug.LogWarning($"[UIGameCtr] _textPlayerGold not assigned. Gold value={gold}");
+        }
     }
 
     public void ToggleUIBossWarning(bool show)
