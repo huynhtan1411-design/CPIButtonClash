@@ -24998,6 +24998,7 @@ MonoBehaviour:
   _textEnemyKill: {fileID: 7712929749911933746}
   _textResourcePerSecond: {fileID: 6092359784214199348}
   _textWave: {fileID: 8001712345027011440}
+  _textPlayerGold: {fileID: 0}
   UIWarningBoss: {fileID: 3006648487530063465}
   mergeCardHerosCtr: {fileID: 7350222359014506589}
   _textProgress: {fileID: 6145710839968369286}

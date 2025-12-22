@@ -33,6 +33,8 @@ public class SlotBuildingBehaviour : MonoBehaviour
     [SerializeField] private Image buildingProgressSlider;
     [SerializeField] private BuildingData data;
     [SerializeField] private ResourceFlyEffect resourceFlyEffect;
+    [SerializeField] private bool useGoldFlyDrain = true;
+    [SerializeField] private bool useCostAsFlyCount = true;
 
 
     [SerializeField] private int levelInit = 1;
@@ -42,9 +44,14 @@ public class SlotBuildingBehaviour : MonoBehaviour
     private BaseBuildingBehaviour buildingBehaviour;
     private bool isBuilding = false;
     private bool isEmpty = true;
+    private int pendingCost;
+    private int coinsArrived;
+    private int targetCost;
     public BuildingType SlotType => slotBuildingType;
     public BaseBuildingBehaviour BuildingBehaviour => buildingBehaviour;
     public int LevelUnlockCondition => levelUnlockCondition;
+    public BuildingData BuildingData => data;
+    public int LevelInit => levelInit;
 
     private void Start()
     {
@@ -70,6 +77,16 @@ public class SlotBuildingBehaviour : MonoBehaviour
             BuildingManager.Instance.OnZoneLevelChanged();
         }
     }
+    private bool HasEnoughGold(int cost)
+    {
+        if (WD.GameManager.Instance == null) return false;
+        if (WD.GameManager.Instance.PlayerGold < cost)
+        {
+            Debug.LogWarning($"Not enough gold. Need {cost}, have {WD.GameManager.Instance.PlayerGold}", this);
+            return false;
+        }
+        return true;
+    }
     public bool IsEmpty()
     {
         return isEmpty;
@@ -93,17 +110,34 @@ public class SlotBuildingBehaviour : MonoBehaviour
     public void BuildTower()
     {
         if (isBuilding) return;
+        if (!IsUnlockedForBuild())
+        {
+            Debug.LogWarning($"Slot locked. Required zone level {levelUnlockCondition}, building unlock {data.LevelIndexUnlock}", this);
+            return;
+        }
         if (IsEmpty())
         {
+            int cost = data.GetCostUpgrade(1);
+            if (!HasEnoughGold(cost))
+                return;
+            bool drainByCoins = useGoldFlyDrain && useCostAsFlyCount;
+            pendingCost = drainByCoins ? cost : 0;
+            coinsArrived = 0;
+            targetCost = drainByCoins ? cost : 0;
+
             isEmpty = false;
-            //BuildingManager.Instance.SpendResources(data.GetCostUpgrade(1));
 
             Transform resourceSpawnPoint = WDPlayerController.Instance.transform;
             // Play resource fly effect before building animation
             if (resourceFlyEffect != null && resourceSpawnPoint != null)
             {
                 Vector3 targetPos = transform.position; // + Vector3.up * 0.5f; // Slightly above the slot
-                resourceFlyEffect.PlayResourceFlyEffect(resourceSpawnPoint, targetPos);
+                int flyCount = useCostAsFlyCount ? cost : resourceFlyEffect.ResourceCount;
+                resourceFlyEffect.PlayResourceFlyEffect(resourceSpawnPoint, targetPos, flyCount, drainByCoins ? OnGoldFlyArrived : null);
+            }
+            if (!drainByCoins && WD.GameManager.Instance != null)
+            {
+                WD.GameManager.Instance.AddGold(-cost);
             }
             
             PlayBuildingAnimation(() => {
@@ -118,6 +152,10 @@ public class SlotBuildingBehaviour : MonoBehaviour
                     buildingBehaviour.SetModelWall(levelUnlockCondition);
                     buildingBehaviour.BuildingGraphics.AnimationDropOfWall();
                 }
+                if (buildingBehaviour != null && buildingBehaviour.IsMaxLevel())
+                {
+                    model.SetActive(false);
+                }
                 Audio_Manager.instance.play("sfx_summon_hero");
                 onBuildingComplete?.Invoke();
 
@@ -125,19 +163,34 @@ public class SlotBuildingBehaviour : MonoBehaviour
                 {
                     onBuildingCompleteDelay?.Invoke();
                 });
+
+                // Drain gold per coin arrival
+                coinsArrived = 0;
+                pendingCost = 0;
             });
         }
         else if (buildingBehaviour != null && buildingBehaviour.CanUpgrade())
         {
+            int cost = data.GetCostUpgrade(buildingBehaviour.CurrentLevel + 1);
+            if (!HasEnoughGold(cost))
+                return;
+            bool drainByCoins = useGoldFlyDrain && useCostAsFlyCount;
+            pendingCost = drainByCoins ? cost : 0;
+            coinsArrived = 0;
+            targetCost = drainByCoins ? cost : 0;
 
             Transform resourceSpawnPoint = WDPlayerController.Instance.transform;
             // Play resource fly effect before building animation
             if (resourceFlyEffect != null && resourceSpawnPoint != null)
             {
                 Vector3 targetPos = transform.position; // + Vector3.up * 0.5f; // Slightly above the slot
-                resourceFlyEffect.PlayResourceFlyEffect(resourceSpawnPoint, targetPos);
+                int flyCount = useCostAsFlyCount ? cost : resourceFlyEffect.ResourceCount;
+                resourceFlyEffect.PlayResourceFlyEffect(resourceSpawnPoint, targetPos, flyCount, drainByCoins ? OnGoldFlyArrived : null);
             }
-            //BuildingManager.Instance.SpendResources(data.GetCostUpgrade(buildingBehaviour.CurrentLevel + 1));
+            if (!drainByCoins && WD.GameManager.Instance != null)
+            {
+                WD.GameManager.Instance.AddGold(-cost);
+            }
             PlayBuildingAnimation(() => {
                 buildingBehaviour.Upgrade();
                 if (slotBuildingType == BuildingType.Base)
@@ -178,21 +231,35 @@ public class SlotBuildingBehaviour : MonoBehaviour
             buildingProgressSlider.fillAmount = 0;
         }
 
-        float elapsedTime = 0;
         buildingEffect.Play();
         Audio_Manager.instance.play("sfx_ui_building");
 
-        while (elapsedTime < timeAnimation)
+        if (useGoldFlyDrain && useCostAsFlyCount && targetCost > 0)
         {
-            elapsedTime += Time.deltaTime;
-            float progress = elapsedTime / timeAnimation;
-            
-            if (buildingProgressSlider != null)
+            while (coinsArrived < targetCost)
             {
-                buildingProgressSlider.fillAmount = progress;
+                if (buildingProgressSlider != null && targetCost > 0)
+                {
+                    buildingProgressSlider.fillAmount = Mathf.Clamp01((float)coinsArrived / targetCost);
+                }
+                yield return null;
             }
-            
-            yield return null;
+        }
+        else
+        {
+            float elapsedTime = 0;
+            while (elapsedTime < timeAnimation)
+            {
+                elapsedTime += Time.deltaTime;
+                float progress = elapsedTime / timeAnimation;
+                
+                if (buildingProgressSlider != null)
+                {
+                    buildingProgressSlider.fillAmount = progress;
+                }
+                
+                yield return null;
+            }
         }
         
         if (buildingProgressSlider != null)
@@ -202,6 +269,30 @@ public class SlotBuildingBehaviour : MonoBehaviour
 
         onComplete?.Invoke();
         isBuilding = false;
+    }
+
+    private void OnGoldFlyArrived(int amount)
+    {
+        if (!useGoldFlyDrain) return;
+        if (WD.GameManager.Instance == null) return;
+
+        if (pendingCost > 0)
+        {
+            WD.GameManager.Instance.AddGold(-amount);
+            pendingCost -= amount;
+            coinsArrived += amount;
+            if (pendingCost < 0)
+                pendingCost = 0;
+        }
+    }
+
+    private bool IsUnlockedForBuild()
+    {
+        if (slotBuildingType == BuildingType.Base)
+            return true;
+        int currentZone = SafeZoneController.Instance != null ? SafeZoneController.Instance.CurrentZoneLevel : 0;
+        int requiredZone = Mathf.Max(levelUnlockCondition, data != null ? data.LevelIndexUnlock : 0);
+        return currentZone >= requiredZone;
     }
 
     public void ResetSlot()
@@ -249,6 +340,10 @@ public class SlotBuildingBehaviour : MonoBehaviour
             {
                 buildingBehaviour.SetModelWall(levelUnlockCondition);
                 buildingBehaviour.BuildingGraphics.AnimationDropOfWall();
+            }
+            if (buildingBehaviour != null && buildingBehaviour.IsMaxLevel())
+            {
+                model.SetActive(false);
             }
             Audio_Manager.instance.play("sfx_summon_hero");
             onBuildingComplete?.Invoke();

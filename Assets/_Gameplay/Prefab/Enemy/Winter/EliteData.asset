@@ -13,11 +13,11 @@ MonoBehaviour:
   m_Name: EliteData
   m_EditorClassIdentifier: 
   enemyType: 3
-  enemyTier: 1
-  elementType: 2
+  enemyTier: 2
+  elementType: 0
   prefab: {fileID: 4796623966293115903, guid: 4434b3e53ef0a7e49bac91e839bb1b91, type: 3}
   stats:
-    hp: 2000
+    hp: 100
     moveSpeed: 10
     damage:
       firstValue: 20

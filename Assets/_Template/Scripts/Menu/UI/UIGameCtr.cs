@@ -17,6 +17,7 @@ public class UIGameCtr : MonoBehaviour
     [SerializeField] private TextMeshProUGUI _textEnemyKill;
     [SerializeField] private TextMeshProUGUI _textResourcePerSecond;
     [SerializeField] private TextMeshProUGUI _textWave;
+    [SerializeField] private TextMeshProUGUI _textPlayerGold;
     [SerializeField] private Transform UIWarningBoss;
     [SerializeField] private MergeCardHeros mergeCardHerosCtr;
     [SerializeField] private TextMeshProUGUI _textProgress;
@@ -95,11 +96,18 @@ public class UIGameCtr : MonoBehaviour
     private void OnEnable()
     {
         BuildingManager.OnResourceUpdated += UpdateResourdUI;
+        if (WD.GameManager.Instance != null)
+        {
+            WD.GameManager.Instance.OnPlayerGoldChanged += UpdatePlayerGoldUI;
+            UpdatePlayerGoldUI(WD.GameManager.Instance.PlayerGold);
+        }
     }
 
     private void OnDisable()
     {
         BuildingManager.OnResourceUpdated -= UpdateResourdUI;
+        if (WD.GameManager.Instance != null)
+            WD.GameManager.Instance.OnPlayerGoldChanged -= UpdatePlayerGoldUI;
     }
 
     private void OnDestroy()
@@ -195,6 +203,8 @@ public class UIGameCtr : MonoBehaviour
     {
         _textGoldReward.text = gold.ToString();
         _textEnemyKill.text = enemyKill.ToString();
+        if (_textPlayerGold != null)
+            _textPlayerGold.text = gold.ToString();
     }
 
     public void UpdateResourcePerSecUI(float resPerSecond)
@@ -206,6 +216,12 @@ public class UIGameCtr : MonoBehaviour
         {
             _textResourcePerSecond.text = $"{resPerSecond} / sec";
         }
+    }
+
+    public void UpdatePlayerGoldUI(int gold)
+    {
+        if (_textPlayerGold != null)
+            _textPlayerGold.text = gold.ToString();
     }
 
     public void ToggleUIBossWarning(bool show)
@@ -356,7 +372,7 @@ public class UIGameCtr : MonoBehaviour
     public void ShowFightButton(int silver)
     {
         _fightTextButton.text = "+ " + silver;
-        _fightButton.gameObject.SetActive(true);
+        // _fightButton.gameObject.SetActive(true);
     }
     public void HideFightButton()
     {

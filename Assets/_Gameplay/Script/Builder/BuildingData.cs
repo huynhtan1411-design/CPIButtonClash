@@ -33,6 +33,7 @@ namespace WD
         [Header("Upgrade & unlock")]
         public int upgradeCost;
         public int levelUnlockCondition;
+        public Vector3 modelOffset = Vector3.zero;
 
         private float health;
         private float attackDamage;

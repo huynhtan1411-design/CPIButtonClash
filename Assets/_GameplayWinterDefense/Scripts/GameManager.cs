@@ -95,8 +95,10 @@ namespace WD
         public int CurrentWave => currentWave;
         public int TotalWaves => totalWaves;
         public GamePhase CurrentPhase => currentPhase;
+        public int PlayerGold => playerGold;
         public event Action<int, int> OnWaveChanged; // (currentWave, totalWaves)
         public event Action OnGameOver;
+        public event Action<int> OnPlayerGoldChanged; // current gold
 
         public static event Action<bool> OnGamePauseStateChanged;
         private UIGameCtr uIGameplayCtr = null;
@@ -322,6 +324,7 @@ namespace WD
             currentLevelIndex = levelIndex;
             currentLevel = levelConfigSO.levels[levelIndex];
             playerGold = currentLevel.startingGold;
+            OnPlayerGoldChanged?.Invoke(playerGold);
 
             waveSpawner.waves = currentLevel.waves;
             waveSpawner.ResetWaves();
@@ -435,12 +438,20 @@ namespace WD
         {
             if (playerGold < amount) return false;
             playerGold -= amount;
+            OnPlayerGoldChanged?.Invoke(playerGold);
             return true;
         }
 
         public void AddGold(int amount)
         {
             playerGold += amount;
+            OnPlayerGoldChanged?.Invoke(playerGold);
+        }
+
+        public void SetGold(int amount)
+        {
+            playerGold = amount;
+            OnPlayerGoldChanged?.Invoke(playerGold);
         }
 
         public void GoToNextLevel()
