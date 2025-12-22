@@ -21,7 +21,7 @@ MonoBehaviour:
   levelConfigs:
   - name: Cannon Tower Lv 1
     icon: {fileID: 21300000, guid: b58ce9ca5be76a647912e2f5782d5d89, type: 3}
-    towerModel: {fileID: 179151388349858306, guid: 246c49c8e2f58974b95b16832ac9dfef,
+    towerModel: {fileID: 179151388349858306, guid: 488dd5c351318b947a73a07f72823046,
       type: 3}
     description: Deals area damage to ground units
     percentAddHealth: 0
@@ -29,36 +29,9 @@ MonoBehaviour:
     attackRange: 4
     attackSpeed: 2.8
     radiusExplosion: 1.5
-    damageExplosion: 30
+    damageExplosion: 200
     maxTargets: 1
-    upgradeCost: 4
-    levelUnlockCondition: 1
-  - name: Cannon Tower Lv 2
-    icon: {fileID: 21300000, guid: 7ee691e1ce9498949b3870ab5f678a10, type: 3}
-    towerModel: {fileID: 179151388349858306, guid: cd63beaeff87cdb40b7d65d3f69b719f,
-      type: 3}
-    description: More damage
-    percentAddHealth: 0.3
-    percentAddDamage: 0.3
-    attackRange: 4
-    attackSpeed: 1.8
-    radiusExplosion: 1.5
-    damageExplosion: 40
-    maxTargets: 1
-    upgradeCost: 6
-    levelUnlockCondition: 2
-  - name: Cannon Tower Lv 3
-    icon: {fileID: 21300000, guid: 10741590d9719894084ca59099a78f71, type: 3}
-    towerModel: {fileID: 179151388349858306, guid: 488dd5c351318b947a73a07f72823046,
-      type: 3}
-    description: Even more damage
-    percentAddHealth: 0.3
-    percentAddDamage: 0.3
-    attackRange: 3
-    attackSpeed: 1.5
-    radiusExplosion: 2
-    damageExplosion: 50
-    maxTargets: 1
-    upgradeCost: 16
+    upgradeCost: 100
     levelUnlockCondition: 3
+    modelOffset: {x: 0, y: 0, z: 0}
   Prefab: {fileID: 7616477193882369530, guid: 435e2baae5a13cc41ac78d8f742671ef, type: 3}

@@ -62,6 +62,8 @@ public class BuildingManager : MonoSingleton<BuildingManager>
     {
         currentResources = WD.GameManager.Instance.GameConfig.silverStart;
         OnResourceUpdated?.Invoke(currentResources, 0);
+        if (WD.GameManager.Instance != null)
+            WD.GameManager.Instance.SetGold(currentResources);
     }
 
     public bool CheckSlotMain()
@@ -104,7 +106,15 @@ public class BuildingManager : MonoSingleton<BuildingManager>
             return true;
         }
 
-        return slot.LevelUnlockCondition <= currentZoneLevel;
+        int required = slot.LevelUnlockCondition;
+        if (slot.BuildingData != null)
+        {
+            required = Mathf.Max(required, slot.BuildingData.LevelIndexUnlock);
+            var lvlData = slot.BuildingData.GetLevelData(slot.LevelInit);
+            if (lvlData != null)
+                required = Mathf.Max(required, lvlData.levelUnlockCondition);
+        }
+        return currentZoneLevel >= required;
     }
 
     public void OnZoneLevelChanged()
@@ -116,6 +126,8 @@ public class BuildingManager : MonoSingleton<BuildingManager>
     {
         currentResources += amount;
         OnResourceUpdated?.Invoke(currentResources, amount);
+        if (WD.GameManager.Instance != null)
+            WD.GameManager.Instance.AddGold(amount);
     }
     public bool CanAffordBuilding(int cost)
     {

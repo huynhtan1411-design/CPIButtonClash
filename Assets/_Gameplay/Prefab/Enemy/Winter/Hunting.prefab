@@ -98,6 +98,7 @@ GameObject:
   - component: {fileID: 4796623966293115896}
   - component: {fileID: 1869973842520041243}
   - component: {fileID: 2456520303868168362}
+  - component: {fileID: -3640343534582175979}
   m_Layer: 9
   m_Name: Hunting
   m_TagString: Enemy
@@ -135,12 +136,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd9819aa71883b645a57564c186e586e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tier: 0
+  tier: 2
   animatorRef: {fileID: 5249379356675064795}
-  healthbarBehaviour: {fileID: 6658223778522967136}
+  healthbarBehaviour: {fileID: 0}
   shawdowObj: {fileID: 2635855571873493517}
   renderer: {fileID: 7057088446444536144}
-  _elementUi: {fileID: 8366703858511125555}
+  _elementUi: {fileID: 0}
   attackAnimationDelay: 0.5
   isFlying: 0
   onDamageTaken:
@@ -207,7 +208,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4796623966293115903}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fc64495d1180407449eb4085b7fe846c, type: 3}
   m_Name: 
@@ -215,6 +216,7 @@ MonoBehaviour:
   enemyType: 0
   flyingMoveSpeed: 5
   targetPriority: 000000000400000001000000
+  useStrictPriorityOrder: 0
   attackRange: 1.5
   targetCheckInterval: 0.5
   pathCheckDistance: 30
@@ -244,6 +246,23 @@ NavMeshAgent:
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
+--- !u!114 &-3640343534582175979
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4796623966293115903}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c0ae1ec527d6394f9bb8c9a6d3e1831, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 1.5
+  rotationSpeed: 5
+  waypointReachDistance: 0.3
+  randomOffset: 0.5
+  lookAtNextWaypoint: 1
 --- !u!1001 &5758856371020669508
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -395,7 +414,7 @@ PrefabInstance:
     - target: {fileID: 3289084078297332158, guid: 920a5b03cccd03344a9a0415a83addd1,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3629126447070815879, guid: 920a5b03cccd03344a9a0415a83addd1,
         type: 3}
@@ -427,36 +446,12 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 920a5b03cccd03344a9a0415a83addd1, type: 3}
---- !u!114 &6658223778522967136 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1408872849544121892, guid: 920a5b03cccd03344a9a0415a83addd1,
-    type: 3}
-  m_PrefabInstance: {fileID: 5758856371020669508}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 897f442fda1b1ce468ce46d8e12e3cbc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!224 &6710565323437084748 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 1354218719477969416, guid: 920a5b03cccd03344a9a0415a83addd1,
     type: 3}
   m_PrefabInstance: {fileID: 5758856371020669508}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &8366703858511125555 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 4320941674174660215, guid: 920a5b03cccd03344a9a0415a83addd1,
-    type: 3}
-  m_PrefabInstance: {fileID: 5758856371020669508}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e379c21b1ee15f448a12b5cafa1488ef, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &7814608235939054101
 PrefabInstance:
   m_ObjectHideFlags: 0

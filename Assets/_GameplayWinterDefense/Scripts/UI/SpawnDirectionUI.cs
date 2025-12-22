@@ -76,7 +76,7 @@ public class SpawnDirectionUI : MonoBehaviour
     {
         GameObject uiElement = Instantiate(spawnInfoPrefab, spawnInfoParent);
         RectTransform rectTransform = uiElement.GetComponent<RectTransform>();
-        uiElement.SetActive(true);
+        uiElement.SetActive(false);
         // Set anchor and position
         rectTransform.anchorMin = config.anchorPosition;
         rectTransform.anchorMax = config.anchorPosition;

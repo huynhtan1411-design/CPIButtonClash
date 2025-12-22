@@ -14,6 +14,8 @@ public class ResourceFlyEffect : MonoBehaviour
 
     private Queue<GameObject> resourcePool;
 
+    public int ResourceCount => resourceCount;
+
     private void Awake()
     {
         resourcePool = new Queue<GameObject>();
@@ -25,14 +27,15 @@ public class ResourceFlyEffect : MonoBehaviour
         }
     }
 
-    public void PlayResourceFlyEffect(Transform startTrans, Vector3 endPos)
+    public void PlayResourceFlyEffect(Transform startTrans, Vector3 endPos, int resourceAmount = -1, System.Action<int> onArrive = null)
     {
-        StartCoroutine(SpawnResources(startTrans, endPos));
+        StartCoroutine(SpawnResources(startTrans, endPos, resourceAmount, onArrive));
     }
 
-    private IEnumerator SpawnResources(Transform startTrans, Vector3 endPos)
+    private IEnumerator SpawnResources(Transform startTrans, Vector3 endPos, int resourceAmount, System.Action<int> onArrive)
     {
-        for (int i = 0; i < resourceCount; i++)
+        int count = resourceAmount > 0 ? resourceAmount : resourceCount;
+        for (int i = 0; i < count; i++)
         {
             var resource = GetResourceFromPool();
             float startTime = Time.time;
@@ -53,18 +56,8 @@ public class ResourceFlyEffect : MonoBehaviour
             resource.transform.DOPath(path, flyDuration, PathType.CatmullRom)
                 .SetEase(Ease.OutQuad)
                 .OnStart(() => { obj.SetActive(true); Audio_Manager.instance.play("Jump"); })
-                .OnUpdate(() => {
-                    // Update the path during animation
-                    float elapsedTime = Time.time - startTime;
-                    if (elapsedTime < flyDuration)
-                    {
-                        Vector3 currentPos = resource.transform.position;
-                        Vector3 newMidPoint = (currentPos + endPos) / 2f + Vector3.up * arcHeight;
-                        Vector3[] newPath = new Vector3[] { currentPos, newMidPoint, endPos };
-                        resource.transform.DOPath(newPath, flyDuration - elapsedTime, PathType.CatmullRom);
-                    }
-                })
                 .OnComplete(() => {
+                    onArrive?.Invoke(1);
                     ReturnResourceToPool(resource);
                 });
 

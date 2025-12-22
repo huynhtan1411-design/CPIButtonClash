@@ -31,8 +31,9 @@ MonoBehaviour:
     radiusExplosion: 0
     damageExplosion: 0
     maxTargets: 1
-    upgradeCost: 3
+    upgradeCost: 8
     levelUnlockCondition: 0
+    modelOffset: {x: 0, y: 0, z: 0}
   - name: Castle Lv2
     icon: {fileID: 21300000, guid: 12292bccfa73bce479ef964876b0cce8, type: 3}
     towerModel: {fileID: 4390284558413753927, guid: 1427ad3917cb1174687db6b563044afb,
@@ -45,8 +46,9 @@ MonoBehaviour:
     radiusExplosion: 0
     damageExplosion: 0
     maxTargets: 1
-    upgradeCost: 7
+    upgradeCost: 15
     levelUnlockCondition: 1
+    modelOffset: {x: 0, y: 0, z: 0}
   - name: Castle Lv3
     icon: {fileID: 21300000, guid: f90372d571a6ab24bab307bf278c6a77, type: 3}
     towerModel: {fileID: 6170171421757313491, guid: a1b5e927c831f3246a420766657c3772,
@@ -61,4 +63,5 @@ MonoBehaviour:
     maxTargets: 1
     upgradeCost: 20
     levelUnlockCondition: 1
+    modelOffset: {x: 0, y: -0.83, z: 0}
   Prefab: {fileID: 7616477193882369530, guid: d3e53dd66c5090d40b11d5e6359a2558, type: 3}

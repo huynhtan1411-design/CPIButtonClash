@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections.Generic;
+using WD;
 
 public class ResourceManager : MonoBehaviour
 {
@@ -71,7 +72,10 @@ public class ResourceManager : MonoBehaviour
         Debug.Log($"Resource collected! Amount: {amount}, Total: {totalResources}");
         
         // Notify UI or other systems about resource collection
-        // You can add UI update code here
+        if (WD.GameManager.Instance != null)
+        {
+            WD.GameManager.Instance.AddGold(amount);
+        }
     }
 
     public int GetTotalResources()

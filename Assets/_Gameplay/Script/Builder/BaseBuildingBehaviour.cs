@@ -78,7 +78,7 @@ namespace WD
             }
             var levelData = buildingConfig.GetLevelData(currentLevel);
             currentModel = Instantiate(levelData.towerModel, modelContainer);
-            currentModel.transform.localPosition = Vector3.zero;
+            currentModel.transform.localPosition = levelData.modelOffset;
             currentModel.transform.localRotation = Quaternion.identity;
             currentModel.transform.localScale = Vector3.one;
             currentModel.transform.localScale = new Vector3(1f, 0.5f, 1f);
