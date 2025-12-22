@@ -38,7 +38,8 @@ public class BuildingManager : MonoSingleton<BuildingManager>
         WD.GameManager.Instance.OnBuildPhaseStart.AddListener(UpdateBuildingSlotsVisibility);
         UIManager.onMenuSet += ResetForMainMenu;
         UIManager.onGameSet += ResetForGameplay;
-
+        if (WD.GameManager.Instance != null)
+            WD.GameManager.Instance.OnPlayerGoldChanged += SyncGold;
     }
     private void OnDestroy()
     {
@@ -46,6 +47,8 @@ public class BuildingManager : MonoSingleton<BuildingManager>
         WD.GameManager.Instance.OnBuildPhaseStart.RemoveListener(UpdateBuildingSlotsVisibility);
         UIManager.onMenuSet -= ResetForMainMenu;
         UIManager.onGameSet -= ResetForGameplay;
+        if (WD.GameManager.Instance != null)
+            WD.GameManager.Instance.OnPlayerGoldChanged -= SyncGold;
     }
 
     private void ResetForMainMenu()
@@ -61,9 +64,10 @@ public class BuildingManager : MonoSingleton<BuildingManager>
     public void SetUpSilver()
     {
         currentResources = WD.GameManager.Instance.GameConfig.silverStart;
-        OnResourceUpdated?.Invoke(currentResources, 0);
         if (WD.GameManager.Instance != null)
             WD.GameManager.Instance.SetGold(currentResources);
+        Debug.Log($"[BuildingManager] SetUpSilver -> currentResources={currentResources}");
+        OnResourceUpdated?.Invoke(currentResources, 0);
     }
 
     public bool CheckSlotMain()
@@ -124,10 +128,10 @@ public class BuildingManager : MonoSingleton<BuildingManager>
 
     public void AddResources(int amount)
     {
-        currentResources += amount;
-        OnResourceUpdated?.Invoke(currentResources, amount);
+        Debug.Log($"[BuildingManager] AddResources amount={amount}");
         if (WD.GameManager.Instance != null)
             WD.GameManager.Instance.AddGold(amount);
+        SyncGold(WD.GameManager.Instance != null ? WD.GameManager.Instance.PlayerGold : currentResources);
     }
     public bool CanAffordBuilding(int cost)
     {
@@ -140,6 +144,13 @@ public class BuildingManager : MonoSingleton<BuildingManager>
             currentResources -= amount;
             OnResourceUpdated?.Invoke(currentResources, -amount);
         }
+    }
+
+    private void SyncGold(int gold)
+    {
+        Debug.Log($"[BuildingManager] SyncGold {currentResources} -> {gold}");
+        currentResources = gold;
+        OnResourceUpdated?.Invoke(currentResources, 0);
     }
 
     public void ResetAllSlots()

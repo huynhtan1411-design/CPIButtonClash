@@ -323,7 +323,16 @@ namespace WD
 
             currentLevelIndex = levelIndex;
             currentLevel = levelConfigSO.levels[levelIndex];
-            playerGold = currentLevel.startingGold;
+            int startGold = currentLevel.startingGold;
+            if (startGold <= 0)
+            {
+                // Fallback to game config start (SetUpSilver already set this)
+                startGold = gameConfig != null ? gameConfig.silverStart : playerGold;
+                Debug.Log($"[GameManager] StartLevel fallback startGold -> {startGold} (level startingGold was {currentLevel.startingGold})");
+            }
+            Debug.Log($"[GameManager] StartLevel init gold from level config: {currentLevel.startingGold} (before {playerGold}) -> using {startGold}");
+            playerGold = startGold;
+            Debug.Log($"[GameManager] StartLevel set playerGold={playerGold}");
             OnPlayerGoldChanged?.Invoke(playerGold);
 
             waveSpawner.waves = currentLevel.waves;
@@ -436,20 +445,25 @@ namespace WD
 
         public bool TrySpendGold(int amount)
         {
+            Debug.Log($"[GameManager] TrySpendGold amount={amount}, current={playerGold}");
             if (playerGold < amount) return false;
             playerGold -= amount;
+            Debug.Log($"[GameManager] Spend success. New gold={playerGold}");
             OnPlayerGoldChanged?.Invoke(playerGold);
             return true;
         }
 
         public void AddGold(int amount)
         {
+            int before = playerGold;
             playerGold += amount;
+            Debug.Log($"[GameManager] AddGold {amount} (before {before} -> after {playerGold})");
             OnPlayerGoldChanged?.Invoke(playerGold);
         }
 
         public void SetGold(int amount)
         {
+            Debug.Log($"[GameManager] SetGold {playerGold} -> {amount}");
             playerGold = amount;
             OnPlayerGoldChanged?.Invoke(playerGold);
         }
