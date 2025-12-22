@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: NormalZombie
   m_EditorClassIdentifier: 
   enemyType: 0
-  enemyTier: 0
+  enemyTier: 1
   elementType: 0
-  prefab: {fileID: 4796623966293115903, guid: 3111499bb00e17746b0f43e919b7d1d6, type: 3}
+  prefab: {fileID: 4796623966293115903, guid: 8364a5d93cb911141ad656f23547ea12, type: 3}
   stats:
     hp: 25
     moveSpeed: 0.5

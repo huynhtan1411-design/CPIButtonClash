@@ -62,6 +62,7 @@ namespace TemplateSystems.Controllers.Player
             if (IsOnHorse)
             {
                 ChangeAnimationState(PlayerAnimationStates.HorseRide);
+                
                 if (horseAnimator != null)
                 {
                     horseAnimator.SetBool(HORSE_MOVE_PARAM, true);
@@ -117,7 +118,12 @@ namespace TemplateSystems.Controllers.Player
                 PlayAttack(100, false);
                 return;
             }
-
+            if ((animationStates == PlayerAnimationStates.Run || animationStates == PlayerAnimationStates.HorseRide) && !animator.GetBool("IsMoving"))
+            {
+                animator.SetBool("IsMoving", true);
+                animator.SetTrigger("StartMove");
+                animator.SetFloat("MoveSpeed", 2);
+            }
             animator.Play(animationStates.ToString());
         }
         // private int idxAtk = 1;
@@ -125,7 +131,7 @@ namespace TemplateSystems.Controllers.Player
         {
             if (animator == null)
                 return ;
-            animator.SetBool("IsWalk", false);
+            animator.SetBool("IsMoving", false);
             animator.SetBool("IsRun", false);
             animator.SetBool("IsIdle", false);
             animator.SetFloat("Speed", 0);
