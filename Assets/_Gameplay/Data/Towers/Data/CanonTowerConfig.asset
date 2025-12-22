@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ID: 2
   nameBase: Cannon Tower
-  HealthBase: 200
+  HealthBase: 1
   AttackDamageBase: 30
   LevelIndexUnlock: 1
   Type: 1

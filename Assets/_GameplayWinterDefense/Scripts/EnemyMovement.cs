@@ -7,20 +7,31 @@ namespace WD
     {
         [Header("Movement Settings")]
         [SerializeField] private float moveSpeed = 5f;
-        [SerializeField] private float rotationSpeed = 5f;
+        [SerializeField] private float rotationSpeed = 6f;
         [SerializeField] private float waypointReachDistance = 0.1f;
         [SerializeField] private float randomOffset = 0.1f;
         [SerializeField] private bool lookAtNextWaypoint = true;
 
+        [Header("Target Tracking")]
+        [SerializeField] private float detectRadius = 5f;
+        [SerializeField] private float targetTrackingFrequency = 0.5f;
+
+        private float nextScanTime;
+
         private PathMovementWD currentPath;
-        private int currentWaypointIndex;
         private Transform[] waypoints;
+        private int currentWaypointIndex;
+
         private BaseEnemyBehavior enemyBehavior;
         private bool isMoving = true;
+
         private Vector3 currentRandomOffset;
-        private float newOffsetTimer = 0f;
+        private float offsetTimer;
         private const float OFFSET_CHANGE_INTERVAL = 0.5f;
 
+        // =========================
+        // INIT
+        // =========================
         private void Start()
         {
             enemyBehavior = GetComponent<BaseEnemyBehavior>();
@@ -29,129 +40,184 @@ namespace WD
 
         private void InitializePath()
         {
-            // Get the nearest path from the PathMovementController
             currentPath = PathMovementController.Instance.GetNearestPath(transform.position);
-            if (currentPath != null)
-            {
-                waypoints = currentPath.Waypoints;
-                currentWaypointIndex = 0;
-                PathMovementController.Instance.RegisterEnemyOnPath(gameObject, currentPath);
-
-                // Move to first waypoint position
-                Vector3 currentRandomOffset = new Vector3(Random.Range(-0.1f, 0.1f), 0, Random.Range(-0.1f, 0.1f));
-                transform.LookAt(waypoints[0].position + currentRandomOffset);
-                transform.position = waypoints[0].position + currentRandomOffset;
-            }
-            else
+            if (currentPath == null)
             {
                 Debug.LogWarning("No path found for enemy!");
+                return;
             }
+
+            waypoints = currentPath.Waypoints;
+            currentWaypointIndex = 0;
+            PathMovementController.Instance.RegisterEnemyOnPath(gameObject, currentPath);
+
+            Vector3 spawnOffset = new Vector3(
+                Random.Range(-randomOffset, randomOffset),
+                0,
+                Random.Range(-randomOffset, randomOffset)
+            );
+
+            transform.position = waypoints[0].position + spawnOffset;
+            transform.LookAt(waypoints[0].position);
         }
 
+        // =========================
+        // UPDATE
+        // =========================
         private void Update()
         {
-            if (!isMoving || waypoints == null || currentWaypointIndex >= waypoints.Length || enemyBehavior.IsDead)
+            if (enemyBehavior.IsDead)
+                return;
+
+            // Periodic target scan
+            if (Time.time >= nextScanTime)
+            {
+                nextScanTime = Time.time + targetTrackingFrequency;
+                UpdateTarget();
+            }
+
+            // ATTACK MODE
+            if (enemyBehavior.Target != null)
+            {
+                HandleAttack();
+                return;
+            }
+
+            // MOVE MODE
+            if (!isMoving || waypoints == null || currentWaypointIndex >= waypoints.Length )
                 return;
 
             MoveAlongPath();
         }
 
+        // =========================
+        // TARGETING
+        // =========================
+        private void UpdateTarget()
+        {
+            // Lose invalid target
+            if (enemyBehavior.Target != null)
+            {
+                float dist = Vector3.Distance(transform.position, enemyBehavior.Target.position);
+                if (dist > detectRadius || !enemyBehavior.Target.gameObject.activeInHierarchy)
+                    enemyBehavior.Target = null;
+            }
+
+            if (enemyBehavior.Target != null)
+                return;
+
+            Collider[] hits = Physics.OverlapSphere(
+                transform.position,
+                detectRadius
+            );
+
+            float closestDist = float.MaxValue;
+            Transform closest = null;
+
+            foreach (var hit in hits)
+            {
+                if(hit.transform.CompareTag("Tower") == false)
+                    continue;
+                float dist = (hit.transform.position - transform.position).sqrMagnitude;
+                if (dist < closestDist)
+                {
+                    closestDist = dist;
+                    closest = hit.transform;
+                }
+            }
+
+            enemyBehavior.Target = closest;
+        }
+
+        // =========================
+        // ATTACK
+        // =========================
+        private void HandleAttack()
+        {
+            Vector3 dir = enemyBehavior.Target.position - transform.position;
+            dir.y = 0f;
+
+            if (dir.sqrMagnitude > 0.01f)
+            {
+                Quaternion lookRot = Quaternion.LookRotation(dir);
+                transform.rotation = Quaternion.Slerp(
+                    transform.rotation,
+                    lookRot,
+                    rotationSpeed * Time.deltaTime
+                );
+            }
+
+            enemyBehavior.HandleAttack();
+        }
+
+        // =========================
+        // MOVEMENT
+        // =========================
         private void MoveAlongPath()
         {
-            Transform currentWaypoint = waypoints[currentWaypointIndex];
-            Vector3 directionToWaypoint = (currentWaypoint.position - transform.position).normalized;
+            Transform waypoint = waypoints[currentWaypointIndex];
 
-            // Update random offset
-            newOffsetTimer += Time.deltaTime;
-            if (newOffsetTimer >= OFFSET_CHANGE_INTERVAL)
+            offsetTimer += Time.deltaTime;
+            if (offsetTimer >= OFFSET_CHANGE_INTERVAL)
             {
                 currentRandomOffset = new Vector3(
                     Random.Range(-randomOffset, randomOffset),
                     0,
                     Random.Range(-randomOffset, randomOffset)
                 );
-                newOffsetTimer = 0f;
+                offsetTimer = 0f;
             }
 
-            // Add random offset to movement
-            Vector3 offsetDirection = directionToWaypoint + currentRandomOffset;
-            offsetDirection.Normalize();
+            Vector3 dir = (waypoint.position - transform.position).normalized;
+            Vector3 moveDir = (dir + currentRandomOffset).normalized;
 
-            // Move towards waypoint with offset
-            transform.position += offsetDirection * moveSpeed * Time.deltaTime;
+            transform.position += moveDir * moveSpeed * Time.deltaTime;
 
-            // Rotate towards movement direction
             if (lookAtNextWaypoint)
             {
-                Quaternion targetRotation = Quaternion.LookRotation(offsetDirection);
-                transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, rotationSpeed * Time.deltaTime);
+                Quaternion rot = Quaternion.LookRotation(moveDir);
+                transform.rotation = Quaternion.Slerp(
+                    transform.rotation,
+                    rot,
+                    rotationSpeed * Time.deltaTime
+                );
             }
 
-            // Check if waypoint is reached
-            float distanceToWaypoint = Vector3.Distance(transform.position, currentWaypoint.position);
-            if (distanceToWaypoint < waypointReachDistance)
+            if (Vector3.Distance(transform.position, waypoint.position) < waypointReachDistance)
             {
                 currentWaypointIndex++;
-
-                // Check if we reached the end of the path
                 if (currentWaypointIndex >= waypoints.Length)
-                {
                     OnPathComplete();
-                }
             }
 
-            // Update animation
-            if (enemyBehavior != null)
-            {
-                enemyBehavior.PlayRunAnimation(isMoving);
-            }
+            enemyBehavior.PlayRunAnimation(true);
         }
 
+        // =========================
+        // PATH END
+        // =========================
         private void OnPathComplete()
         {
             isMoving = false;
-            PathMovementController.Instance.UnregisterEnemyFromPath(gameObject, currentPath);
 
-            // You can add additional logic here when the enemy reaches the end of the path
-            // For example, dealing damage to the player's base or destroying the enemy
-            if (enemyBehavior != null)
-            {
-                enemyBehavior.PlayAttackAnimation();
-            }
-        }
-        private void OnTriggerEnter(Collider other)
-        {
-            if (other.CompareTag("Wall"))
-            {
-                OnPathComplete();
-            }
-        }
-        
+            if (currentPath != null)
+                PathMovementController.Instance.UnregisterEnemyFromPath(gameObject, currentPath);
 
-        public void PauseMovement()
-        {
-            isMoving = false;
-            if (enemyBehavior != null)
-            {
-                enemyBehavior.PlayRunAnimation(false);
-            }
-        }
-
-        public void ResumeMovement()
-        {
-            isMoving = true;
-            if (enemyBehavior != null)
-            {
-                enemyBehavior.PlayRunAnimation(true);
-            }
+            enemyBehavior.PlayAttackAnimation();
         }
 
         private void OnDestroy()
         {
             if (currentPath != null)
-            {
                 PathMovementController.Instance.UnregisterEnemyFromPath(gameObject, currentPath);
-            }
         }
+
+#if UNITY_EDITOR
+        private void OnDrawGizmosSelected()
+        {
+            Gizmos.color = Color.red;
+            Gizmos.DrawWireSphere(transform.position, detectRadius);
+        }
+#endif
     }
 }
