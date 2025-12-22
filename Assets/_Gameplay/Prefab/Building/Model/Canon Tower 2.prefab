@@ -103,6 +103,7 @@ MonoBehaviour:
   lightObject: {fileID: 6684026735053824223}
   fireSmokeEffectPrefab: {fileID: 115116, guid: 7913dbc08c2d3e74f876ea93aa62da29,
     type: 3}
+  destroyVFX: {fileID: 1324124168371050, guid: 9eb3b1a11c610cd418079f132e291197, type: 3}
 --- !u!1 &545619125995614126
 GameObject:
   m_ObjectHideFlags: 0

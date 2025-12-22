@@ -12794,7 +12794,7 @@ MonoBehaviour:
   spawnInterval: 0.2
   spawnCountPerTick: 1
   eliteEnemyData: {fileID: 11400000, guid: cb7024dd4a8b2f54c817bec0c1b98b83, type: 2}
-  elitePrefabOverride: {fileID: 4796623966293115903, guid: 4434b3e53ef0a7e49bac91e839bb1b91,
+  elitePrefabOverride: {fileID: 4796623966293115903, guid: 8364a5d93cb911141ad656f23547ea12,
     type: 3}
   eliteLevel: 1
   eliteSpawnPoint: {fileID: 1321607542}
@@ -15681,6 +15681,16 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6150507391044812901, guid: 1158f128473ca1041951a4102aa76181,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 4.84
+      objectReference: {fileID: 0}
+    - target: {fileID: 6150507391044812901, guid: 1158f128473ca1041951a4102aa76181,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -6.52
+      objectReference: {fileID: 0}
     - target: {fileID: 6161371776026778090, guid: 1158f128473ca1041951a4102aa76181,
         type: 3}
       propertyPath: m_AnchorMax.y
@@ -15724,12 +15734,12 @@ PrefabInstance:
     - target: {fileID: 6664434825324436691, guid: 1158f128473ca1041951a4102aa76181,
         type: 3}
       propertyPath: m_AnchorMax.x
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6664434825324436691, guid: 1158f128473ca1041951a4102aa76181,
         type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6722613659891380424, guid: 1158f128473ca1041951a4102aa76181,
         type: 3}
@@ -15849,7 +15859,7 @@ PrefabInstance:
     - target: {fileID: 8053202507780008761, guid: 1158f128473ca1041951a4102aa76181,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8194751689404591379, guid: 1158f128473ca1041951a4102aa76181,
         type: 3}

@@ -8,6 +8,7 @@ namespace CLHoma.Combat
         [SerializeField] private HealthBarUI healthBarUI;
         [SerializeField] protected GameObject lightObject;
         [SerializeField] private GameObject fireSmokeEffectPrefab;
+        [SerializeField] private GameObject destroyVFX;
         protected override void Start()
         {
             base.Start();
@@ -37,6 +38,7 @@ namespace CLHoma.Combat
             if (destroyedEffectPrefab != null)
             {
                 GameObject obj = Instantiate(destroyedEffectPrefab, transform.position, Quaternion.identity);
+                Instantiate(destroyVFX,transform.position,Quaternion.identity);
                 BuildingManager.Instance.destroyEffectObjects.Add(obj);
             }
 
