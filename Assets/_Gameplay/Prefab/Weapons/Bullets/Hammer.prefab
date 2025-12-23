@@ -652,7 +652,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7590a80808598c544b7c19a7b087878d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 80
+  speed: 60
   maxDistance: 4
   sideOffset: 0.5
   trailRenderer: {fileID: 4275672981623040213}

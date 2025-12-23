@@ -9,6 +9,7 @@ using UnityEngine.UI;
 using Unity.VisualScripting;
 using UnityEngine.Events;
 using DG.Tweening;
+using TMPro;
 public enum BuildingType
 {
     Base,
@@ -61,6 +62,7 @@ public class SlotBuildingBehaviour : MonoBehaviour
             SafeZoneController.Instance.OnZoneLevelChanged += OnZoneLevelChanged;
         }
         buildingProgressSlider.gameObject.SetActive(false);
+        model.transform.GetChild(0).GetChild(1).GetComponent<TextMeshProUGUI>().text = resourceFlyEffect.ResourceCount.ToString();
     }
 
     private void OnDestroy()
@@ -119,7 +121,7 @@ public class SlotBuildingBehaviour : MonoBehaviour
         }
         if (IsEmpty())
         {
-            int cost = data.GetCostUpgrade(1);
+            int cost = resourceFlyEffect.ResourceCount;
             Debug.Log($"[SlotBuilding] Building new {data.name} cost={cost}", this);
             if (!HasEnoughGold(cost))
                 return;
@@ -137,8 +139,23 @@ public class SlotBuildingBehaviour : MonoBehaviour
             if (resourceFlyEffect != null && resourceSpawnPoint != null)
             {
                 Vector3 targetPos = transform.position; // + Vector3.up * 0.5f; // Slightly above the slot
-                int flyCount = useCostAsFlyCount ? cost : resourceFlyEffect.ResourceCount;
-                resourceFlyEffect.PlayResourceFlyEffect(resourceSpawnPoint, targetPos, flyCount, drainByCoins ? OnGoldFlyArrived : null);
+                int flyCount = Random.Range(6, 9); // min 6, max 10 visuals
+
+                targetCost = cost;
+                pendingCost = cost;
+                coinsArrived = 0;
+
+                // distribute gold per visual coin
+                goldPerFly = cost / flyCount;
+                remainderGold = cost % flyCount;
+
+                resourceFlyEffect.PlayResourceFlyEffect(
+                    resourceSpawnPoint,
+                    targetPos,
+                    flyCount,
+                    OnGoldFlyArrived
+                );
+
             }
             else
             {
@@ -165,10 +182,11 @@ public class SlotBuildingBehaviour : MonoBehaviour
                     buildingBehaviour.SetModelWall(levelUnlockCondition);
                     buildingBehaviour.BuildingGraphics.AnimationDropOfWall();
                 }
-                if (buildingBehaviour != null && buildingBehaviour.IsMaxLevel())
-                {
-                    model.SetActive(false);
-                }
+                // if (buildingBehaviour != null && buildingBehaviour.IsMaxLevel())
+                // {
+                //     model.SetActive(false);
+                // }
+                model.SetActive(false);
                 Audio_Manager.instance.play("sfx_summon_hero");
                 onBuildingComplete?.Invoke();
 
@@ -295,22 +313,33 @@ public class SlotBuildingBehaviour : MonoBehaviour
         onComplete?.Invoke();
         isBuilding = false;
     }
+private int goldPerFly;
+private int remainderGold;
 
-    private void OnGoldFlyArrived(int amount)
+    private void OnGoldFlyArrived(int _)
+{
+    if (!useGoldFlyDrain) return;
+    if (WD.GameManager.Instance == null) return;
+    if (pendingCost <= 0) return;
+
+    int amount = goldPerFly;
+
+    // handle remainder (last few coins)
+    if (remainderGold > 0)
     {
-        if (!useGoldFlyDrain) return;
-        if (WD.GameManager.Instance == null) return;
-
-        if (pendingCost > 0)
-        {
-            Debug.Log($"[SlotBuilding] OnGoldFlyArrived amount={amount} pendingCost(before)={pendingCost}", this);
-            WD.GameManager.Instance.AddGold(-amount);
-            pendingCost -= amount;
-            coinsArrived += amount;
-            if (pendingCost < 0)
-                pendingCost = 0;
-        }
+        amount += 1;
+        remainderGold--;
     }
+
+    WD.GameManager.Instance.AddGold(-amount);
+
+    pendingCost -= amount;
+    coinsArrived += amount;
+
+    if (pendingCost < 0)
+        pendingCost = 0;
+}
+
 
     private bool IsUnlockedForBuild()
     {

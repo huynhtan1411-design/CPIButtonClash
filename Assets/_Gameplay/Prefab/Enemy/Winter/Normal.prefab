@@ -59,6 +59,7 @@ MonoBehaviour:
   _elementUi: {fileID: 0}
   attackAnimationDelay: 0.5
   isFlying: 0
+  breakGroundVFX: {fileID: 0}
   onDamageTaken:
     m_PersistentCalls:
       m_Calls: []
@@ -173,11 +174,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c0ae1ec527d6394f9bb8c9a6d3e1831, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 1.5
+  moveSpeed: 2
   rotationSpeed: 5
   waypointReachDistance: 0.3
   randomOffset: 0.5
   lookAtNextWaypoint: 1
+  detectRadius: 0.1
+  targetTrackingFrequency: 10
 --- !u!1001 &5876926801214838503
 PrefabInstance:
   m_ObjectHideFlags: 0

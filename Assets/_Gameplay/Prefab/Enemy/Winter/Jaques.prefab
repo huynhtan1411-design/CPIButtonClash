@@ -55,15 +55,17 @@ MonoBehaviour:
   shawdowObj: {fileID: 0}
   renderer: {fileID: 8878600461793812309}
   _elementUi: {fileID: 0}
-  attackAnimationDelay: 0.5
+  attackAnimationDelay: 1
   isFlying: 0
+  breakGroundVFX: {fileID: 6120252921715728027, guid: 75385faccc459c640a445354df412639,
+    type: 3}
   onDamageTaken:
     m_PersistentCalls:
       m_Calls: []
   onHealthChanged:
     m_PersistentCalls:
       m_Calls: []
-  meleeAttackDelay: 0.5
+  meleeAttackDelay: 0.8
 --- !u!136 &4796623966293115897
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -148,7 +150,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c0ae1ec527d6394f9bb8c9a6d3e1831, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 1
+  moveSpeed: 1.5
   rotationSpeed: 5
   waypointReachDistance: 0.3
   randomOffset: 0.5

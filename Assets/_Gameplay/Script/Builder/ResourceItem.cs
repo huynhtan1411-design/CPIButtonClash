@@ -32,6 +32,14 @@ public class ResourceItem : MonoBehaviour
         isMovingToTarget = false;
         sphereCollider.enabled = true;
     }
+    public void UpdateCollectRadius(int newRadius)
+    {
+        if (sphereCollider != null)
+        {
+            sphereCollider.radius = newRadius;
+            collectRadius = newRadius;
+        }
+    }
 public float hoverHeight = 0.005f;
 public float hoverSpeed = 0.02f;
 

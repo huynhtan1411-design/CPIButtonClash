@@ -87,7 +87,7 @@ public class SafeZoneController : MonoSingleton<SafeZoneController>
 
     public void UpgradeZoneLevel()
     {
-        currentZoneLevel++;
+        currentZoneLevel = 3;
         UpdateSafeZone();
         Audio_Manager.instance.play("sfx_land_expanding");
     }

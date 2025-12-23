@@ -82,7 +82,7 @@ namespace WD
         private int playerGold;
         private bool isGamePaused;
         private Button _fightBtn;
-        private List<GameObject> activeEnemies = new List<GameObject>();
+        public List<GameObject> activeEnemies = new List<GameObject>();
         public int RadiusArea = 10;
 
         [Header("Wave Settings")]
@@ -116,6 +116,7 @@ namespace WD
                 activeEnemies.Add(enemy);
             }
         }
+        
 
         public void UnregisterEnemy(GameObject enemy)
         {
@@ -167,6 +168,17 @@ namespace WD
             }
             activeEnemies.Clear();
         }
+        public void KillAllEnemies()
+        {
+            foreach (var enemy in activeEnemies.ToList()) // Use ToList() to avoid modification during iteration
+            {
+                if (enemy != null)
+                {
+                    enemy.GetComponent<IDamageable>().TakeDamage(99999);
+                }
+            }
+            activeEnemies.Clear();
+        }
 
         private void Awake()
         {
@@ -182,8 +194,9 @@ namespace WD
         private void Start()
         {
             currentLevelIndex = DataManager.Instance.GetLevel();
-            Debug.LogError("currentLevelIndex "+ currentLevelIndex);
-            OnWaveComplete.AddListener(() => {
+            Debug.LogError("currentLevelIndex " + currentLevelIndex);
+            OnWaveComplete.AddListener(() =>
+            {
                 BuildingManager.Instance.AddResources(waveData.SilverReward);
             });
             InitializeEventListeners();
@@ -195,6 +208,7 @@ namespace WD
                 directionalLight = light;
             SetDayLight(true);
         }
+        
         private void OnDestroy()
         {
             UnsubscribeEvents();

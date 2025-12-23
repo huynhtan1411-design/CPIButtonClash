@@ -6,6 +6,7 @@ using DG.Tweening;
 using UnityEngine.Events;
 using System;
 using System.Collections;
+using Cinemachine;
 
 namespace CLHoma.Combat
 {
@@ -32,6 +33,7 @@ namespace CLHoma.Combat
         [SerializeField] protected float attackAnimationDelay = 0.5f;
 
         [SerializeField] protected bool isFlying = false;
+        [SerializeField] protected GameObject breakGroundVFX;
 
         protected bool isInAttackAnimation = false;
         protected Coroutine attackCoroutine;
@@ -198,11 +200,24 @@ namespace CLHoma.Combat
         protected virtual IEnumerator AttackSequence()
         {
             isInAttackAnimation = true;
-            PlayAttackAnimation();          
-            yield return new WaitForSeconds(attackAnimationDelay);          
+            PlayAttackAnimation();
+            yield return new WaitForSeconds(attackAnimationDelay);
+            if (breakGroundVFX != null)
+                Instantiate(breakGroundVFX, target.transform.position, Quaternion.identity);
+            StartCoroutine(ShakeCamera());
             PerformAttackAction();
-            
+
             isInAttackAnimation = false;
+        }
+        private IEnumerator ShakeCamera()
+        {
+            if (gameObject.name.Contains("jaques")) yield break;
+            GameObject.Find("CMMove1").GetComponent<CinemachineVirtualCamera>().GetCinemachineComponent<CinemachineBasicMultiChannelPerlin>().m_AmplitudeGain = 2f;
+            GameObject.Find("CMMove1").GetComponent<CinemachineVirtualCamera>().GetCinemachineComponent<CinemachineBasicMultiChannelPerlin>().m_FrequencyGain = 2f;
+            yield return new WaitForSeconds(0.3f);
+            GameObject.Find("CMMove1").GetComponent<CinemachineVirtualCamera>().GetCinemachineComponent<CinemachineBasicMultiChannelPerlin>().m_AmplitudeGain = 0f;
+            GameObject.Find("CMMove1").GetComponent<CinemachineVirtualCamera>().GetCinemachineComponent<CinemachineBasicMultiChannelPerlin>().m_FrequencyGain = 0f;
+
         }
 
         protected virtual void PerformAttackAction()
@@ -259,8 +274,16 @@ namespace CLHoma.Combat
             // animatorRef.SetTrigger(ANIMATOR_TRIGGER_DEATH);
             animatorRef.SetTrigger("StartDie");
             animatorRef.SetBool("IsDead", true);
-
-
+            if (gameObject.name.Contains("Jaques"))
+            {
+                foreach (var item in WD.GameManager.Instance.activeEnemies)
+                {
+                    // Debug.Log("Removing enemy from active list on Jaques death" + item.name);
+                    item.GetComponent<NormalEnemyBehavior>().TakeDamage(99999, Vector3.zero, Vector3.zero, HitType.Hit);
+                    // Destroy(item);
+                }
+            }
+            
             if (healthbarBehaviour != null)
                 healthbarBehaviour.DisableBar();
             enemyCollider.enabled = false;

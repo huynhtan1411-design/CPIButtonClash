@@ -27,11 +27,11 @@ MonoBehaviour:
     percentAddHealth: 0
     percentAddDamage: 0
     attackRange: 4
-    attackSpeed: 2.8
+    attackSpeed: 0.1
     radiusExplosion: 1.5
-    damageExplosion: 200
+    damageExplosion: 5000
     maxTargets: 1
     upgradeCost: 100
-    levelUnlockCondition: 3
+    levelUnlockCondition: 1
     modelOffset: {x: 0, y: 0, z: 0}
   Prefab: {fileID: 7616477193882369530, guid: 435e2baae5a13cc41ac78d8f742671ef, type: 3}

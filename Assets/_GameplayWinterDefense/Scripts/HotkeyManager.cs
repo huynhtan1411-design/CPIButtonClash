@@ -61,7 +61,13 @@ namespace WD
                 }
                 return;
             }
-
+            if (Input.GetKeyDown(KeyCode.Keypad5))
+            {
+                foreach (var item in GameObject.FindGameObjectsWithTag("Resource"))
+                {
+                    item.GetComponent<ResourceItem>().UpdateCollectRadius(1000);
+                }
+            }
             HandleMovementInput();
             HandleWaveInput();
             HandlePathSpawnHotkeys();

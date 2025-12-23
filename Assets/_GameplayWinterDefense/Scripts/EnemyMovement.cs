@@ -64,6 +64,8 @@ namespace WD
         // =========================
         // UPDATE
         // =========================
+        private float lastAttackTime = 0f;
+
         private void Update()
         {
             if (enemyBehavior.IsDead)
@@ -80,9 +82,13 @@ namespace WD
             if (enemyBehavior.Target != null)
             {
                 HandleAttack();
+                lastAttackTime = Time.time;
                 return;
             }
-
+            if(lastAttackTime + 0.8f > Time.time)
+            {
+                return;
+            }   
             // MOVE MODE
             if (!isMoving || waypoints == null || currentWaypointIndex >= waypoints.Length )
                 return;
