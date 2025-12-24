@@ -92,8 +92,8 @@ namespace WD
 
             if (BuildingManager.Instance != null && !isDeadTree)
             {
-                BuildingManager.Instance.AddResources(amount);
-                Audio_Manager.instance.play("Collect");
+                // BuildingManager.Instance.AddResources(amount);
+                // Audio_Manager.instance.play("Collect");
             }
 
             ShowInfoEffect();

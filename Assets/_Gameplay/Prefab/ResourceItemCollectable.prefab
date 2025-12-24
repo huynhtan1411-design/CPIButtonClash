@@ -236,11 +236,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6df9484c327d1e4bb7066913596ed39, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 10
-  collectRadius: 3
-  flyDuration: 0.25
+  moveSpeed: 4
+  collectRadius: 1.5
+  flyDuration: 0.35
   rotationSpeed: 270
-  jumpPower: 1
+  jumpPower: 0.8
   numJumps: 1
   hoverHeight: 0.005
   hoverSpeed: 0.02
@@ -423,17 +423,17 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 0aed9346e8ec07c4e840117866ea6071,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.23968501
+      value: 0.33
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 0aed9346e8ec07c4e840117866ea6071,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.15
+      value: 0.20652106
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 0aed9346e8ec07c4e840117866ea6071,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.15
+      value: 0.20652106
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 0aed9346e8ec07c4e840117866ea6071,
         type: 3}
@@ -488,7 +488,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 0aed9346e8ec07c4e840117866ea6071,
         type: 3}
       propertyPath: m_ConstrainProportionsScale
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 0aed9346e8ec07c4e840117866ea6071,
         type: 3}

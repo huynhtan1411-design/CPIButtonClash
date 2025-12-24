@@ -2,6 +2,8 @@ using UnityEngine;
 using TemplateSystems;
 using TemplateSystems.Keys;
 using CLHoma.Combat;
+using System.Collections;
+using Cinemachine;
 
 namespace WD
 {
@@ -66,6 +68,7 @@ namespace WD
                 foreach (var item in GameObject.FindGameObjectsWithTag("Resource"))
                 {
                     item.GetComponent<ResourceItem>().UpdateCollectRadius(1000);
+                    item.GetComponent<ResourceItem>().flyDuration = 0.75f;
                 }
             }
             HandleMovementInput();
@@ -202,7 +205,10 @@ namespace WD
                 return;
 
             if (Input.GetKeyDown(eliteSpawnKey))
+            {
+
                 pathSpawnController.SpawnEliteOnce();
+            }
         }
 
         private void HandleDropSpawnHotkeys()

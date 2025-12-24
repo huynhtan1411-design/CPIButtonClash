@@ -6,7 +6,7 @@ using System.Collections;
 public class ResourceFlyEffect : MonoBehaviour
 {
     [SerializeField] private GameObject resourcePrefab;
-    [SerializeField] private int resourceCount = 5;
+    [SerializeField] public int resourceCount = 5;
     [SerializeField] private float flyDuration = 1f;
     [SerializeField] private float delayBetweenResources = 0.1f;
     [SerializeField] private float arcHeight = 2f;

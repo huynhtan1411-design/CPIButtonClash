@@ -37,6 +37,7 @@ public class SlotBuildingBehaviour : MonoBehaviour
     [SerializeField] private bool useGoldFlyDrain = true;
     [SerializeField] private bool useCostAsFlyCount = true;
 
+    [SerializeField] private BuildingData canonData;
 
     [SerializeField] private int levelInit = 1;
     [SerializeField] private float timeAnimation = 1f;
@@ -64,7 +65,10 @@ public class SlotBuildingBehaviour : MonoBehaviour
         buildingProgressSlider.gameObject.SetActive(false);
         model.transform.GetChild(0).GetChild(1).GetComponent<TextMeshProUGUI>().text = resourceFlyEffect.ResourceCount.ToString();
     }
-
+    public void UpdateCoin()
+    {
+        model.transform.GetChild(0).GetChild(1).GetComponent<TextMeshProUGUI>().text = resourceFlyEffect.ResourceCount.ToString();
+    }
     private void OnDestroy()
     {
         if (SafeZoneController.Instance != null)
@@ -108,6 +112,16 @@ public class SlotBuildingBehaviour : MonoBehaviour
         buildingBehaviour = buildingObj.GetComponent<BaseBuildingBehaviour>();
         buildingBehaviour.CurrentLevel = levelInit;
         buildingBehaviour.Initialize(data);
+        if(slotBuildingType == BuildingType.Base)
+        {
+            model.transform.localPosition = new Vector3(2.8f, 0, 2.5f);
+            model.transform.localScale = Vector3.one * 1.8f;
+            model.transform.GetChild(0).GetChild(0).GetComponent<RectTransform>().anchoredPosition = new Vector3(-50f, -8f, 0f);
+            model.transform.GetChild(0).GetChild(0).GetComponent<RectTransform>().localScale = Vector3.one * 0.85f;
+            model.transform.GetChild(0).GetChild(1).GetComponent<RectTransform>().anchoredPosition = new Vector3(17f, -8f, 0f);
+            resourceFlyEffect.resourceCount = 200;
+            UpdateCoin();
+        }
     }
 
     public void BuildTower()
@@ -182,11 +196,14 @@ public class SlotBuildingBehaviour : MonoBehaviour
                     buildingBehaviour.SetModelWall(levelUnlockCondition);
                     buildingBehaviour.BuildingGraphics.AnimationDropOfWall();
                 }
-                // if (buildingBehaviour != null && buildingBehaviour.IsMaxLevel())
-                // {
-                //     model.SetActive(false);
-                // }
-                model.SetActive(false);
+                if (buildingBehaviour != null && buildingBehaviour.IsMaxLevel())
+                {
+                    model.SetActive(false);
+                }
+                if(slotBuildingType != BuildingType.Base)
+                {
+                    model.SetActive(false);
+                }
                 Audio_Manager.instance.play("sfx_summon_hero");
                 onBuildingComplete?.Invoke();
 
@@ -236,7 +253,23 @@ public class SlotBuildingBehaviour : MonoBehaviour
             PlayBuildingAnimation(() => {
                 buildingBehaviour.Upgrade();
                 if (slotBuildingType == BuildingType.Base)
+                {
                     SafeZoneController.Instance.UpgradeZoneLevel();
+                    foreach (var slot in GameObject.FindObjectsOfType<SlotBuildingBehaviour>())
+                    {
+                        if (slot.SlotType != BuildingType.Base)
+                        {
+                            slot.levelInit = 1;
+                            slot.data.AttackDamageBase = 5000;
+                            slot.data = canonData;
+                            slot.BuildTower();
+                            if (!slot.isEmpty)
+                            {
+                            }
+                        }
+                    }
+                }
+                    
                 if (slotBuildingType == BuildingType.Wall)
                 {
                     buildingBehaviour.SetModelWall(levelUnlockCondition);
@@ -417,7 +450,10 @@ private int remainderGold;
 
             buildingBehaviour.Upgrade();
             if (slotBuildingType == BuildingType.Base)
+            {
+                BuildingManager.Instance.isUpgrade = true;
                 SafeZoneController.Instance.UpgradeZoneLevel();
+            }
             if (slotBuildingType == BuildingType.Wall)
             {
                 buildingBehaviour.SetModelWall(levelUnlockCondition);

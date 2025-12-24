@@ -471,6 +471,8 @@ namespace WD
         {
             int before = playerGold;
             playerGold += amount;
+            if(playerGold < 0)
+                playerGold = 0;
             Debug.Log($"[GameManager] AddGold {amount} (before {before} -> after {playerGold})");
             OnPlayerGoldChanged?.Invoke(playerGold);
         }

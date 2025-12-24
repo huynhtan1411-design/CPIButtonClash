@@ -74,10 +74,10 @@ public class BuildingManager : MonoSingleton<BuildingManager>
     {
         return !slotMain.IsEmpty();
     }
-
+    public bool isUpgrade = false;
     private void UpdateBuildingSlotsVisibility()
     {
-        int currentZoneLevel = SafeZoneController.Instance.CurrentZoneLevel;
+        int currentZoneLevel = isUpgrade? 3: 2;
 
         foreach (var slot in allBuildingSlots)
         {
@@ -87,10 +87,10 @@ public class BuildingManager : MonoSingleton<BuildingManager>
                 bool shouldBeVisible = CheckSlotUnlockCondition(slot, currentZoneLevel);
                 slot.ToggleRendererSlot(shouldBeVisible);
             }
-            // else if (WD.GameManager.Instance.CurrentPhase == GamePhase.CombatPhase)
-            // {
-            //     slot.ToggleRendererSlot(false);
-            // }
+            else if (WD.GameManager.Instance.CurrentPhase == GamePhase.CombatPhase)
+            {
+                slot.ToggleRendererSlot(false);
+            }
         }
         DestroyAllTempObject();
     }
@@ -155,15 +155,15 @@ public class BuildingManager : MonoSingleton<BuildingManager>
 
     public void ResetAllSlots()
     {
-        foreach (var slot in allBuildingSlots)
-        {
-            if (slot != null)
-            {
-                slot.ResetSlot();
-            }
-        }
-        if (slotMain != null)
-            slotMain.ResetSlot();
+        // foreach (var slot in allBuildingSlots)
+        // {
+        //     if (slot != null)
+        //     {
+        //         slot.ResetSlot();
+        //     }
+        // }
+        // if (slotMain != null)
+        //     slotMain.ResetSlot();
         SafeZoneController.Instance.ResetSafeZone();
     }
 

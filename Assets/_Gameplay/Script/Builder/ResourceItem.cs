@@ -6,7 +6,7 @@ public class ResourceItem : MonoBehaviour
 {
     [SerializeField] private float moveSpeed = 5f;
     [SerializeField] private float collectRadius = 3f;
-    [SerializeField] private float flyDuration = 0.5f;
+    [SerializeField] public float flyDuration = 0.5f;
     [SerializeField] private float rotationSpeed = 180f; // Tốc độ xoay (độ/giây)
     [SerializeField] private float jumpPower = 2f; // Độ cao nhảy
     [SerializeField] private int numJumps = 1; // Số lần nhảy
@@ -72,7 +72,7 @@ private float timeOffset;
         sphereCollider.enabled = false;
         
         transform.DOJump(target.position, jumpPower, numJumps, flyDuration)
-            .SetEase(Ease.InQuad)
+            .SetEase(Ease.InQuad).Join(transform.DOScale(0.3f, flyDuration))
             .OnComplete(() => {
                 ResourceManager.Instance.CollectResource(amount);
                 ResourceManager.Instance.ReturnToPool(this);

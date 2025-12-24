@@ -38,7 +38,7 @@ public class SafeZoneController : MonoSingleton<SafeZoneController>
         float newRadius = safeZoneConfig.GetSafeZoneRadius(currentZoneLevel);
         UpdateZoneVisual(15);
     }
-
+    private int amount = 0;
     private void UpdateZoneVisual(float targetRadius)
     {
         if (safeZoneVisual != null)
@@ -74,8 +74,12 @@ public class SafeZoneController : MonoSingleton<SafeZoneController>
         safeZoneVisual.radius = endRadius;
         radiusAnimationCoroutine = null;
         onComplete?.Invoke();
+        if(amount > 1)
+        {
+            yield break;
+        }
         yield return new WaitForSeconds(0.3f); // Small delay to ensure the visual update is complete
-
+        amount++;
         if (virtualCamera != null)
             virtualCamera.gameObject.SetActive(false);
     }

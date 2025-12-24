@@ -15,7 +15,7 @@ MonoBehaviour:
   ID: 1
   nameBase: Arrow Tower
   HealthBase: 1
-  AttackDamageBase: 50
+  AttackDamageBase: 5000
   LevelIndexUnlock: 0
   Type: 1
   levelConfigs:

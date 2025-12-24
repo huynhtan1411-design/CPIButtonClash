@@ -214,7 +214,7 @@ namespace CLHoma.Combat
             if (gameObject.name.Contains("jaques")) yield break;
             GameObject.Find("CMMove1").GetComponent<CinemachineVirtualCamera>().GetCinemachineComponent<CinemachineBasicMultiChannelPerlin>().m_AmplitudeGain = 2f;
             GameObject.Find("CMMove1").GetComponent<CinemachineVirtualCamera>().GetCinemachineComponent<CinemachineBasicMultiChannelPerlin>().m_FrequencyGain = 2f;
-            yield return new WaitForSeconds(0.3f);
+            yield return new WaitForSeconds(0.5f);
             GameObject.Find("CMMove1").GetComponent<CinemachineVirtualCamera>().GetCinemachineComponent<CinemachineBasicMultiChannelPerlin>().m_AmplitudeGain = 0f;
             GameObject.Find("CMMove1").GetComponent<CinemachineVirtualCamera>().GetCinemachineComponent<CinemachineBasicMultiChannelPerlin>().m_FrequencyGain = 0f;
 
@@ -267,23 +267,33 @@ namespace CLHoma.Combat
                 .6f
             );
         }
-
+        private IEnumerator WaitAndKill()
+        {
+            GameObject.Find("CMMove1").GetComponent<CinemachineVirtualCamera>().GetCinemachineComponent<CinemachineBasicMultiChannelPerlin>().m_AmplitudeGain = 2f;
+            GameObject.Find("CMMove1").GetComponent<CinemachineVirtualCamera>().GetCinemachineComponent<CinemachineBasicMultiChannelPerlin>().m_FrequencyGain = 2f;
+            yield return new WaitForSeconds(1f);
+            foreach (var item in WD.GameManager.Instance.activeEnemies)
+            {
+                // Debug.Log("Removing enemy from active list on Jaques death" + item.name);
+                item.GetComponent<NormalEnemyBehavior>().TakeDamage(99999, Vector3.zero, Vector3.zero, HitType.Hit);
+                // Destroy(item);
+            }
+             yield return new WaitForSeconds(0.25f);
+            GameObject.Find("CMMove1").GetComponent<CinemachineVirtualCamera>().GetCinemachineComponent<CinemachineBasicMultiChannelPerlin>().m_AmplitudeGain = 0f;
+            GameObject.Find("CMMove1").GetComponent<CinemachineVirtualCamera>().GetCinemachineComponent<CinemachineBasicMultiChannelPerlin>().m_FrequencyGain = 0f;
+            
+        }
         protected virtual void OnDeath()
         {
             isDead = true;
             // animatorRef.SetTrigger(ANIMATOR_TRIGGER_DEATH);
             animatorRef.SetTrigger("StartDie");
             animatorRef.SetBool("IsDead", true);
-            if (gameObject.name.Contains("Jaques"))
-            {
-                foreach (var item in WD.GameManager.Instance.activeEnemies)
-                {
-                    // Debug.Log("Removing enemy from active list on Jaques death" + item.name);
-                    item.GetComponent<NormalEnemyBehavior>().TakeDamage(99999, Vector3.zero, Vector3.zero, HitType.Hit);
-                    // Destroy(item);
-                }
-            }
             
+            // if (gameObject.name.Contains("Jaques"))
+            // {
+            //     StartCoroutine(WaitAndKill());
+            // }
             if (healthbarBehaviour != null)
                 healthbarBehaviour.DisableBar();
             enemyCollider.enabled = false;
@@ -295,6 +305,13 @@ namespace CLHoma.Combat
             // Spawn resource when enemy dies
             if (ResourceManager.Instance != null)
             {
+                if (gameObject.name.Contains("jaques"))
+                {
+                    for (int i = 0; i < 10; i++)
+                    {
+                        ResourceManager.Instance.SpawnResource(transform.position + Vector3.up * 0.25f, Gold);
+                    }
+                }
                 ResourceManager.Instance.SpawnResource(transform.position + Vector3.up * 0.25f, Gold);
             }
 
@@ -304,7 +321,7 @@ namespace CLHoma.Combat
             // Add additional delay after animation
             AnimatorStateInfo state = animatorRef.GetCurrentAnimatorStateInfo(0);
             float clipLength = state.length;
-            deathSequence.AppendInterval(clipLength+ 0.5f);
+            deathSequence.AppendInterval(clipLength+ 2.5f);
             
             // Destroy the object after the sequence completes
             deathSequence.OnComplete(() => {

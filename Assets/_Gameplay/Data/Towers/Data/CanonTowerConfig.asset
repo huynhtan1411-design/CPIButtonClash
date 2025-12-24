@@ -15,8 +15,8 @@ MonoBehaviour:
   ID: 2
   nameBase: Cannon Tower
   HealthBase: 1
-  AttackDamageBase: 30
-  LevelIndexUnlock: 1
+  AttackDamageBase: 5000
+  LevelIndexUnlock: 3
   Type: 1
   levelConfigs:
   - name: Cannon Tower Lv 1

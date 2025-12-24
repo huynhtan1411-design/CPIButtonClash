@@ -55,7 +55,7 @@ public class CharacterTriggerHandler : MonoBehaviour
         {
             //HandleTower(other.gameObject, true);
         }
-        if (other.CompareTag(Tree))
+        if (other.CompareTag("dasdasd"))
         {
             TreeInteractiveBehaviour tree = other.GetComponent<TreeInteractiveBehaviour>();
             if (tree != null && !tree.IsDestroyed)

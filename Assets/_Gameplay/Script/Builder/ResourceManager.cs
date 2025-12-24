@@ -1,6 +1,7 @@
 using UnityEngine;
 using System.Collections.Generic;
 using WD;
+using DG.Tweening;
 
 public class ResourceManager : MonoBehaviour
 {
@@ -54,8 +55,34 @@ public class ResourceManager : MonoBehaviour
         item.transform.position = position;
         item.gameObject.SetActive(true);
         item.Initialize(amount);
+        PlaySpawnCoinAnimation(item.transform);
+        //Do spawn coin animation here like kingshot
         return item;
     }
+void PlaySpawnCoinAnimation(Transform coin)
+{
+    float burstRadius = 0.8f;
+    float jumpPower = 1.2f;
+    float duration = 0.45f;
+
+    // Random outward direction (XZ plane)
+    Vector3 dir = Random.insideUnitSphere;
+    dir.y = 0;
+    dir.Normalize();
+
+    Vector3 targetPos = coin.position + dir * burstRadius;
+
+    Sequence seq = DOTween.Sequence();
+    seq.PrependInterval(Random.Range(0f, 0.08f));
+
+    seq.Append(coin.DOScale(1f, 0.15f).SetEase(Ease.OutBack))
+       .Join(coin.DOJump(
+            targetPos,
+            jumpPower,
+            1,
+            duration
+        ).SetEase(Ease.OutQuad));
+}
 
     public void ReturnToPool(ResourceItem item)
     {
